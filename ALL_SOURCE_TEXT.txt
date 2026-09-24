@@ -1,0 +1,6880 @@
+===== BEGIN FILE: 3Dmodels/2N3904_TO92.wrl =====
+#VRML V2.0 utf8
+Transform { children [ Shape { geometry Box { size 1 1 1 } } ] }
+
+===== END FILE: 3Dmodels/2N3904_TO92.wrl =====
+
+===== BEGIN FILE: 3Dmodels/Buzzer_12mm.wrl =====
+#VRML V2.0 utf8
+Transform { children [ Shape { geometry Box { size 1 1 1 } } ] }
+
+===== END FILE: 3Dmodels/Buzzer_12mm.wrl =====
+
+===== BEGIN FILE: 3Dmodels/Capacitor_THT.wrl =====
+#VRML V2.0 utf8
+Transform { children [ Shape { geometry Box { size 1 1 1 } } ] }
+
+===== END FILE: 3Dmodels/Capacitor_THT.wrl =====
+
+===== BEGIN FILE: 3Dmodels/Diode_SS14.wrl =====
+#VRML V2.0 utf8
+Transform { children [ Shape { geometry Box { size 1 1 1 } } ] }
+
+===== END FILE: 3Dmodels/Diode_SS14.wrl =====
+
+===== BEGIN FILE: 3Dmodels/ESP32S3_DevKitC1_N16R8.wrl =====
+#VRML V2.0 utf8
+Transform { children [ Shape { geometry Box { size 1 1 1 } } ] }
+
+===== END FILE: 3Dmodels/ESP32S3_DevKitC1_N16R8.wrl =====
+
+===== BEGIN FILE: 3Dmodels/Fuse_PTC.wrl =====
+#VRML V2.0 utf8
+Transform { children [ Shape { geometry Box { size 1 1 1 } } ] }
+
+===== END FILE: 3Dmodels/Fuse_PTC.wrl =====
+
+===== BEGIN FILE: 3Dmodels/Header_1x02.wrl =====
+#VRML V2.0 utf8
+Transform { children [ Shape { geometry Box { size 1 1 1 } } ] }
+
+===== END FILE: 3Dmodels/Header_1x02.wrl =====
+
+===== BEGIN FILE: 3Dmodels/KY040_Encoder.wrl =====
+#VRML V2.0 utf8
+Transform { children [ Shape { geometry Box { size 1 1 1 } } ] }
+
+===== END FILE: 3Dmodels/KY040_Encoder.wrl =====
+
+===== BEGIN FILE: 3Dmodels/NEO6M.wrl =====
+#VRML V2.0 utf8
+Transform { children [ Shape { geometry Box { size 1 1 1 } } ] }
+
+===== END FILE: 3Dmodels/NEO6M.wrl =====
+
+===== BEGIN FILE: 3Dmodels/Resistor_THT.wrl =====
+#VRML V2.0 utf8
+Transform { children [ Shape { geometry Box { size 1 1 1 } } ] }
+
+===== END FILE: 3Dmodels/Resistor_THT.wrl =====
+
+===== BEGIN FILE: 3Dmodels/Tactile_6x6.wrl =====
+#VRML V2.0 utf8
+Transform { children [ Shape { geometry Box { size 1 1 1 } } ] }
+
+===== END FILE: 3Dmodels/Tactile_6x6.wrl =====
+
+===== BEGIN FILE: 3Dmodels/nRF24L01_2x4.wrl =====
+#VRML V2.0 utf8
+Transform { children [ Shape { geometry Box { size 1 1 1 } } ] }
+
+===== END FILE: 3Dmodels/nRF24L01_2x4.wrl =====
+
+===== BEGIN FILE: 3d_model_mappings.csv =====
+Reference,Footprint,ModelPath
+U1_3D,Custom:U1_3D,${KIPRJMOD}/3Dmodels/ESP32S3_DevKitC1_N16R8.wrl
+J_RF1,Custom:J_RF1,${KIPRJMOD}/3Dmodels/nRF24L01_2x4.wrl
+J_RF2,Custom:J_RF2,${KIPRJMOD}/3Dmodels/nRF24L01_2x4.wrl
+J_GPS1,Custom:J_GPS1,${KIPRJMOD}/3Dmodels/NEO6M.wrl
+J_ENC1,Custom:J_ENC1,${KIPRJMOD}/3Dmodels/KY040_Encoder.wrl
+SW1,Custom:SW1,${KIPRJMOD}/3Dmodels/Tactile_6x6.wrl
+SW2,Custom:SW2,${KIPRJMOD}/3Dmodels/Tactile_6x6.wrl
+SW3,Custom:SW3,${KIPRJMOD}/3Dmodels/Tactile_6x6.wrl
+SW4,Custom:SW4,${KIPRJMOD}/3Dmodels/Tactile_6x6.wrl
+BZ1,Custom:BZ1,${KIPRJMOD}/3Dmodels/Buzzer_12mm.wrl
+Q1,Custom:Q1,${KIPRJMOD}/3Dmodels/2N3904_TO92.wrl
+R5,Custom:R5,${KIPRJMOD}/3Dmodels/Resistor_THT.wrl
+R6,Custom:R6,${KIPRJMOD}/3Dmodels/Resistor_THT.wrl
+J_PWR,Custom:J_PWR,${KIPRJMOD}/3Dmodels/Header_1x02.wrl
+F1,Custom:F1,${KIPRJMOD}/3Dmodels/Fuse_PTC.wrl
+D1,Custom:D1,${KIPRJMOD}/3Dmodels/Diode_SS14.wrl
+J_BAT,Custom:J_BAT,${KIPRJMOD}/3Dmodels/Header_1x02.wrl
+R13,Custom:R13,${KIPRJMOD}/3Dmodels/Resistor_THT.wrl
+R14,Custom:R14,${KIPRJMOD}/3Dmodels/Resistor_THT.wrl
+C8,Custom:C8,${KIPRJMOD}/3Dmodels/Capacitor_THT.wrl
+
+===== END FILE: 3d_model_mappings.csv =====
+
+===== BEGIN FILE: ESP32_S3_Master_Reconstruction.kicad_dru =====
+(version 1)
+(rule "Default clearance"
+  (constraint clearance (min 0.20mm))
+)
+(rule "Signal track width"
+  (constraint track_width (min 0.25mm) (opt 0.30mm) (max 0.60mm))
+)
+(rule "Power track width"
+  (condition "A.NetClass == 'POWER'")
+  (constraint track_width (min 0.45mm) (opt 0.60mm) (max 1.20mm))
+)
+(rule "Via dimensions"
+  (constraint hole_size (min 0.40mm))
+  (constraint physical_hole_size (min 0.40mm))
+)
+(rule "Copper to board edge"
+  (constraint edge_clearance (min 0.50mm))
+)
+(rule "Hole to hole"
+  (constraint hole_clearance (min 0.25mm))
+)
+
+===== END FILE: ESP32_S3_Master_Reconstruction.kicad_dru =====
+
+===== BEGIN FILE: ESP32_S3_Master_Reconstruction.kicad_pcb =====
+(kicad_pcb
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(general (thickness 1.6) (legacy_teardrops no))
+	(paper "A4")
+	(title_block
+		(title "ESP32-S3 N16R8 Modular Carrier - REV4.1 PROFESSIONAL ROUTE")
+		(date "2026-09-22")
+		(rev "4.0")
+		(company "Modular carrier — clean rebuild")
+		(comment 1 "2x nRF24L01+ / TFT BUS / NEO-6M / Encoder / 4 buttons / buzzer / battery sense")
+		(comment 2 "microSD removed; ESP32-S3 DevKitC-1 N16R8 socketed; TFT off-board via 1x8 bus")
+	)
+	(layers
+		(0 "F.Cu" signal)
+		(31 "B.Cu" signal)
+		(36 "B.SilkS" user "b.Silkscreen")
+		(37 "F.SilkS" user "f.Silkscreen")
+		(44 "Edge.Cuts" user)
+		(46 "B.CrtYd" user "b.Courtyard")
+		(47 "F.CrtYd" user "f.Courtyard")
+		(48 "B.Fab" user)
+		(49 "F.Fab" user)
+	)
+	(net 0 "")
+	(net 1 "3V3")
+	(net 2 "RST")
+	(net 3 "GPIO4")
+	(net 4 "GPIO5")
+	(net 5 "GPIO6")
+	(net 6 "GPIO7")
+	(net 7 "GPIO15")
+	(net 8 "GPIO16")
+	(net 9 "GPIO17")
+	(net 10 "GPIO18")
+	(net 11 "GPIO8")
+	(net 12 "GPIO3")
+	(net 13 "GPIO46")
+	(net 14 "GPIO9")
+	(net 15 "GPIO10")
+	(net 16 "GPIO11")
+	(net 17 "GPIO12")
+	(net 18 "GPIO13")
+	(net 19 "GPIO14")
+	(net 20 "5V_PROTECTED")
+	(net 21 "GND")
+	(net 22 "GPIO43")
+	(net 23 "GPIO44")
+	(net 24 "GPIO1")
+	(net 25 "GPIO2")
+	(net 26 "GPIO42")
+	(net 27 "GPIO41")
+	(net 28 "GPIO40")
+	(net 29 "GPIO39")
+	(net 30 "GPIO38")
+	(net 31 "GPIO37")
+	(net 32 "GPIO36")
+	(net 33 "GPIO35")
+	(net 34 "GPIO0")
+	(net 35 "GPIO45")
+	(net 36 "GPIO48")
+	(net 37 "GPIO47")
+	(net 38 "GPIO21")
+	(net 39 "GPIO20")
+	(net 40 "GPIO19")
+	(net 41 "BUZZER_LOW")
+	(net 42 "BUZZER_BASE")
+	(net 43 "5V_IN")
+	(net 44 "5V_FUSED")
+	(net 45 "VBAT_RAW")
+	(net 46 "BAT_ADC")
+	(setup
+		(pad_to_mask_clearance 0)
+		(allow_soldermask_bridges_in_footprints no)
+	)
+	(gr_rect
+		(start 10 10)
+		(end 190 130)
+		(radius 3)
+		(stroke (width 0.05) (type default))
+		(fill none)
+		(layer "Edge.Cuts")
+		(uuid "aad53f8a-0abe-4b13-8d21-8766bba20cbc")
+	)
+	(footprint "MountingHole_M3_15_15"
+		(layer "F.Cu")
+		(uuid "7dc09f5e-c510-4fe2-ad2d-8836bb92edba")
+		(at 15 15)
+		(attr exclude_from_pos_files exclude_from_bom)
+		(fp_circle
+			(center 0 0)
+			(end 3.5 0)
+			(stroke (width 0.3) (type default))
+			(fill none)
+			(layer "F.SilkS")
+			(uuid "60893b04-0eba-4e1c-a1b2-97a5b4b8200d")
+		)
+		(pad "" np_thru_hole circle
+			(at 0 0) (size 6.5 6.5) (drill 3.2)
+			(layers "*.Cu" "*.Mask")
+			(uuid "1ef60e1e-5d51-47c4-8836-527d60466388")
+		)
+	)
+	(footprint "MountingHole_M3_185_15"
+		(layer "F.Cu")
+		(uuid "f4923af6-d6c6-4e38-a1d7-3031e2402896")
+		(at 185 15)
+		(attr exclude_from_pos_files exclude_from_bom)
+		(fp_circle
+			(center 0 0)
+			(end 3.5 0)
+			(stroke (width 0.3) (type default))
+			(fill none)
+			(layer "F.SilkS")
+			(uuid "b522447d-e3c0-47a4-8515-17bc78f222e0")
+		)
+		(pad "" np_thru_hole circle
+			(at 0 0) (size 6.5 6.5) (drill 3.2)
+			(layers "*.Cu" "*.Mask")
+			(uuid "16eb8e55-be4c-4255-8133-1705ddd5c52e")
+		)
+	)
+	(footprint "MountingHole_M3_15_125"
+		(layer "F.Cu")
+		(uuid "4fac5e57-df93-4244-ac3d-5019a9fe6de3")
+		(at 15 125)
+		(attr exclude_from_pos_files exclude_from_bom)
+		(fp_circle
+			(center 0 0)
+			(end 3.5 0)
+			(stroke (width 0.3) (type default))
+			(fill none)
+			(layer "F.SilkS")
+			(uuid "c9e66e7e-d6f1-412d-9771-d70c7fa9a8e1")
+		)
+		(pad "" np_thru_hole circle
+			(at 0 0) (size 6.5 6.5) (drill 3.2)
+			(layers "*.Cu" "*.Mask")
+			(uuid "ba044aed-6ea8-4699-a213-cb763de7aa4a")
+		)
+	)
+	(footprint "MountingHole_M3_185_125"
+		(layer "F.Cu")
+		(uuid "58f9e471-25f3-461d-ba86-5e4db4817259")
+		(at 185 125)
+		(attr exclude_from_pos_files exclude_from_bom)
+		(fp_circle
+			(center 0 0)
+			(end 3.5 0)
+			(stroke (width 0.3) (type default))
+			(fill none)
+			(layer "F.SilkS")
+			(uuid "2f9a2ceb-7064-4439-b597-1f562f329a55")
+		)
+		(pad "" np_thru_hole circle
+			(at 0 0) (size 6.5 6.5) (drill 3.2)
+			(layers "*.Cu" "*.Mask")
+			(uuid "981a66b1-7b81-4dab-8bc9-e53647dd14c8")
+		)
+	)
+	(footprint "Custom:J1"
+		(layer "F.Cu")
+		(uuid "bca11bcf-f077-482e-8025-bbc1a452e73a")
+		(at 82.3 40)
+		(property "Reference" "J1"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "41665824-e2a2-4f1a-b527-df7afbb9ccca")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(property "Value" "ESP32-S3 DevKitC-1 1x22 socket"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "bbd6b486-2a5d-43bf-b6b4-6bb7fcaf23cf")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(attr through_hole)
+		(pad "1" thru_hole rect
+			(at 0 0.0)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 1 "3V3")
+			(uuid "9a0fb5ab-201c-4878-a4a5-2b4b51028ca4")
+		)
+		(pad "2" thru_hole circle
+			(at 0 2.54)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 1 "3V3")
+			(uuid "0e445fd1-fd76-4b42-aaac-54c5cefcc314")
+		)
+		(pad "3" thru_hole circle
+			(at 0 5.08)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 2 "RST")
+			(uuid "5935b613-ece0-4a9a-a239-e27603a7ff18")
+		)
+		(pad "4" thru_hole circle
+			(at 0 7.62)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 3 "GPIO4")
+			(uuid "a6a3cdfc-d3b8-44e9-99cf-2d5e5a7ae152")
+		)
+		(pad "5" thru_hole circle
+			(at 0 10.16)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 4 "GPIO5")
+			(uuid "83ac0c1d-944c-463f-aba1-e135ef064933")
+		)
+		(pad "6" thru_hole circle
+			(at 0 12.7)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 5 "GPIO6")
+			(uuid "299de244-0ff1-4d78-827f-175e2db0f6a8")
+		)
+		(pad "7" thru_hole circle
+			(at 0 15.24)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 6 "GPIO7")
+			(uuid "1434076d-f554-4885-99bd-a330e415967c")
+		)
+		(pad "8" thru_hole circle
+			(at 0 17.78)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 7 "GPIO15")
+			(uuid "f1db50f4-db92-4678-ab62-44803ccd9d02")
+		)
+		(pad "9" thru_hole circle
+			(at 0 20.32)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 8 "GPIO16")
+			(uuid "d65c18e3-033a-4a63-a81f-cf42bc3d9467")
+		)
+		(pad "10" thru_hole circle
+			(at 0 22.86)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 9 "GPIO17")
+			(uuid "b48669bb-076f-418b-8513-dfe48c52537f")
+		)
+		(pad "11" thru_hole circle
+			(at 0 25.4)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 10 "GPIO18")
+			(uuid "23149d2e-3428-43fd-a752-b07a5a80f691")
+		)
+		(pad "12" thru_hole circle
+			(at 0 27.94)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 11 "GPIO8")
+			(uuid "fbab2ca1-4f3a-44cf-b5ca-103fdfb9dab9")
+		)
+		(pad "13" thru_hole circle
+			(at 0 30.48)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 12 "GPIO3")
+			(uuid "888faa47-2b9d-4b6f-87fc-00a7cfe32014")
+		)
+		(pad "14" thru_hole circle
+			(at 0 33.02)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 13 "GPIO46")
+			(uuid "ec790550-e3c6-4a79-8350-b1c8ca65c91c")
+		)
+		(pad "15" thru_hole circle
+			(at 0 35.56)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 14 "GPIO9")
+			(uuid "879110cf-1c54-46c2-88f4-791582b199c6")
+		)
+		(pad "16" thru_hole circle
+			(at 0 38.1)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 15 "GPIO10")
+			(uuid "96be4650-9461-44c3-8154-4c198a4dab94")
+		)
+		(pad "17" thru_hole circle
+			(at 0 40.64)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 16 "GPIO11")
+			(uuid "a98c1cec-1913-4769-978b-3b71d889015d")
+		)
+		(pad "18" thru_hole circle
+			(at 0 43.18)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 17 "GPIO12")
+			(uuid "349da265-46ee-4a6d-8a19-abe2f5a6f50e")
+		)
+		(pad "19" thru_hole circle
+			(at 0 45.72)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 18 "GPIO13")
+			(uuid "ba242c3f-4b9d-4e80-9c7d-abae0c6452a1")
+		)
+		(pad "20" thru_hole circle
+			(at 0 48.26)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 19 "GPIO14")
+			(uuid "ce2d8fc2-1469-402e-9bf6-c37d854cbe55")
+		)
+		(pad "21" thru_hole circle
+			(at 0 50.8)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 20 "5V_PROTECTED")
+			(uuid "de35d7d7-3bd4-4a62-9943-dd4b19b74ed6")
+		)
+		(pad "22" thru_hole circle
+			(at 0 53.34)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 21 "GND")
+			(uuid "6607d19c-0c84-4b6d-806d-853d1102b6e7")
+		)
+		(embedded_fonts no)
+	)
+	(footprint "Custom:J3"
+		(layer "F.Cu")
+		(uuid "14330454-51ad-4eba-a160-18c033aa2c9b")
+		(at 107.7 40)
+		(property "Reference" "J3"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "8f7e2b60-cedc-4d31-a7be-a4b4169232a6")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(property "Value" "ESP32-S3 DevKitC-1 1x22 socket"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "504bf1fa-0f23-401a-8a80-e0e18988b77c")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(attr through_hole)
+		(pad "1" thru_hole rect
+			(at 0 0.0)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 21 "GND")
+			(uuid "a5b49d40-9949-4dc3-91c5-c66f4a762c25")
+		)
+		(pad "2" thru_hole circle
+			(at 0 2.54)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 22 "GPIO43")
+			(uuid "b37c53b2-fda3-43fc-9226-18d61354fb5a")
+		)
+		(pad "3" thru_hole circle
+			(at 0 5.08)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 23 "GPIO44")
+			(uuid "526f9f1a-c092-48d0-a938-ea407a7d4cc8")
+		)
+		(pad "4" thru_hole circle
+			(at 0 7.62)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 24 "GPIO1")
+			(uuid "c24ccf40-0359-4cc9-a8be-910415554799")
+		)
+		(pad "5" thru_hole circle
+			(at 0 10.16)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 25 "GPIO2")
+			(uuid "d77cf55a-080f-4354-a988-11d2a7f53508")
+		)
+		(pad "6" thru_hole circle
+			(at 0 12.7)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 26 "GPIO42")
+			(uuid "7f8cba08-9267-4d58-934d-be8e7271e0ef")
+		)
+		(pad "7" thru_hole circle
+			(at 0 15.24)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 27 "GPIO41")
+			(uuid "b06f9b4f-5225-4c09-ba4b-4c1789dbce99")
+		)
+		(pad "8" thru_hole circle
+			(at 0 17.78)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 28 "GPIO40")
+			(uuid "cd2d63d0-2f2a-460b-a0c8-2e6a2054a592")
+		)
+		(pad "9" thru_hole circle
+			(at 0 20.32)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 29 "GPIO39")
+			(uuid "f097c644-a02d-4f0d-88db-bdc0f404497d")
+		)
+		(pad "10" thru_hole circle
+			(at 0 22.86)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 30 "GPIO38")
+			(uuid "3ca9883b-7427-44ab-8368-19bd006b4a00")
+		)
+		(pad "11" thru_hole circle
+			(at 0 25.4)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 31 "GPIO37")
+			(uuid "0c83aebb-33fb-4dd2-b00a-738ad43f7547")
+		)
+		(pad "12" thru_hole circle
+			(at 0 27.94)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 32 "GPIO36")
+			(uuid "19d32f77-725e-4c4e-b16f-7f83c0bb60c0")
+		)
+		(pad "13" thru_hole circle
+			(at 0 30.48)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 33 "GPIO35")
+			(uuid "8049be57-a721-43ed-9ffe-f21c2dbf5150")
+		)
+		(pad "14" thru_hole circle
+			(at 0 33.02)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 34 "GPIO0")
+			(uuid "773a9a7c-06fd-4fab-ac8e-07b9af93873b")
+		)
+		(pad "15" thru_hole circle
+			(at 0 35.56)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 35 "GPIO45")
+			(uuid "f5b3fe0f-45b6-4943-b5c1-180e981665d0")
+		)
+		(pad "16" thru_hole circle
+			(at 0 38.1)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 36 "GPIO48")
+			(uuid "fbe899ee-4e64-4d45-bb70-5d37c8d884ef")
+		)
+		(pad "17" thru_hole circle
+			(at 0 40.64)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 37 "GPIO47")
+			(uuid "944eda60-76f0-47a4-92ed-0029ab54d8f1")
+		)
+		(pad "18" thru_hole circle
+			(at 0 43.18)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 38 "GPIO21")
+			(uuid "2696b072-d84f-4bbd-abcb-cfcb7d7aca20")
+		)
+		(pad "19" thru_hole circle
+			(at 0 45.72)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 39 "GPIO20")
+			(uuid "df1bb3e1-b754-402a-a79f-3e8d412cc386")
+		)
+		(pad "20" thru_hole circle
+			(at 0 48.26)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 40 "GPIO19")
+			(uuid "d44576c0-a499-498c-bedf-0f542a0975fe")
+		)
+		(pad "21" thru_hole circle
+			(at 0 50.8)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 21 "GND")
+			(uuid "16e99798-29ce-4ba8-8193-12a82c1ec6fc")
+		)
+		(pad "22" thru_hole circle
+			(at 0 53.34)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 21 "GND")
+			(uuid "51425a1c-1bfd-48d7-b195-52f61c222434")
+		)
+		(embedded_fonts no)
+	)
+	(footprint "Custom:U1_3D"
+		(layer "F.Cu")
+		(uuid "02d7d47b-ebbc-40e7-938c-1f3489325bc2")
+		(at 95 66.67)
+		(property "Reference" "U1_3D"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "47ccb5ad-a2dc-48f5-be39-2cf067ecf568")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(property "Value" "ESP32-S3 DevKitC-1 N16R8"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "296b1f9b-547a-49fa-9fb7-4130a9204e5d")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(attr through_hole)
+		(model "${KIPRJMOD}/3Dmodels/ESP32S3_DevKitC1_N16R8.wrl"
+			(offset (xyz 0 0 0))
+			(scale (xyz 1 1 1))
+			(rotate (xyz 0 0 0))
+		)
+		(embedded_fonts no)
+	)
+	(footprint "Custom:J_RF1"
+		(layer "F.Cu")
+		(uuid "3503c99a-1cfe-4721-9e74-d6cea9f03c63")
+		(at 35 29.5)
+		(property "Reference" "J_RF1"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "818c7c6a-4008-4e6c-a17e-206f9589fcd6")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(property "Value" "nRF24L01+ 2x4 socket"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "8bdba18b-aa69-42ad-aecf-270a02b16d88")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(attr through_hole)
+		(fp_rect
+			(start -14.6 -7.95)
+			(end 14.6 7.95)
+			(stroke (width 0.25) (type default))
+			(fill none)
+			(layer "F.SilkS")
+			(uuid "81d90e91-3984-4fa3-bb21-6e5d52fb6c26")
+		)
+		(pad "1" thru_hole rect
+			(at -3.81 6.35)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 21 "GND")
+			(uuid "288e0a48-59be-4781-b171-8f60ae9c6b55")
+		)
+		(pad "2" thru_hole circle
+			(at -1.27 6.35)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 1 "3V3")
+			(uuid "f85b2682-bdd5-458f-9674-7c6e7e2cf333")
+		)
+		(pad "3" thru_hole circle
+			(at 1.27 6.35)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 3 "GPIO4")
+			(uuid "7c76cac3-481c-4e92-b9b8-1265bb81e7aa")
+		)
+		(pad "4" thru_hole circle
+			(at 3.81 6.35)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 12 "GPIO3")
+			(uuid "f323c41f-037f-4eb4-9dbb-f523ed9085a2")
+		)
+		(pad "5" thru_hole circle
+			(at -3.81 8.89)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 5 "GPIO6")
+			(uuid "2999a433-0398-4aab-b5ac-99c094fb7fb0")
+		)
+		(pad "6" thru_hole circle
+			(at -1.27 8.89)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 6 "GPIO7")
+			(uuid "a1cc754a-861a-4917-99ec-631a936f3039")
+		)
+		(pad "7" thru_hole circle
+			(at 1.27 8.89)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 4 "GPIO5")
+			(uuid "addbe6e5-5097-4a9f-99f9-88925d4d0783")
+		)
+		(pad "8" thru_hole circle
+			(at 3.81 8.89)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 21 "GND")
+			(uuid "46dfbd6c-9646-4eb1-a78b-d4e98b311779")
+		)
+		(model "${KIPRJMOD}/3Dmodels/nRF24L01_2x4.wrl"
+			(offset (xyz 0 0 0))
+			(scale (xyz 1 1 1))
+			(rotate (xyz 0 0 0))
+		)
+		(embedded_fonts no)
+	)
+	(footprint "Custom:J_RF2"
+		(layer "F.Cu")
+		(uuid "3d64dfdf-92dc-41a2-a3d6-437cb78b8e9b")
+		(at 155 29.5)
+		(property "Reference" "J_RF2"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "822c3d34-58ac-4bc7-9fca-86c329f1a538")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(property "Value" "nRF24L01+ 2x4 socket"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "83f88278-d79b-4370-b95f-7bc1730cc786")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(attr through_hole)
+		(fp_rect
+			(start -14.6 -7.95)
+			(end 14.6 7.95)
+			(stroke (width 0.25) (type default))
+			(fill none)
+			(layer "F.SilkS")
+			(uuid "52abe844-d8bc-4fec-9a74-153d2a4ed8cf")
+		)
+		(pad "1" thru_hole rect
+			(at -3.81 6.35)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 21 "GND")
+			(uuid "c5be906d-3cad-4f11-bb2e-3e29232c9aed")
+		)
+		(pad "2" thru_hole circle
+			(at -1.27 6.35)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 1 "3V3")
+			(uuid "f84472f9-b70c-4e62-a64b-a6d20ad0cecb")
+		)
+		(pad "3" thru_hole circle
+			(at 1.27 6.35)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 25 "GPIO2")
+			(uuid "e6f42b13-6f95-43f1-85b5-9baf6b75b9ff")
+		)
+		(pad "4" thru_hole circle
+			(at 3.81 6.35)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 24 "GPIO1")
+			(uuid "915e9dea-5372-494b-9266-54c64b33d415")
+		)
+		(pad "5" thru_hole circle
+			(at -3.81 8.89)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 5 "GPIO6")
+			(uuid "15dbe4dd-b150-4e7b-bc76-98cb82e4fe21")
+		)
+		(pad "6" thru_hole circle
+			(at -1.27 8.89)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 6 "GPIO7")
+			(uuid "e6926769-9946-4940-af1b-115d9abad941")
+		)
+		(pad "7" thru_hole circle
+			(at 1.27 8.89)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 4 "GPIO5")
+			(uuid "8c025e9f-87f0-4b99-a9ff-e3434577bb9a")
+		)
+		(pad "8" thru_hole circle
+			(at 3.81 8.89)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 21 "GND")
+			(uuid "7de141a1-bf16-4f0b-a595-85a185c28eba")
+		)
+		(model "${KIPRJMOD}/3Dmodels/nRF24L01_2x4.wrl"
+			(offset (xyz 0 0 0))
+			(scale (xyz 1 1 1))
+			(rotate (xyz 0 0 0))
+		)
+		(embedded_fonts no)
+	)
+	(footprint "Custom:J_TFT_BUS"
+		(layer "F.Cu")
+		(uuid "2cad03ed-c744-4757-8b9b-8db31207e8cd")
+		(at 35 74)
+		(property "Reference" "J_TFT_BUS"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "c528a3c2-57f6-4237-969f-527747c96270")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(property "Value" "TFT BUS 1x8 external"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "acf5f187-2450-4f8f-9a44-5decccc4a0d0")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(attr through_hole)
+		(fp_rect
+			(start -11.5 24.0)
+			(end 11.5 29.5)
+			(stroke (width 0.25) (type default))
+			(fill none)
+			(layer "F.SilkS")
+			(uuid "e2bcd8ed-8ad6-4c28-87a8-8a1b7783b4cb")
+		)
+		(pad "1" thru_hole rect
+			(at -8.89 26.67)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 1 "3V3")
+			(uuid "abb38915-36f2-4d89-97a5-fcbb1dde6dbd")
+		)
+		(pad "2" thru_hole circle
+			(at -6.3500000000000005 26.67)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 21 "GND")
+			(uuid "e76180d2-546d-4bd7-b2bd-692aab476501")
+		)
+		(pad "3" thru_hole circle
+			(at -3.8100000000000005 26.67)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 17 "GPIO12")
+			(uuid "ecb2383a-3eba-4619-a561-86adcd3d4c5e")
+		)
+		(pad "4" thru_hole circle
+			(at -1.2700000000000005 26.67)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 16 "GPIO11")
+			(uuid "7ef42873-1e9c-4ace-9f75-312eae963f55")
+		)
+		(pad "5" thru_hole circle
+			(at 1.2699999999999996 26.67)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 14 "GPIO9")
+			(uuid "c786809c-e522-45d1-8320-ed8d3ecfca3c")
+		)
+		(pad "6" thru_hole circle
+			(at 3.8099999999999987 26.67)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 15 "GPIO10")
+			(uuid "69df82cc-5f17-4614-9149-6da755afe867")
+		)
+		(pad "7" thru_hole circle
+			(at 6.35 26.67)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 11 "GPIO8")
+			(uuid "29e68310-837e-4876-a8f4-5666d4d46d98")
+		)
+		(pad "8" thru_hole circle
+			(at 8.89 26.67)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 1 "3V3")
+			(uuid "4030e61b-179e-41f1-8631-9cb6deaa405d")
+		)
+		(embedded_fonts no)
+	)
+	(footprint "Custom:J_GPS1"
+		(layer "F.Cu")
+		(uuid "41e0676e-9d80-4420-b0c9-7aae59b8c3aa")
+		(at 155 74)
+		(property "Reference" "J_GPS1"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "8f8622e8-a840-47eb-8416-4c13bac2fb65")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(property "Value" "NEO-6M GPS 4P"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "d9f57bf5-5f52-4caa-9b35-3b7d99819eb2")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(attr through_hole)
+		(fp_rect
+			(start -13.0 -13.0)
+			(end 13.0 13.0)
+			(stroke (width 0.25) (type default))
+			(fill none)
+			(layer "F.SilkS")
+			(uuid "4322f640-7f1f-412f-815f-ded836adaf09")
+		)
+		(pad "1" thru_hole rect
+			(at -3.81 11.43)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 1 "3V3")
+			(uuid "fe91bd3d-f899-4e99-afc0-6aac27769276")
+		)
+		(pad "2" thru_hole circle
+			(at -1.27 11.43)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 21 "GND")
+			(uuid "dc0a3a98-6688-4fa0-9f3e-42cae7de0cc9")
+		)
+		(pad "3" thru_hole circle
+			(at 1.27 11.43)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 10 "GPIO18")
+			(uuid "c4a7a067-e20c-464f-8e2c-6dcafaa85217")
+		)
+		(pad "4" thru_hole circle
+			(at 3.81 11.43)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 9 "GPIO17")
+			(uuid "ca0d9141-4fa4-43ba-83d7-a41d51f07d47")
+		)
+		(model "${KIPRJMOD}/3Dmodels/NEO6M.wrl"
+			(offset (xyz 0 0 0))
+			(scale (xyz 1 1 1))
+			(rotate (xyz 0 0 0))
+		)
+		(embedded_fonts no)
+	)
+	(footprint "Custom:J_ENC1"
+		(layer "F.Cu")
+		(uuid "37455d3e-e1a0-46ea-ab98-25390808d68a")
+		(at 30 112)
+		(property "Reference" "J_ENC1"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "8db45c5a-7bc8-42f5-9f2a-076ffc04a690")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(property "Value" "KY-040 5P"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "e52e22ee-17c5-4e45-97d6-d9624b0b785e")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(attr through_hole)
+		(fp_rect
+			(start -10.0 -5.0)
+			(end 10.0 5.0)
+			(stroke (width 0.25) (type default))
+			(fill none)
+			(layer "F.SilkS")
+			(uuid "1087b384-4dcf-4813-9c9c-b3ebe1b61808")
+		)
+		(pad "1" thru_hole rect
+			(at -5.08 0)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 21 "GND")
+			(uuid "fa0e3934-eda3-4634-a1a0-cd3fac55330f")
+		)
+		(pad "2" thru_hole circle
+			(at -2.54 0)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 1 "3V3")
+			(uuid "49f9911a-fdac-47a7-8efb-3dedacfec702")
+		)
+		(pad "3" thru_hole circle
+			(at 0 0)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 29 "GPIO39")
+			(uuid "8fe4747c-5a92-4058-a3fd-433ef6899b07")
+		)
+		(pad "4" thru_hole circle
+			(at 2.54 0)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 28 "GPIO40")
+			(uuid "66520920-6ab3-48cd-8bd8-2c881c5609b7")
+		)
+		(pad "5" thru_hole circle
+			(at 5.08 0)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net 27 "GPIO41")
+			(uuid "1bb4bfdf-bf8f-49e0-9086-ba56cee5865a")
+		)
+		(model "${KIPRJMOD}/3Dmodels/KY040_Encoder.wrl"
+			(offset (xyz 0 0 0))
+			(scale (xyz 1 1 1))
+			(rotate (xyz 0 0 0))
+		)
+		(embedded_fonts no)
+	)
+	(footprint "Custom:SW1"
+		(layer "F.Cu")
+		(uuid "29d5f087-ef33-4b80-844c-02498460f30e")
+		(at 86 112)
+		(property "Reference" "SW1"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "e74b9660-8dbb-4d7f-9060-4eb0e437e631")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(property "Value" "6x6 tactile"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "269317a7-d275-4892-a4a9-81caaa00105d")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(attr through_hole)
+		(fp_rect
+			(start -4.5 -4.5)
+			(end 4.5 4.5)
+			(stroke (width 0.25) (type default))
+			(fill none)
+			(layer "F.SilkS")
+			(uuid "52edc7bd-de5a-4453-9db6-c502c6d170ef")
+		)
+		(pad "1" thru_hole rect
+			(at -2.54 -2.54)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net 18 "GPIO13")
+			(uuid "202572d6-bf97-4860-bdcd-1f42ea6ca15e")
+		)
+		(pad "2" thru_hole circle
+			(at -2.54 2.54)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net 18 "GPIO13")
+			(uuid "3b0f3cbf-4ed0-40e2-bd9b-ca7eb78d0e59")
+		)
+		(pad "3" thru_hole circle
+			(at 2.54 -2.54)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net 21 "GND")
+			(uuid "2eb2a6bd-1666-451c-89ed-b4b1f4eb4bf6")
+		)
+		(pad "4" thru_hole circle
+			(at 2.54 2.54)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net 21 "GND")
+			(uuid "07de85a0-641a-4e0c-8083-7e1e1a09d65b")
+		)
+		(model "${KIPRJMOD}/3Dmodels/Tactile_6x6.wrl"
+			(offset (xyz 0 0 0))
+			(scale (xyz 1 1 1))
+			(rotate (xyz 0 0 0))
+		)
+		(embedded_fonts no)
+	)
+	(footprint "Custom:SW2"
+		(layer "F.Cu")
+		(uuid "b8bbd99a-9d6a-4ad2-8271-ca0a716ab2fb")
+		(at 104 112)
+		(property "Reference" "SW2"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "a1f32e89-ecff-4d56-8d9d-e87d6a3aa286")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(property "Value" "6x6 tactile"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "50bd3d1c-573c-4f86-916f-7928f6b2aad3")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(attr through_hole)
+		(fp_rect
+			(start -4.5 -4.5)
+			(end 4.5 4.5)
+			(stroke (width 0.25) (type default))
+			(fill none)
+			(layer "F.SilkS")
+			(uuid "cf391a74-0ecc-49d2-8b4f-7e1da0f0fcf6")
+		)
+		(pad "1" thru_hole rect
+			(at -2.54 -2.54)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net 19 "GPIO14")
+			(uuid "3bc90f46-453d-4420-99fa-ec121769d846")
+		)
+		(pad "2" thru_hole circle
+			(at -2.54 2.54)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net 19 "GPIO14")
+			(uuid "0d1535d3-e50f-46e8-bb5e-8df0157a7a52")
+		)
+		(pad "3" thru_hole circle
+			(at 2.54 -2.54)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net 21 "GND")
+			(uuid "de816b4f-58bb-4791-ad22-56993d2e15b8")
+		)
+		(pad "4" thru_hole circle
+			(at 2.54 2.54)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net 21 "GND")
+			(uuid "b29f1b82-bdbe-42f6-a315-5720c91cd49d")
+		)
+		(model "${KIPRJMOD}/3Dmodels/Tactile_6x6.wrl"
+			(offset (xyz 0 0 0))
+			(scale (xyz 1 1 1))
+			(rotate (xyz 0 0 0))
+		)
+		(embedded_fonts no)
+	)
+	(footprint "Custom:SW3"
+		(layer "F.Cu")
+		(uuid "8cc29f6d-65bd-4966-ba2b-127ccec6aa42")
+		(at 122 112)
+		(property "Reference" "SW3"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "f600f589-a0a9-42c2-b7d7-f2dddbae5781")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(property "Value" "6x6 tactile"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "c628d77d-3c33-4849-afb2-1fc9e0d75be7")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(attr through_hole)
+		(fp_rect
+			(start -4.5 -4.5)
+			(end 4.5 4.5)
+			(stroke (width 0.25) (type default))
+			(fill none)
+			(layer "F.SilkS")
+			(uuid "c6144803-de19-41fc-9a1c-7fa480de344a")
+		)
+		(pad "1" thru_hole rect
+			(at -2.54 -2.54)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net 7 "GPIO15")
+			(uuid "2d1b4403-78b0-4c9f-a920-ed7a20471451")
+		)
+		(pad "2" thru_hole circle
+			(at -2.54 2.54)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net 7 "GPIO15")
+			(uuid "576bd691-00ed-4a1b-ba0e-fafcd642fdcf")
+		)
+		(pad "3" thru_hole circle
+			(at 2.54 -2.54)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net 21 "GND")
+			(uuid "1ca80d1b-f9eb-4d13-8e35-59f3691698ff")
+		)
+		(pad "4" thru_hole circle
+			(at 2.54 2.54)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net 21 "GND")
+			(uuid "6b3d84c4-7ebf-42ae-b75f-f0ec0367f39c")
+		)
+		(model "${KIPRJMOD}/3Dmodels/Tactile_6x6.wrl"
+			(offset (xyz 0 0 0))
+			(scale (xyz 1 1 1))
+			(rotate (xyz 0 0 0))
+		)
+		(embedded_fonts no)
+	)
+	(footprint "Custom:SW4"
+		(layer "F.Cu")
+		(uuid "e4e16a68-2a48-4953-a04c-f3fc9483c46a")
+		(at 140 112)
+		(property "Reference" "SW4"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "42443574-bc1c-4744-8ceb-f8a627ea5e29")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(property "Value" "6x6 tactile"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "4975a494-73f3-4f42-908b-5cfe8add0d45")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(attr through_hole)
+		(fp_rect
+			(start -4.5 -4.5)
+			(end 4.5 4.5)
+			(stroke (width 0.25) (type default))
+			(fill none)
+			(layer "F.SilkS")
+			(uuid "e1a84a8a-c7bb-4614-8bbd-414dc5cd20db")
+		)
+		(pad "1" thru_hole rect
+			(at -2.54 -2.54)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net 8 "GPIO16")
+			(uuid "5fe7a264-ee51-4c16-aa7a-a8bdb59287c2")
+		)
+		(pad "2" thru_hole circle
+			(at -2.54 2.54)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net 8 "GPIO16")
+			(uuid "2f056ea9-e886-42cd-95d9-395900b17147")
+		)
+		(pad "3" thru_hole circle
+			(at 2.54 -2.54)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net 21 "GND")
+			(uuid "c9e61806-3d0b-4ec4-9ee3-10227d20a865")
+		)
+		(pad "4" thru_hole circle
+			(at 2.54 2.54)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net 21 "GND")
+			(uuid "17d77704-11bd-4ce4-9a68-15f8ed81d982")
+		)
+		(model "${KIPRJMOD}/3Dmodels/Tactile_6x6.wrl"
+			(offset (xyz 0 0 0))
+			(scale (xyz 1 1 1))
+			(rotate (xyz 0 0 0))
+		)
+		(embedded_fonts no)
+	)
+	(footprint "Custom:BZ1"
+		(layer "F.Cu")
+		(uuid "52a58082-06bf-41b8-b132-54b9c4b70ff1")
+		(at 158 112)
+		(property "Reference" "BZ1"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "ce1d8df4-b259-4d6e-9018-8da5d3b7411e")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(property "Value" "Active buzzer"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "343ee7ea-4633-4901-8abe-8d394ca25b50")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(attr through_hole)
+		(fp_rect
+			(start -6.0 -6.0)
+			(end 6.0 6.0)
+			(stroke (width 0.25) (type default))
+			(fill none)
+			(layer "F.SilkS")
+			(uuid "4b776750-ea30-4b18-b649-2b1ed915a3ff")
+		)
+		(pad "1" thru_hole rect
+			(at -3.81 0)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net 1 "3V3")
+			(uuid "f12aebe8-d760-4cd7-90f3-9f607d0e3a97")
+		)
+		(pad "2" thru_hole circle
+			(at 3.81 0)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net 41 "BUZZER_LOW")
+			(uuid "3ec89072-af22-497e-9d1f-2af563c06306")
+		)
+		(model "${KIPRJMOD}/3Dmodels/Buzzer_12mm.wrl"
+			(offset (xyz 0 0 0))
+			(scale (xyz 1 1 1))
+			(rotate (xyz 0 0 0))
+		)
+		(embedded_fonts no)
+	)
+	(footprint "Custom:Q1"
+		(layer "F.Cu")
+		(uuid "48c50b2c-54ff-4570-bd47-e30def646747")
+		(at 158 123)
+		(property "Reference" "Q1"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "ae51bd19-e5af-473a-90c2-969d71e808fa")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(property "Value" "2N3904 TO-92"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "5bf24b5d-2c21-459f-aa2d-e289397fb192")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(attr through_hole)
+		(fp_rect
+			(start -4.0 -2.5)
+			(end 4.0 2.5)
+			(stroke (width 0.25) (type default))
+			(fill none)
+			(layer "F.SilkS")
+			(uuid "99e336aa-5125-4ce5-9ad1-3b611e858985")
+		)
+		(pad "1" thru_hole rect
+			(at -2.54 0)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net 42 "BUZZER_BASE")
+			(uuid "aca0d4a1-61d0-4648-8075-16a4c63dc629")
+		)
+		(pad "2" thru_hole circle
+			(at 0 0)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net 41 "BUZZER_LOW")
+			(uuid "2b99003b-135c-4f2a-81cc-eceba10dd26a")
+		)
+		(pad "3" thru_hole circle
+			(at 2.54 0)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net 21 "GND")
+			(uuid "5b5834ec-3896-47dd-be9b-da36b0d56dbe")
+		)
+		(model "${KIPRJMOD}/3Dmodels/2N3904_TO92.wrl"
+			(offset (xyz 0 0 0))
+			(scale (xyz 1 1 1))
+			(rotate (xyz 0 0 0))
+		)
+		(embedded_fonts no)
+	)
+	(footprint "Custom:R5"
+		(layer "F.Cu")
+		(uuid "b449ebf8-e1ef-4c85-921d-1c34ad7aaabc")
+		(at 145 123)
+		(property "Reference" "R5"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "73846fc1-2951-4aa3-b715-60d364414f17")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(property "Value" "1k"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "c34d749b-33c5-4e3f-bbfd-00207a8bbf60")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(attr through_hole)
+		(fp_rect
+			(start -4.0 -1.5)
+			(end 4.0 1.5)
+			(stroke (width 0.25) (type default))
+			(fill none)
+			(layer "F.SilkS")
+			(uuid "dfc58fa4-e8b5-462c-a764-c93efe4e5a1b")
+		)
+		(pad "1" thru_hole rect
+			(at -2.54 0)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net 26 "GPIO42")
+			(uuid "258f8f95-97c7-43de-ab56-a38268e0c4a4")
+		)
+		(pad "2" thru_hole circle
+			(at 2.54 0)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net 42 "BUZZER_BASE")
+			(uuid "d89ffe03-01af-4c34-b403-7464d0226f1d")
+		)
+		(model "${KIPRJMOD}/3Dmodels/Resistor_THT.wrl"
+			(offset (xyz 0 0 0))
+			(scale (xyz 1 1 1))
+			(rotate (xyz 0 0 0))
+		)
+		(embedded_fonts no)
+	)
+	(footprint "Custom:R6"
+		(layer "F.Cu")
+		(uuid "89201fcf-6189-4446-b0c8-b745e24cbe9b")
+		(at 145 128)
+		(property "Reference" "R6"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "bbdcb6d2-35ed-405a-bed3-599143d66414")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(property "Value" "100k"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "990459cb-ee84-44f2-92f5-7bb2c7d1d9a5")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(attr through_hole)
+		(fp_rect
+			(start -4.0 -1.5)
+			(end 4.0 1.5)
+			(stroke (width 0.25) (type default))
+			(fill none)
+			(layer "F.SilkS")
+			(uuid "834182c4-59a7-4e2a-b88f-c5b0ca0dea79")
+		)
+		(pad "1" thru_hole rect
+			(at -2.54 0)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net 42 "BUZZER_BASE")
+			(uuid "02f7659d-099f-4eba-9d8a-0ddc0bf5c7f8")
+		)
+		(pad "2" thru_hole circle
+			(at 2.54 0)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net 21 "GND")
+			(uuid "830b721c-07e1-447d-8ed1-a8cb9420a328")
+		)
+		(model "${KIPRJMOD}/3Dmodels/Resistor_THT.wrl"
+			(offset (xyz 0 0 0))
+			(scale (xyz 1 1 1))
+			(rotate (xyz 0 0 0))
+		)
+		(embedded_fonts no)
+	)
+	(footprint "Custom:J_PWR"
+		(layer "F.Cu")
+		(uuid "f9b80f0f-b6b9-4b9c-8137-feb448c08dfc")
+		(at 176 123)
+		(property "Reference" "J_PWR"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "fc353cdd-07cb-4c64-b5c2-88e3deda2971")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(property "Value" "5V INPUT"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "0adb5418-ecbf-46f1-ac68-48d2df603e92")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(attr through_hole)
+		(fp_rect
+			(start -3.5 -3.5)
+			(end 3.5 3.5)
+			(stroke (width 0.25) (type default))
+			(fill none)
+			(layer "F.SilkS")
+			(uuid "cb2eeb24-bb5f-46c6-b0a5-5673a68d95eb")
+		)
+		(pad "1" thru_hole rect
+			(at 0 0)
+			(size 2.4 2.4)
+			(drill 1.1)
+			(layers "*.Cu" "*.Mask")
+			(net 43 "5V_IN")
+			(uuid "2eac6399-96eb-437b-aa95-57497c7563b7")
+		)
+		(pad "2" thru_hole circle
+			(at 0 2.54)
+			(size 2.4 2.4)
+			(drill 1.1)
+			(layers "*.Cu" "*.Mask")
+			(net 21 "GND")
+			(uuid "7cbdaade-05eb-4320-9d10-b91fc5f9b204")
+		)
+		(model "${KIPRJMOD}/3Dmodels/Header_1x02.wrl"
+			(offset (xyz 0 0 0))
+			(scale (xyz 1 1 1))
+			(rotate (xyz 0 0 0))
+		)
+		(embedded_fonts no)
+	)
+	(footprint "Custom:F1"
+		(layer "F.Cu")
+		(uuid "e0460c9d-c1ab-4ca8-9e6a-0cf6f57302e8")
+		(at 162 122)
+		(property "Reference" "F1"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "437a339a-9f4a-4470-a286-97d4759034cc")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(property "Value" "PTC 0.75A"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "b0481f96-68dc-401b-801c-c70d99a226f1")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(attr through_hole)
+		(fp_rect
+			(start -4.0 -1.5)
+			(end 4.0 1.5)
+			(stroke (width 0.25) (type default))
+			(fill none)
+			(layer "F.SilkS")
+			(uuid "2caf6196-cc51-489c-9676-e2254a4d3126")
+		)
+		(pad "1" thru_hole rect
+			(at -2.54 0)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net 43 "5V_IN")
+			(uuid "edfe7d83-441d-489c-9958-bde8ea09d72d")
+		)
+		(pad "2" thru_hole circle
+			(at 2.54 0)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net 44 "5V_FUSED")
+			(uuid "6362a2c3-2c03-4768-928e-0d7eb0620de3")
+		)
+		(model "${KIPRJMOD}/3Dmodels/Fuse_PTC.wrl"
+			(offset (xyz 0 0 0))
+			(scale (xyz 1 1 1))
+			(rotate (xyz 0 0 0))
+		)
+		(embedded_fonts no)
+	)
+	(footprint "Custom:D1"
+		(layer "F.Cu")
+		(uuid "39e30be1-1321-42cc-8a9f-39d93d92bc76")
+		(at 151 122)
+		(property "Reference" "D1"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "503cc45a-ef40-4524-bca1-1ddd56fbd7d0")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(property "Value" "SS14"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "6e0cb2b3-c69e-469f-a68b-77276ee662f0")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(attr through_hole)
+		(fp_rect
+			(start -4.0 -1.5)
+			(end 4.0 1.5)
+			(stroke (width 0.25) (type default))
+			(fill none)
+			(layer "F.SilkS")
+			(uuid "7dbad7f5-4d4c-47f2-a5dc-ae975a392b1a")
+		)
+		(pad "1" thru_hole rect
+			(at -2.54 0)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net 44 "5V_FUSED")
+			(uuid "54a6ec31-93da-4f7f-af91-0be22a060a29")
+		)
+		(pad "2" thru_hole circle
+			(at 2.54 0)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net 20 "5V_PROTECTED")
+			(uuid "a3b6a092-ef1b-41bf-8dbd-9a0cf45caf01")
+		)
+		(model "${KIPRJMOD}/3Dmodels/Diode_SS14.wrl"
+			(offset (xyz 0 0 0))
+			(scale (xyz 1 1 1))
+			(rotate (xyz 0 0 0))
+		)
+		(embedded_fonts no)
+	)
+	(footprint "Custom:J_BAT"
+		(layer "F.Cu")
+		(uuid "3aa4f3e3-1b07-48e7-9602-ef3d85162005")
+		(at 176 88)
+		(property "Reference" "J_BAT"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "e070fb13-ee6f-45c9-947d-a37b9002ee4c")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(property "Value" "BATTERY SENSE"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "945e8ca4-7527-41f1-851c-dfc8de0118ae")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(attr through_hole)
+		(fp_rect
+			(start -3.5 -3.5)
+			(end 3.5 3.5)
+			(stroke (width 0.25) (type default))
+			(fill none)
+			(layer "F.SilkS")
+			(uuid "800639fa-8819-4c3f-b020-2a1f866c0fd1")
+		)
+		(pad "1" thru_hole rect
+			(at 0 0)
+			(size 2.4 2.4)
+			(drill 1.1)
+			(layers "*.Cu" "*.Mask")
+			(net 45 "VBAT_RAW")
+			(uuid "62716e19-e837-4134-85d3-a95784b75454")
+		)
+		(pad "2" thru_hole circle
+			(at 0 2.54)
+			(size 2.4 2.4)
+			(drill 1.1)
+			(layers "*.Cu" "*.Mask")
+			(net 21 "GND")
+			(uuid "d16b2a34-7428-4514-ac2b-e720e1a2e5c3")
+		)
+		(model "${KIPRJMOD}/3Dmodels/Header_1x02.wrl"
+			(offset (xyz 0 0 0))
+			(scale (xyz 1 1 1))
+			(rotate (xyz 0 0 0))
+		)
+		(embedded_fonts no)
+	)
+	(footprint "Custom:R13"
+		(layer "F.Cu")
+		(uuid "d1f377e1-f188-49a8-be3c-ff417cb84386")
+		(at 164 94)
+		(property "Reference" "R13"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "d36e5f3e-c065-468f-a133-2a6704a3c419")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(property "Value" "2.2k"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "8d0839c2-677c-42ab-8a29-6a9a1cf03722")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(attr through_hole)
+		(fp_rect
+			(start -4.0 -1.5)
+			(end 4.0 1.5)
+			(stroke (width 0.25) (type default))
+			(fill none)
+			(layer "F.SilkS")
+			(uuid "5fe64759-242c-4ad0-8f9b-45c922190113")
+		)
+		(pad "1" thru_hole rect
+			(at -2.54 0)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net 45 "VBAT_RAW")
+			(uuid "7016a680-ebae-42f2-baf3-a8a3817f99a8")
+		)
+		(pad "2" thru_hole circle
+			(at 2.54 0)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net 46 "BAT_ADC")
+			(uuid "bfa1e2f6-d0ef-4463-9b2a-6cd47c8bfad1")
+		)
+		(model "${KIPRJMOD}/3Dmodels/Resistor_THT.wrl"
+			(offset (xyz 0 0 0))
+			(scale (xyz 1 1 1))
+			(rotate (xyz 0 0 0))
+		)
+		(embedded_fonts no)
+	)
+	(footprint "Custom:R14"
+		(layer "F.Cu")
+		(uuid "621485b2-dd3f-4d8d-8350-644c2158c89c")
+		(at 164 100)
+		(property "Reference" "R14"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "258707b3-76df-4429-8879-318e0444dc71")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(property "Value" "1k"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "2f29b5a4-cf72-4bbf-8c0d-bb5ca40faedd")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(attr through_hole)
+		(fp_rect
+			(start -4.0 -1.5)
+			(end 4.0 1.5)
+			(stroke (width 0.25) (type default))
+			(fill none)
+			(layer "F.SilkS")
+			(uuid "942d04a4-9f7d-4cbf-97b3-e33d9ac62c7f")
+		)
+		(pad "1" thru_hole rect
+			(at -2.54 0)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net 46 "BAT_ADC")
+			(uuid "25498ae7-2a19-4c4c-9a24-9d6cd1e1e381")
+		)
+		(pad "2" thru_hole circle
+			(at 2.54 0)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net 21 "GND")
+			(uuid "c0359eba-f5d8-44f8-8b56-b0ba2c571a6c")
+		)
+		(model "${KIPRJMOD}/3Dmodels/Resistor_THT.wrl"
+			(offset (xyz 0 0 0))
+			(scale (xyz 1 1 1))
+			(rotate (xyz 0 0 0))
+		)
+		(embedded_fonts no)
+	)
+	(footprint "Custom:C8"
+		(layer "F.Cu")
+		(uuid "447dffae-0fa1-4ed9-b5e0-e307eed9a784")
+		(at 176 99)
+		(property "Reference" "C8"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "f05c4ba2-94ef-4f0c-8350-5d49fa581718")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(property "Value" "100nF"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "1dc3a6c2-47f3-42ec-9be0-36020a377e76")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(attr through_hole)
+		(fp_rect
+			(start -3.0 -2.0)
+			(end 3.0 2.0)
+			(stroke (width 0.25) (type default))
+			(fill none)
+			(layer "F.SilkS")
+			(uuid "db394438-cc7e-4123-8abc-def012345678")
+		)
+		(pad "1" thru_hole rect
+			(at -2.54 0)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net 46 "BAT_ADC")
+			(uuid "a1234567-89ab-cdef-0123-456789abcdef")
+		)
+		(pad "2" thru_hole circle
+			(at 2.54 0)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net 21 "GND")
+			(uuid "fedcba98-7654-3210-fedc-ba9876543210")
+		)
+		(model "${KIPRJMOD}/3Dmodels/Capacitor_THT.wrl"
+			(offset (xyz 0 0 0))
+			(scale (xyz 1 1 1))
+			(rotate (xyz 0 0 0))
+		)
+		(embedded_fonts no)
+	)
+	(gr_text "ESP32-S3 N16R8 MODULAR CARRIER"
+		(at 100 15.5 0)
+		(layer "F.SilkS")
+		(effects (font (size 1.65 1.65) (thickness 0.28)))
+		(uuid "a0819bee-97f1-4792-8453-dbc999770a25")
+	)
+	(gr_text "REV4.1  •  2-LAYER  •  SOCKETED DEVKITC-1"
+		(at 100 18.5 0)
+		(layer "F.SilkS")
+		(effects (font (size 0.85 0.85) (thickness 0.14)))
+		(uuid "860aa9a4-ea44-4332-89b6-273faa32d965")
+	)
+	(gr_rect
+		(start 24 12)
+		(end 46 23)
+		(stroke (width 0.3) (type default))
+		(fill none)
+		(layer "F.SilkS")
+		(uuid "5e144081-1c66-40f6-9738-444e54f2e2d8")
+	)
+	(gr_rect
+		(start 144 12)
+		(end 166 23)
+		(stroke (width 0.3) (type default))
+		(fill none)
+		(layer "F.SilkS")
+		(uuid "6c6fed27-7b4f-4248-b8f3-b7b5f81335e8")
+	)
+	(gr_text "ANTENNA KEEP-OUT"
+		(at 35 17.2 0)
+		(layer "F.SilkS")
+		(effects (font (size 1.0 1.0) (thickness 0.16)))
+		(uuid "73bbce7b-8c83-46d6-a7a2-f1b09982867a")
+	)
+	(gr_text "ANTENNA KEEP-OUT"
+		(at 155 17.2 0)
+		(layer "F.SilkS")
+		(effects (font (size 1.0 1.0) (thickness 0.16)))
+		(uuid "54c37188-1924-4ce3-a1be-31f13302db01")
+	)
+	(gr_rect
+		(start 63.5 28)
+		(end 126.5 108)
+		(stroke (width 0.35) (type default))
+		(fill none)
+		(layer "F.SilkS")
+		(uuid "408d888e-58eb-4a6d-9882-e513bf5ad5ad")
+	)
+	(gr_rect
+		(start 67 31.5)
+		(end 123 105)
+		(stroke (width 0.18) (type default))
+		(fill none)
+		(layer "F.SilkS")
+		(uuid "df41ccb6-f19f-4035-ba76-0676874e964f")
+	)
+	(gr_text "ESP32-S3 DEVKITC-1"
+		(at 95 69 90)
+		(layer "F.SilkS")
+		(effects (font (size 1.55 1.55) (thickness 0.24)))
+		(uuid "91e07a66-fb02-4787-9ba0-9c4842f6ad38")
+	)
+	(gr_text "SOCKETED / REMOVABLE"
+		(at 95 89 90)
+		(layer "F.SilkS")
+		(effects (font (size 0.85 0.85) (thickness 0.15)))
+		(uuid "53e16c32-e6e3-4e75-8356-1786b8a51bb4")
+	)
+	(gr_text "RF1"
+		(at 35 26.7 0)
+		(layer "F.SilkS")
+		(effects (font (size 1.0 1.0) (thickness 0.17)))
+		(uuid "ab6593fb-3981-4bcc-ab0b-5ede4ba0af58")
+	)
+	(gr_text "nRF24L01+"
+		(at 35 24.8 0)
+		(layer "F.SilkS")
+		(effects (font (size 1.0 1.0) (thickness 0.17)))
+		(uuid "2ef2e7eb-247e-43e3-9f85-1ae3e3badc81")
+	)
+	(gr_text "RF2"
+		(at 155 26.7 0)
+		(layer "F.SilkS")
+		(effects (font (size 1.0 1.0) (thickness 0.17)))
+		(uuid "5b18c99e-09e6-4277-862d-a73a5613710b")
+	)
+	(gr_text "nRF24L01+"
+		(at 155 24.8 0)
+		(layer "F.SilkS")
+		(effects (font (size 1.0 1.0) (thickness 0.17)))
+		(uuid "e8365405-bf20-4e5c-bb77-b53a6c8e6ad3")
+	)
+	(gr_text "TFT BUS 1x8"
+		(at 35 106.6 0)
+		(layer "F.SilkS")
+		(effects (font (size 1.0 1.0) (thickness 0.17)))
+		(uuid "a78d48f5-0b9a-4944-869c-c28e3e435c4a")
+	)
+	(gr_text "NEO-6M / UART"
+		(at 155 104.5 0)
+		(layer "F.SilkS")
+		(effects (font (size 1.0 1.0) (thickness 0.17)))
+		(uuid "db1f1c12-c8e2-4ffc-853c-cdef1a1c746f")
+	)
+	(gr_text "KY-040"
+		(at 30 118 0)
+		(layer "F.SilkS")
+		(effects (font (size 1.0 1.0) (thickness 0.17)))
+		(uuid "c83ae201-45aa-4b82-8131-d323442850e7")
+	)
+	(gr_text "UP"
+		(at 86 119.2 0)
+		(layer "F.SilkS")
+		(effects (font (size 1.0 1.0) (thickness 0.17)))
+		(uuid "d1f98f4b-27d0-49f2-91df-4ba2e008d46f")
+	)
+	(gr_text "DOWN"
+		(at 104 119.2 0)
+		(layer "F.SilkS")
+		(effects (font (size 1.0 1.0) (thickness 0.17)))
+		(uuid "201fa0ca-c571-4e4d-8951-8772c4dc0d67")
+	)
+	(gr_text "ENTER"
+		(at 122 119.2 0)
+		(layer "F.SilkS")
+		(effects (font (size 1.0 1.0) (thickness 0.17)))
+		(uuid "48c92653-a1af-441f-a994-c7811323a6ba")
+	)
+	(gr_text "BACK"
+		(at 140 119.2 0)
+		(layer "F.SilkS")
+		(effects (font (size 1.0 1.0) (thickness 0.17)))
+		(uuid "d5359bd8-8ea6-4426-bedb-5ad5898a77f6")
+	)
+	(gr_text "BUZZER"
+		(at 158 106.5 0)
+		(layer "F.SilkS")
+		(effects (font (size 1.0 1.0) (thickness 0.17)))
+		(uuid "b61d5f4e-2f53-46f3-acc7-200b0aeb0b41")
+	)
+	(gr_text "PWR"
+		(at 176 118 90)
+		(layer "F.SilkS")
+		(effects (font (size 1.0 1.0) (thickness 0.17)))
+		(uuid "6956d4c9-cb42-4ac9-9d0e-71d611f146ed")
+	)
+	(gr_text "BAT"
+		(at 176 84 90)
+		(layer "F.SilkS")
+		(effects (font (size 1.0 1.0) (thickness 0.17)))
+		(uuid "905a81d4-d529-43cb-8ea7-0fda3a248a93")
+	)
+	(gr_text "REV4.1"
+		(at 17.5 70 90)
+		(layer "F.SilkS")
+		(effects (font (size 1.0 1.0) (thickness 0.17)))
+		(uuid "47aa33e9-82c1-4c9c-be44-ed07bac284a6")
+	)
+	(gr_text "3V3"
+		(at 78.8 40.0 0)
+		(layer "F.SilkS")
+		(effects (font (size 0.55 0.55) (thickness 0.1)))
+		(uuid "f4dba878-1ded-4777-8170-88bf7b19fbb6")
+	)
+	(gr_text "3V3"
+		(at 78.8 42.54 0)
+		(layer "F.SilkS")
+		(effects (font (size 0.55 0.55) (thickness 0.1)))
+		(uuid "46b85de1-3ce7-46ac-8e52-d3e184a32668")
+	)
+	(gr_text "RST"
+		(at 78.8 45.08 0)
+		(layer "F.SilkS")
+		(effects (font (size 0.55 0.55) (thickness 0.1)))
+		(uuid "3b2c2a31-1ab9-4660-ad2d-44b91b0372c0")
+	)
+	(gr_text "GPIO4"
+		(at 78.8 47.62 0)
+		(layer "F.SilkS")
+		(effects (font (size 0.55 0.55) (thickness 0.1)))
+		(uuid "8a3bc262-96d9-43a9-987f-cbbadd45bd58")
+	)
+	(gr_text "GPIO5"
+		(at 78.8 50.16 0)
+		(layer "F.SilkS")
+		(effects (font (size 0.55 0.55) (thickness 0.1)))
+		(uuid "5c648cc5-0ddd-458a-8c59-cbd204990b5c")
+	)
+	(gr_text "GPIO6"
+		(at 78.8 52.7 0)
+		(layer "F.SilkS")
+		(effects (font (size 0.55 0.55) (thickness 0.1)))
+		(uuid "63f63c3b-660f-4a9d-92c7-531d31379037")
+	)
+	(gr_text "GPIO7"
+		(at 78.8 55.24 0)
+		(layer "F.SilkS")
+		(effects (font (size 0.55 0.55) (thickness 0.1)))
+		(uuid "3ddadef8-90c7-47c0-856e-7a7309d640dd")
+	)
+	(gr_text "GPIO15"
+		(at 78.8 57.78 0)
+		(layer "F.SilkS")
+		(effects (font (size 0.55 0.55) (thickness 0.1)))
+		(uuid "a528721b-80b7-403d-ab98-e61532ee3806")
+	)
+	(gr_text "GPIO16"
+		(at 78.8 60.32 0)
+		(layer "F.SilkS")
+		(effects (font (size 0.55 0.55) (thickness 0.1)))
+		(uuid "856ea21d-435d-406d-8fb5-d069b6cfafaa")
+	)
+	(gr_text "GPIO17"
+		(at 78.8 62.86 0)
+		(layer "F.SilkS")
+		(effects (font (size 0.55 0.55) (thickness 0.1)))
+		(uuid "bb6a0e3c-3f4c-43f4-872d-c75a23e585f4")
+	)
+	(gr_text "GPIO18"
+		(at 78.8 65.4 0)
+		(layer "F.SilkS")
+		(effects (font (size 0.55 0.55) (thickness 0.1)))
+		(uuid "ae95d4d9-41aa-483c-8c2c-2ddb51a2be59")
+	)
+	(gr_text "GPIO8"
+		(at 78.8 67.94 0)
+		(layer "F.SilkS")
+		(effects (font (size 0.55 0.55) (thickness 0.1)))
+		(uuid "5e71880f-bc1f-4775-b4fe-6b517fceeeeb")
+	)
+	(gr_text "GPIO3"
+		(at 78.8 70.48 0)
+		(layer "F.SilkS")
+		(effects (font (size 0.55 0.55) (thickness 0.1)))
+		(uuid "ba4b0774-6aef-4844-b504-ccff90f13dfd")
+	)
+	(gr_text "GPIO46"
+		(at 78.8 73.02000000000001 0)
+		(layer "F.SilkS")
+		(effects (font (size 0.55 0.55) (thickness 0.1)))
+		(uuid "d0dfb6d7-7bec-4205-b20d-b22c385d0787")
+	)
+	(gr_text "GPIO9"
+		(at 78.8 75.56 0)
+		(layer "F.SilkS")
+		(effects (font (size 0.55 0.55) (thickness 0.1)))
+		(uuid "c8057cde-07ab-4c6f-a6e5-852bc378c9fa")
+	)
+	(gr_text "GPIO10"
+		(at 78.8 78.1 0)
+		(layer "F.SilkS")
+		(effects (font (size 0.55 0.55) (thickness 0.1)))
+		(uuid "d36f8e1f-3728-4c81-add5-db62ddc8ec2a")
+	)
+	(gr_text "GPIO11"
+		(at 78.8 80.64 0)
+		(layer "F.SilkS")
+		(effects (font (size 0.55 0.55) (thickness 0.1)))
+		(uuid "aace8f1b-8b3f-4f32-b4f3-f4fd8da9ad01")
+	)
+	(gr_text "GPIO12"
+		(at 78.8 83.18 0)
+		(layer "F.SilkS")
+		(effects (font (size 0.55 0.55) (thickness 0.1)))
+		(uuid "f7bd2231-3eeb-40b8-bc6a-075f4ca765c9")
+	)
+	(gr_text "GPIO13"
+		(at 78.8 85.72 0)
+		(layer "F.SilkS")
+		(effects (font (size 0.55 0.55) (thickness 0.1)))
+		(uuid "2c7a0dcd-b27d-4d52-9028-80dad0f30f9e")
+	)
+	(gr_text "GPIO14"
+		(at 78.8 88.25999999999999 0)
+		(layer "F.SilkS")
+		(effects (font (size 0.55 0.55) (thickness 0.1)))
+		(uuid "8e63db7c-f0c4-4f97-b562-7d7038e8f58e")
+	)
+	(gr_text "5V"
+		(at 78.8 90.8 0)
+		(layer "F.SilkS")
+		(effects (font (size 0.55 0.55) (thickness 0.1)))
+		(uuid "40b6c0e6-6293-4a38-b8c6-96f164876601")
+	)
+	(gr_text "GND"
+		(at 78.8 93.34 0)
+		(layer "F.SilkS")
+		(effects (font (size 0.55 0.55) (thickness 0.1)))
+		(uuid "db33a272-7dd3-4e42-b609-5d86804b3e22")
+	)
+	(gr_text "GND"
+		(at 111.2 40.0 0)
+		(layer "F.SilkS")
+		(effects (font (size 0.55 0.55) (thickness 0.1)))
+		(uuid "c2cf7638-d4a8-4089-9913-7e6455fc6d2d")
+	)
+	(gr_text "GPIO43"
+		(at 111.2 42.54 0)
+		(layer "F.SilkS")
+		(effects (font (size 0.55 0.55) (thickness 0.1)))
+		(uuid "85dc5fa2-6ad1-4418-99bc-3991485642da")
+	)
+	(gr_text "GPIO44"
+		(at 111.2 45.08 0)
+		(layer "F.SilkS")
+		(effects (font (size 0.55 0.55) (thickness 0.1)))
+		(uuid "1cdc7e6f-ab83-47d3-9d2f-3c31b7b83879")
+	)
+	(gr_text "GPIO1"
+		(at 111.2 47.62 0)
+		(layer "F.SilkS")
+		(effects (font (size 0.55 0.55) (thickness 0.1)))
+		(uuid "9e959681-8325-4c9b-812c-beffcd861b22")
+	)
+	(gr_text "GPIO2"
+		(at 111.2 50.16 0)
+		(layer "F.SilkS")
+		(effects (font (size 0.55 0.55) (thickness 0.1)))
+		(uuid "2757963d-b332-4d93-8c38-99e649210c89")
+	)
+	(gr_text "GPIO42"
+		(at 111.2 52.7 0)
+		(layer "F.SilkS")
+		(effects (font (size 0.55 0.55) (thickness 0.1)))
+		(uuid "7a8183a0-093e-4ce4-a09d-e2425d7046ba")
+	)
+	(gr_text "GPIO41"
+		(at 111.2 55.24 0)
+		(layer "F.SilkS")
+		(effects (font (size 0.55 0.55) (thickness 0.1)))
+		(uuid "01255cd5-0f4a-4803-8b88-d2bb7e5a2ea6")
+	)
+	(gr_text "GPIO40"
+		(at 111.2 57.78 0)
+		(layer "F.SilkS")
+		(effects (font (size 0.55 0.55) (thickness 0.1)))
+		(uuid "28a061c8-1186-43b7-82eb-a840ee1366d6")
+	)
+	(gr_text "GPIO39"
+		(at 111.2 60.32 0)
+		(layer "F.SilkS")
+		(effects (font (size 0.55 0.55) (thickness 0.1)))
+		(uuid "6bf6d577-f570-4126-b5f7-b505f019036b")
+	)
+	(gr_text "GPIO38"
+		(at 111.2 62.86 0)
+		(layer "F.SilkS")
+		(effects (font (size 0.55 0.55) (thickness 0.1)))
+		(uuid "7456318a-2152-48e1-8477-4d0483618750")
+	)
+	(gr_text "GPIO37"
+		(at 111.2 65.4 0)
+		(layer "F.SilkS")
+		(effects (font (size 0.55 0.55) (thickness 0.1)))
+		(uuid "5c03118e-b0a6-4aa2-9503-c990ea3860df")
+	)
+	(gr_text "GPIO36"
+		(at 111.2 67.94 0)
+		(layer "F.SilkS")
+		(effects (font (size 0.55 0.55) (thickness 0.1)))
+		(uuid "f1ae9075-6269-4e68-962f-f5e29174418c")
+	)
+	(gr_text "GPIO35"
+		(at 111.2 70.48 0)
+		(layer "F.SilkS")
+		(effects (font (size 0.55 0.55) (thickness 0.1)))
+		(uuid "8d572948-e094-4b9e-be23-84e1caa58e43")
+	)
+	(gr_text "GPIO0"
+		(at 111.2 73.02000000000001 0)
+		(layer "F.SilkS")
+		(effects (font (size 0.55 0.55) (thickness 0.1)))
+		(uuid "6befad6e-bdf0-4dab-aee5-e1950541427b")
+	)
+	(gr_text "GPIO45"
+		(at 111.2 75.56 0)
+		(layer "F.SilkS")
+		(effects (font (size 0.55 0.55) (thickness 0.1)))
+		(uuid "795f032f-e5e3-4cf8-9fa6-5f2591dfad8e")
+	)
+	(gr_text "GPIO48"
+		(at 111.2 78.1 0)
+		(layer "F.SilkS")
+		(effects (font (size 0.55 0.55) (thickness 0.1)))
+		(uuid "a8c8e9e9-ec63-4374-a843-515aeca36b1a")
+	)
+	(gr_text "GPIO47"
+		(at 111.2 80.64 0)
+		(layer "F.SilkS")
+		(effects (font (size 0.55 0.55) (thickness 0.1)))
+		(uuid "a5ace540-7ad8-467c-be1f-d3b9829de025")
+	)
+	(gr_text "GPIO21"
+		(at 111.2 83.18 0)
+		(layer "F.SilkS")
+		(effects (font (size 0.55 0.55) (thickness 0.1)))
+		(uuid "57491833-5a3d-4e80-b560-1dbacaca0d09")
+	)
+	(gr_text "GPIO20"
+		(at 111.2 85.72 0)
+		(layer "F.SilkS")
+		(effects (font (size 0.55 0.55) (thickness 0.1)))
+		(uuid "c34ae8ce-c9fd-4b6d-acb3-9d1b58cb236c")
+	)
+	(gr_text "GPIO19"
+		(at 111.2 88.25999999999999 0)
+		(layer "F.SilkS")
+		(effects (font (size 0.55 0.55) (thickness 0.1)))
+		(uuid "29be28e2-cc8e-4649-bb93-6a9734c50453")
+	)
+	(gr_text "GND"
+		(at 111.2 90.8 0)
+		(layer "F.SilkS")
+		(effects (font (size 0.55 0.55) (thickness 0.1)))
+		(uuid "7cd5e0f5-fcd4-4133-9e91-6954e131d6fd")
+	)
+	(gr_text "GND"
+		(at 111.2 93.34 0)
+		(layer "F.SilkS")
+		(effects (font (size 0.55 0.55) (thickness 0.1)))
+		(uuid "d76909f8-78e9-4e92-b715-34323f65e44a")
+	)
+	(segment
+		(start 82.3 52.7)
+		(end 67.3 37.7)
+		(width 0.32)
+		(layer "B.Cu")
+		(net 5)
+		(uuid "441099ed-e2a7-4073-ac56-0a088b1ad315")
+	)
+	(segment
+		(start 67.3 37.7)
+		(end 67.3 32.5)
+		(width 0.32)
+		(layer "B.Cu")
+		(net 5)
+		(uuid "8024d6b2-3657-4383-8f3d-5a49c810db95")
+	)
+	(segment
+		(start 67.3 32.5)
+		(end 61.3 26.5)
+		(width 0.32)
+		(layer "B.Cu")
+		(net 5)
+		(uuid "4613037d-17e3-4271-ae9a-cebcf223276b")
+	)
+	(segment
+		(start 61.3 26.5)
+		(end 54.76 33.04)
+		(width 0.32)
+		(layer "B.Cu")
+		(net 5)
+		(uuid "780c964c-a858-45de-8531-28454fd8cf19")
+	)
+	(segment
+		(start 54.76 33.04)
+		(end 36.541 33.04)
+		(width 0.32)
+		(layer "B.Cu")
+		(net 5)
+		(uuid "4dfcbee4-1cc1-456e-969c-390535056e36")
+	)
+	(segment
+		(start 36.541 33.04)
+		(end 31.19 38.39)
+		(width 0.32)
+		(layer "B.Cu")
+		(net 5)
+		(uuid "c5236e93-16d2-46c8-86d5-44754bbfae1b")
+	)
+	(segment
+		(start 61.3 26.5)
+		(end 67.84 33.04)
+		(width 0.32)
+		(layer "B.Cu")
+		(net 5)
+		(uuid "86077d9b-e8f5-4b89-be14-dc6e56e44a34")
+	)
+	(segment
+		(start 67.84 33.04)
+		(end 145.839 33.04)
+		(width 0.32)
+		(layer "B.Cu")
+		(net 5)
+		(uuid "ac8c6b04-ef76-4b88-baa9-dea36f221f18")
+	)
+	(segment
+		(start 145.839 33.04)
+		(end 151.19 38.39)
+		(width 0.32)
+		(layer "B.Cu")
+		(net 5)
+		(uuid "1aa6c207-b87e-4c91-b3d9-0c8200afac30")
+	)
+	(segment
+		(start 82.3 55.24)
+		(end 67.3 40.24)
+		(width 0.32)
+		(layer "B.Cu")
+		(net 6)
+		(uuid "5e4274a6-caf8-48da-ac64-f0e999370b19")
+	)
+	(segment
+		(start 67.3 40.24)
+		(end 67.3 37.0)
+		(width 0.32)
+		(layer "B.Cu")
+		(net 6)
+		(uuid "6c246e5c-f0c4-4d93-aa01-34a94d257eb9")
+	)
+	(segment
+		(start 67.3 37.0)
+		(end 61.3 31.0)
+		(width 0.32)
+		(layer "B.Cu")
+		(net 6)
+		(uuid "05a5bf93-2b5f-4df1-b712-778c4de41391")
+	)
+	(segment
+		(start 61.3 31.0)
+		(end 57.235 35.065)
+		(width 0.32)
+		(layer "B.Cu")
+		(net 6)
+		(uuid "92ea1e85-0005-4c8e-89e8-9628299ec249")
+	)
+	(segment
+		(start 57.235 35.065)
+		(end 37.055 35.065)
+		(width 0.32)
+		(layer "B.Cu")
+		(net 6)
+		(uuid "bea2a342-d597-4c3c-8990-999e9f590620")
+	)
+	(segment
+		(start 37.055 35.065)
+		(end 33.73 38.39)
+		(width 0.32)
+		(layer "B.Cu")
+		(net 6)
+		(uuid "793ee880-5cc5-4798-9266-459b26c0f50f")
+	)
+	(segment
+		(start 61.3 31.0)
+		(end 65.364 35.065)
+		(width 0.32)
+		(layer "B.Cu")
+		(net 6)
+		(uuid "b6c99493-635f-4aea-aaa2-0e383695d30e")
+	)
+	(segment
+		(start 65.364 35.065)
+		(end 150.404 35.065)
+		(width 0.32)
+		(layer "B.Cu")
+		(net 6)
+		(uuid "6970c346-129b-4895-9b97-a5c7c8a08b83")
+	)
+	(segment
+		(start 150.404 35.065)
+		(end 153.73 38.39)
+		(width 0.32)
+		(layer "B.Cu")
+		(net 6)
+		(uuid "3f41f11e-8a76-4568-b129-efb802ef4de4")
+	)
+	(segment
+		(start 82.3 47.62)
+		(end 75.826 41.147)
+		(width 0.32)
+		(layer "F.Cu")
+		(net 3)
+		(uuid "64908ef8-f157-4100-92f9-c3c4b12ba733")
+	)
+	(segment
+		(start 75.826 41.147)
+		(end 41.567 41.147)
+		(width 0.32)
+		(layer "F.Cu")
+		(net 3)
+		(uuid "da558cc6-58ff-4819-aae3-84aafadecf81")
+	)
+	(segment
+		(start 41.567 41.147)
+		(end 36.27 35.85)
+		(width 0.32)
+		(layer "F.Cu")
+		(net 3)
+		(uuid "41e67d61-5ef3-4e99-a156-4d75378fa841")
+	)
+	(segment
+		(start 82.3 50.16)
+		(end 75.826 43.686)
+		(width 0.32)
+		(layer "F.Cu")
+		(net 4)
+		(uuid "5b16a621-c5ac-45ac-8c55-32d3d72eeb26")
+	)
+	(segment
+		(start 75.826 43.686)
+		(end 41.567 43.686)
+		(width 0.32)
+		(layer "F.Cu")
+		(net 4)
+		(uuid "51755e57-946f-49a3-847a-8ea44247b66e")
+	)
+	(segment
+		(start 41.567 43.686)
+		(end 36.27 38.39)
+		(width 0.32)
+		(layer "F.Cu")
+		(net 4)
+		(uuid "8fcfb663-30b6-4351-8ac1-33f9ab3b4eb7")
+	)
+	(segment
+		(start 82.3 70.48)
+		(end 55.67 43.85)
+		(width 0.32)
+		(layer "F.Cu")
+		(net 12)
+		(uuid "c94c8332-ffaa-4824-b87e-f411e08d33eb")
+	)
+	(segment
+		(start 55.67 43.85)
+		(end 46.81 43.85)
+		(width 0.32)
+		(layer "F.Cu")
+		(net 12)
+		(uuid "fa2ed2f1-c541-433d-904c-081e746841d1")
+	)
+	(segment
+		(start 46.81 43.85)
+		(end 38.81 35.85)
+		(width 0.32)
+		(layer "F.Cu")
+		(net 12)
+		(uuid "af7c1893-eb5e-46cf-8370-0526ab8b05d9")
+	)
+	(segment
+		(start 107.7 47.62)
+		(end 114.174 41.147)
+		(width 0.32)
+		(layer "F.Cu")
+		(net 24)
+		(uuid "84dac348-6581-4003-bc4c-72269c555240")
+	)
+	(segment
+		(start 114.174 41.147)
+		(end 153.513 41.147)
+		(width 0.32)
+		(layer "F.Cu")
+		(net 24)
+		(uuid "529253fe-5f94-4133-ace3-cac03720e967")
+	)
+	(segment
+		(start 153.513 41.147)
+		(end 158.81 35.85)
+		(width 0.32)
+		(layer "F.Cu")
+		(net 24)
+		(uuid "8eabd2cc-8fd9-4eaa-bad0-fb0cc76b18d7")
+	)
+	(segment
+		(start 107.7 50.16)
+		(end 115.57 42.289)
+		(width 0.32)
+		(layer "F.Cu")
+		(net 25)
+		(uuid "627261ad-34b6-4c96-ba16-65690a05723c")
+	)
+	(segment
+		(start 115.57 42.289)
+		(end 149.831 42.289)
+		(width 0.32)
+		(layer "F.Cu")
+		(net 25)
+		(uuid "bcdcd441-21f2-45fd-9ce8-7de73fb69049")
+	)
+	(segment
+		(start 149.831 42.289)
+		(end 156.27 35.85)
+		(width 0.32)
+		(layer "F.Cu")
+		(net 25)
+		(uuid "61d614b9-aa6e-43b1-852c-539292543b39")
+	)
+	(segment
+		(start 82.3 50.16)
+		(end 88.773 43.686)
+		(width 0.32)
+		(layer "B.Cu")
+		(net 4)
+		(uuid "cc49812b-e3dd-4463-bf07-15cc1754301e")
+	)
+	(segment
+		(start 88.773 43.686)
+		(end 150.974 43.686)
+		(width 0.32)
+		(layer "B.Cu")
+		(net 4)
+		(uuid "ce580201-f8f6-4d59-b3ef-f481cfea2757")
+	)
+	(segment
+		(start 150.974 43.686)
+		(end 156.27 38.39)
+		(width 0.32)
+		(layer "B.Cu")
+		(net 4)
+		(uuid "ad692e0c-f8c2-4f41-a9ed-83444a7088b7")
+	)
+	(segment
+		(start 82.3 67.94)
+		(end 54.57 95.67)
+		(width 0.32)
+		(layer "F.Cu")
+		(net 11)
+		(uuid "048a4d2a-47d5-46f3-a709-280800e1ae3a")
+	)
+	(segment
+		(start 54.57 95.67)
+		(end 46.35 95.67)
+		(width 0.32)
+		(layer "F.Cu")
+		(net 11)
+		(uuid "fee118cc-8191-46d7-8c2c-3602734727a6")
+	)
+	(segment
+		(start 46.35 95.67)
+		(end 41.35 100.67)
+		(width 0.32)
+		(layer "F.Cu")
+		(net 11)
+		(uuid "8f2ce759-9f3b-4e5c-8adb-6c90a336b02a")
+	)
+	(segment
+		(start 82.3 78.1)
+		(end 64.73 95.67)
+		(width 0.32)
+		(layer "F.Cu")
+		(net 15)
+		(uuid "2d5a4aa7-7676-406b-8863-047e984b108b")
+	)
+	(segment
+		(start 64.73 95.67)
+		(end 43.81 95.67)
+		(width 0.32)
+		(layer "F.Cu")
+		(net 15)
+		(uuid "82a49966-a8d2-4b14-bfa9-99c9dabda013")
+	)
+	(segment
+		(start 43.81 95.67)
+		(end 38.81 100.67)
+		(width 0.32)
+		(layer "F.Cu")
+		(net 15)
+		(uuid "b751c2fc-cb4e-40c3-9b1c-b73ab64d980e")
+	)
+	(segment
+		(start 82.3 75.56)
+		(end 62.19 95.67)
+		(width 0.32)
+		(layer "F.Cu")
+		(net 14)
+		(uuid "505466f2-f536-42bf-998a-2c2a7c150130")
+	)
+	(segment
+		(start 62.19 95.67)
+		(end 41.27 95.67)
+		(width 0.32)
+		(layer "F.Cu")
+		(net 14)
+		(uuid "83181474-4d11-4ed3-b253-72797d7a5b78")
+	)
+	(segment
+		(start 41.27 95.67)
+		(end 36.27 100.67)
+		(width 0.32)
+		(layer "F.Cu")
+		(net 14)
+		(uuid "59a12be4-0bed-4d49-b9bb-07ff2d55259b")
+	)
+	(segment
+		(start 82.3 80.64)
+		(end 67.27 95.67)
+		(width 0.32)
+		(layer "F.Cu")
+		(net 16)
+		(uuid "1924c1ab-017b-4998-aa42-9e3cf84ff223")
+	)
+	(segment
+		(start 67.27 95.67)
+		(end 38.73 95.67)
+		(width 0.32)
+		(layer "F.Cu")
+		(net 16)
+		(uuid "08a6fd0a-5a39-45ce-b3b9-0f4dd2ebbb35")
+	)
+	(segment
+		(start 38.73 95.67)
+		(end 33.73 100.67)
+		(width 0.32)
+		(layer "F.Cu")
+		(net 16)
+		(uuid "2eb5d7a8-f085-4604-b907-7d51f0dd7d28")
+	)
+	(segment
+		(start 82.3 83.18)
+		(end 69.81 95.67)
+		(width 0.32)
+		(layer "F.Cu")
+		(net 17)
+		(uuid "fa487524-44fd-4a90-aabb-cd3327a82e92")
+	)
+	(segment
+		(start 69.81 95.67)
+		(end 36.19 95.67)
+		(width 0.32)
+		(layer "F.Cu")
+		(net 17)
+		(uuid "c20f34b9-f278-4e53-a8a5-1caef6245d76")
+	)
+	(segment
+		(start 36.19 95.67)
+		(end 31.19 100.67)
+		(width 0.32)
+		(layer "F.Cu")
+		(net 17)
+		(uuid "6ba7b305-9103-4ef2-8fdb-89051a1bfbe7")
+	)
+	(segment
+		(start 107.7 65.4)
+		(end 121.73 79.43)
+		(width 0.32)
+		(layer "F.Cu")
+		(net 10)
+		(uuid "3f6d559c-42e4-4c5e-b604-7816f2dfc248")
+	)
+	(segment
+		(start 121.73 79.43)
+		(end 150.27 79.43)
+		(width 0.32)
+		(layer "F.Cu")
+		(net 10)
+		(uuid "f9b082d0-2496-4c8e-afef-98a74baecec7")
+	)
+	(segment
+		(start 150.27 79.43)
+		(end 156.27 85.43)
+		(width 0.32)
+		(layer "F.Cu")
+		(net 10)
+		(uuid "340f7d92-801a-464a-a6d8-0edf074f1c13")
+	)
+	(segment
+		(start 107.7 62.86)
+		(end 124.27 79.43)
+		(width 0.32)
+		(layer "F.Cu")
+		(net 9)
+		(uuid "76c9486e-0b0b-4765-9289-5a37cebf28e2")
+	)
+	(segment
+		(start 124.27 79.43)
+		(end 152.81 79.43)
+		(width 0.32)
+		(layer "F.Cu")
+		(net 9)
+		(uuid "2453f22e-f94d-4014-b48c-55e7cb7ff443")
+	)
+	(segment
+		(start 152.81 79.43)
+		(end 158.81 85.43)
+		(width 0.32)
+		(layer "F.Cu")
+		(net 9)
+		(uuid "0d9e2f44-bebd-4a09-bef6-df97308af294")
+	)
+	(segment
+		(start 82.3 85.72)
+		(end 82.938 86.358)
+		(width 0.32)
+		(layer "F.Cu")
+		(net 18)
+		(uuid "d4632837-cea3-48c8-9a98-e65f275c002c")
+	)
+	(segment
+		(start 82.938 86.358)
+		(end 82.938 108.938)
+		(width 0.32)
+		(layer "F.Cu")
+		(net 18)
+		(uuid "410bf0a4-d037-4495-8356-092fb20d64be")
+	)
+	(segment
+		(start 82.938 108.938)
+		(end 83.46 109.46)
+		(width 0.32)
+		(layer "F.Cu")
+		(net 18)
+		(uuid "6dec906c-172f-4881-a791-dedb1bb91642")
+	)
+	(segment
+		(start 83.46 109.46)
+		(end 83.46 114.54)
+		(width 0.32)
+		(layer "F.Cu")
+		(net 18)
+		(uuid "8ec5df7b-ba34-4c55-9726-50be37cb1ecc")
+	)
+	(segment
+		(start 82.3 88.26)
+		(end 97.46 103.42)
+		(width 0.32)
+		(layer "F.Cu")
+		(net 19)
+		(uuid "4fe4409c-e265-4d54-941d-330c3f11342f")
+	)
+	(segment
+		(start 97.46 103.42)
+		(end 97.46 105.46)
+		(width 0.32)
+		(layer "F.Cu")
+		(net 19)
+		(uuid "eca6e56f-20d4-4df5-8ae0-01c183907e5a")
+	)
+	(segment
+		(start 97.46 105.46)
+		(end 101.46 109.46)
+		(width 0.32)
+		(layer "F.Cu")
+		(net 19)
+		(uuid "05ad9f21-a863-467f-b619-d25d2bb5c542")
+	)
+	(segment
+		(start 101.46 109.46)
+		(end 101.46 114.54)
+		(width 0.32)
+		(layer "F.Cu")
+		(net 19)
+		(uuid "f7b208f6-028c-451b-aa5c-b9a047c53b7a")
+	)
+	(segment
+		(start 82.3 57.78)
+		(end 112.46 87.94)
+		(width 0.32)
+		(layer "F.Cu")
+		(net 7)
+		(uuid "c249f0fe-3a95-4286-817f-18620d6df9e4")
+	)
+	(segment
+		(start 112.46 87.94)
+		(end 112.46 102.46)
+		(width 0.32)
+		(layer "F.Cu")
+		(net 7)
+		(uuid "fc535dd8-4335-4330-b7ab-32dfaf85d392")
+	)
+	(segment
+		(start 112.46 102.46)
+		(end 119.46 109.46)
+		(width 0.32)
+		(layer "F.Cu")
+		(net 7)
+		(uuid "f2928ff5-abf0-4fbf-9915-88c96992d9ff")
+	)
+	(segment
+		(start 119.46 109.46)
+		(end 119.46 114.54)
+		(width 0.32)
+		(layer "F.Cu")
+		(net 7)
+		(uuid "8da7656f-caca-4ad7-b4d7-52b4c0e09815")
+	)
+	(segment
+		(start 82.3 60.32)
+		(end 124.44 102.46)
+		(width 0.32)
+		(layer "F.Cu")
+		(net 8)
+		(uuid "2114042b-b2a5-48d6-ac5f-e75ee45780ce")
+	)
+	(segment
+		(start 124.44 102.46)
+		(end 130.46 102.46)
+		(width 0.32)
+		(layer "F.Cu")
+		(net 8)
+		(uuid "232adc2b-36cf-4f7f-9150-778f71d41df8")
+	)
+	(segment
+		(start 130.46 102.46)
+		(end 137.46 109.46)
+		(width 0.32)
+		(layer "F.Cu")
+		(net 8)
+		(uuid "8e1f2532-4496-412a-9645-193f864916d9")
+	)
+	(segment
+		(start 137.46 109.46)
+		(end 137.46 114.54)
+		(width 0.32)
+		(layer "F.Cu")
+		(net 8)
+		(uuid "b2a915eb-5f4a-460b-82b9-29e332fdbae7")
+	)
+	(segment
+		(start 107.7 55.24)
+		(end 105.115 57.825)
+		(width 0.32)
+		(layer "B.Cu")
+		(net 27)
+		(uuid "91e10397-3cbd-4bb0-bdce-dfe5fef89da9")
+	)
+	(segment
+		(start 105.115 57.825)
+		(end 105.115 101.885)
+		(width 0.32)
+		(layer "B.Cu")
+		(net 27)
+		(uuid "c2461b43-3767-47bb-88de-5eb7a2d30e95")
+	)
+	(segment
+		(start 105.115 101.885)
+		(end 103.0 104.0)
+		(width 0.32)
+		(layer "B.Cu")
+		(net 27)
+		(uuid "cfdfa283-cbab-43dc-88c5-da95a2a06b61")
+	)
+	(segment
+		(start 103.0 104.0)
+		(end 98.6 108.4)
+		(width 0.32)
+		(layer "B.Cu")
+		(net 27)
+		(uuid "0581840f-736c-4172-8a22-decd6f8cc35b")
+	)
+	(segment
+		(start 98.6 108.4)
+		(end 38.68 108.4)
+		(width 0.32)
+		(layer "B.Cu")
+		(net 27)
+		(uuid "62bad163-6c48-45b4-bb08-d54fba44f740")
+	)
+	(segment
+		(start 38.68 108.4)
+		(end 35.08 112.0)
+		(width 0.32)
+		(layer "B.Cu")
+		(net 27)
+		(uuid "f118fca4-a349-4e89-b71a-bed68cf8dd0c")
+	)
+	(segment
+		(start 107.7 57.78)
+		(end 102.915 62.565)
+		(width 0.32)
+		(layer "B.Cu")
+		(net 28)
+		(uuid "4d33e71f-0755-4f93-82bf-2dd9e92a5baf")
+	)
+	(segment
+		(start 102.915 62.565)
+		(end 102.915 100.085)
+		(width 0.32)
+		(layer "B.Cu")
+		(net 28)
+		(uuid "23739a11-85c3-4a96-97aa-d72492f9809b")
+	)
+	(segment
+		(start 102.915 100.085)
+		(end 99.0 104.0)
+		(width 0.32)
+		(layer "B.Cu")
+		(net 28)
+		(uuid "a975c2ea-5a40-4327-83e9-e90598588e13")
+	)
+	(segment
+		(start 99.0 104.0)
+		(end 94.6 108.4)
+		(width 0.32)
+		(layer "B.Cu")
+		(net 28)
+		(uuid "146e0ae1-2eca-434b-a9d1-3eb899291bef")
+	)
+	(segment
+		(start 94.6 108.4)
+		(end 36.14 108.4)
+		(width 0.32)
+		(layer "B.Cu")
+		(net 28)
+		(uuid "7cbc4317-b93d-49a1-a43e-17e0a272d6f7")
+	)
+	(segment
+		(start 36.14 108.4)
+		(end 32.54 112.0)
+		(width 0.32)
+		(layer "B.Cu")
+		(net 28)
+		(uuid "758c5e93-5dc4-4012-84db-882652a4c583")
+	)
+	(segment
+		(start 107.7 60.32)
+		(end 100.715 67.305)
+		(width 0.32)
+		(layer "B.Cu")
+		(net 29)
+		(uuid "400e3f13-422f-4d60-9518-5b16be64738d")
+	)
+	(segment
+		(start 100.715 67.305)
+		(end 100.715 98.285)
+		(width 0.32)
+		(layer "B.Cu")
+		(net 29)
+		(uuid "6527924c-c644-405e-b4bd-1ff2855af7b2")
+	)
+	(segment
+		(start 100.715 98.285)
+		(end 95.0 104.0)
+		(width 0.32)
+		(layer "B.Cu")
+		(net 29)
+		(uuid "76d50e3b-29c4-449a-ab01-34f90c4c74f8")
+	)
+	(segment
+		(start 95.0 104.0)
+		(end 90.6 108.4)
+		(width 0.32)
+		(layer "B.Cu")
+		(net 29)
+		(uuid "6f5adc78-9824-4ab4-ab6b-7fcb8daa089c")
+	)
+	(segment
+		(start 90.6 108.4)
+		(end 33.6 108.4)
+		(width 0.32)
+		(layer "B.Cu")
+		(net 29)
+		(uuid "18a718d5-bab2-4989-8055-d3ab59f19db1")
+	)
+	(segment
+		(start 33.6 108.4)
+		(end 30.0 112.0)
+		(width 0.32)
+		(layer "B.Cu")
+		(net 29)
+		(uuid "285848fd-5a70-47f3-a4d3-c54b7e6a2579")
+	)
+	(segment
+		(start 107.7 52.7)
+		(end 134.46 79.46)
+		(width 0.32)
+		(layer "F.Cu")
+		(net 26)
+		(uuid "dbd0bb0b-3b4e-4943-a89a-110fc7cd01f2")
+	)
+	(segment
+		(start 134.46 79.46)
+		(end 134.46 115.0)
+		(width 0.32)
+		(layer "F.Cu")
+		(net 26)
+		(uuid "eb3c07f8-d0e2-4c32-8d7e-360849160a79")
+	)
+	(segment
+		(start 134.46 115.0)
+		(end 142.46 123.0)
+		(width 0.32)
+		(layer "F.Cu")
+		(net 26)
+		(uuid "1c0ccc7c-ced2-463a-b97e-686dfed3891e")
+	)
+	(segment
+		(start 161.81 112.0)
+		(end 165.62 112.0)
+		(width 0.32)
+		(layer "F.Cu")
+		(net 41)
+		(uuid "3040ac06-1955-4e33-923a-16a732ae0415")
+	)
+	(segment
+		(start 165.62 112.0)
+		(end 161.81 123.0)
+		(width 0.32)
+		(layer "F.Cu")
+		(net 41)
+		(uuid "fc1ff906-fd80-4516-836b-ef7a4a57cc43")
+	)
+	(segment
+		(start 147.54 123.0)
+		(end 152.54 123.0)
+		(width 0.32)
+		(layer "F.Cu")
+		(net 42)
+		(uuid "c6751b02-ddd2-4458-af01-7b9d64edfca1")
+	)
+	(segment
+		(start 152.54 123.0)
+		(end 155.46 123.0)
+		(width 0.32)
+		(layer "F.Cu")
+		(net 42)
+		(uuid "eb55bdb3-ea28-4594-9e2e-7fff3fc4a3c4")
+	)
+	(segment
+		(start 142.46 128.0)
+		(end 145.0 124.46)
+		(width 0.32)
+		(layer "F.Cu")
+		(net 42)
+		(uuid "e2fdd01a-c1f3-4ca8-9747-b4108cd3cde2")
+	)
+	(segment
+		(start 145.0 124.46)
+		(end 147.54 123.0)
+		(width 0.32)
+		(layer "F.Cu")
+		(net 42)
+		(uuid "1c1a8d45-ccfc-4c0c-ae80-44beee7e3b5e")
+	)
+	(segment
+		(start 176.0 123.0)
+		(end 175.45 122.45)
+		(width 0.32)
+		(layer "B.Cu")
+		(net 43)
+		(uuid "b497f9e2-f189-437b-b1f1-b2c3e2653f21")
+	)
+	(segment
+		(start 175.45 122.45)
+		(end 159.91 122.45)
+		(width 0.32)
+		(layer "B.Cu")
+		(net 43)
+		(uuid "60064629-539f-41b5-a44f-dce9b259015d")
+	)
+	(segment
+		(start 159.91 122.45)
+		(end 159.46 122.0)
+		(width 0.32)
+		(layer "B.Cu")
+		(net 43)
+		(uuid "222d2e51-7b12-42f7-99ad-7ea6281b1984")
+	)
+	(segment
+		(start 164.54 122.0)
+		(end 160.54 126.0)
+		(width 0.32)
+		(layer "B.Cu")
+		(net 44)
+		(uuid "f3c1c64e-fd14-4cfa-b73c-8c4ec7f107bc")
+	)
+	(segment
+		(start 160.54 126.0)
+		(end 148.46 122.0)
+		(width 0.32)
+		(layer "B.Cu")
+		(net 44)
+		(uuid "016c4db1-3b3e-4b5d-8165-fd04a8e4b603")
+	)
+	(segment
+		(start 153.54 122.0)
+		(end 150.0 118.46)
+		(width 0.32)
+		(layer "B.Cu")
+		(net 20)
+		(uuid "449a37f1-6785-4a66-8f84-d8ef8f260318")
+	)
+	(segment
+		(start 150.0 118.46)
+		(end 150.0 98.0)
+		(width 0.32)
+		(layer "B.Cu")
+		(net 20)
+		(uuid "1bb58e06-7669-448e-a1a2-8cd45793a16c")
+	)
+	(segment
+		(start 150.0 98.0)
+		(end 120.0 98.0)
+		(width 0.32)
+		(layer "B.Cu")
+		(net 20)
+		(uuid "fe6e4e75-ecc3-4ac4-9ebf-236ac3b0764a")
+	)
+	(segment
+		(start 120.0 98.0)
+		(end 112.8 90.8)
+		(width 0.32)
+		(layer "B.Cu")
+		(net 20)
+		(uuid "148c0d10-0ce6-4fcb-aa00-0345970cc068")
+	)
+	(segment
+		(start 112.8 90.8)
+		(end 82.3 90.8)
+		(width 0.32)
+		(layer "B.Cu")
+		(net 20)
+		(uuid "00fb30af-2b4f-488a-b20f-4ad53a7c7772")
+	)
+	(segment
+		(start 176.0 88.0)
+		(end 172.7 91.3)
+		(width 0.32)
+		(layer "B.Cu")
+		(net 45)
+		(uuid "183c51c3-3a33-43cc-807f-a1aa7cf5c117")
+	)
+	(segment
+		(start 172.7 91.3)
+		(end 164.16 91.3)
+		(width 0.32)
+		(layer "B.Cu")
+		(net 45)
+		(uuid "db2cec6c-5ede-475f-a944-1ae7f6c08e4c")
+	)
+	(segment
+		(start 164.16 91.3)
+		(end 161.46 94.0)
+		(width 0.32)
+		(layer "B.Cu")
+		(net 45)
+		(uuid "12d6b7f9-1ea0-416a-865d-4ee126c3f8d4")
+	)
+	(segment
+		(start 166.54 94.0)
+		(end 168.5 94.0)
+		(width 0.32)
+		(layer "B.Cu")
+		(net 46)
+		(uuid "363a93c9-3b9f-4015-8694-25176eda5eac")
+	)
+	(segment
+		(start 168.5 94.0)
+		(end 168.5 99.0)
+		(width 0.32)
+		(layer "B.Cu")
+		(net 46)
+		(uuid "adce1183-28ff-4c1c-ab01-27bcc524cb9f")
+	)
+	(segment
+		(start 168.5 99.0)
+		(end 166.54 100.0)
+		(width 0.32)
+		(layer "B.Cu")
+		(net 46)
+		(uuid "16eead20-6d63-4f4d-b0e8-38551f82e652")
+	)
+	(segment
+		(start 161.46 100.0)
+		(end 171.0 100.0)
+		(width 0.32)
+		(layer "B.Cu")
+		(net 46)
+		(uuid "571b0c43-030d-472e-8845-df6f2cda39ee")
+	)
+	(segment
+		(start 171.0 100.0)
+		(end 171.0 99.0)
+		(width 0.32)
+		(layer "B.Cu")
+		(net 46)
+		(uuid "de7bf36f-76be-497d-b572-f03b6a1a1b2d")
+	)
+	(segment
+		(start 171.0 99.0)
+		(end 173.46 99.0)
+		(width 0.32)
+		(layer "B.Cu")
+		(net 46)
+		(uuid "160ee4b7-9084-4436-a745-7c30004a8105")
+	)
+	(zone
+		(net 21)
+		(net_name "GND")
+		(layer "B.Cu")
+		(hatch edge 0.5)
+		(connect_pads (clearance 0.3))
+		(min_thickness 0.25)
+		(fill yes (thermal_gap 0.3) (thermal_bridge_width 0.3))
+		(polygon
+			(pts
+				(xy 13 26) (xy 177 26) (xy 177 127) (xy 13 127)
+			)
+		)
+		(uuid "e87eaec8-ebd8-43dc-827c-7ca4f4bfa7dc")
+	)
+	(zone
+		(net 1)
+		(net_name "3V3")
+		(layer "F.Cu")
+		(hatch edge 0.5)
+		(connect_pads (clearance 0.3))
+		(min_thickness 0.25)
+		(fill yes (thermal_gap 0.3) (thermal_bridge_width 0.3))
+		(polygon
+			(pts
+				(xy 13 26) (xy 177 26) (xy 177 127) (xy 13 127)
+			)
+		)
+		(uuid "50544619-c6f8-4d98-8801-b36a6e651a34")
+	)
+
+)
+===== END FILE: ESP32_S3_Master_Reconstruction.kicad_pcb =====
+
+===== BEGIN FILE: ESP32_S3_Master_Reconstruction.kicad_prl =====
+{
+  "board": {},
+  "meta": {"version": 1},
+  "pcbnew": {},
+  "schematic": {}
+}
+
+===== END FILE: ESP32_S3_Master_Reconstruction.kicad_prl =====
+
+===== BEGIN FILE: ESP32_S3_Master_Reconstruction.kicad_pro =====
+{
+  "board": {},
+  "boards": [],
+  "cvpcb": {},
+  "erc": {},
+  "libraries": {},
+  "meta": {
+    "filename": "ESP32_S3_Master_Reconstruction.kicad_pro",
+    "version": 1
+  },
+  "net_settings": {
+    "classes": [
+      {
+        "bus_width": 12,
+        "clearance": 0.2,
+        "diff_pair_gap": 0.2,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.25,
+        "name": "Default",
+        "pcb_color": "",
+        "schematic_color": "",
+        "track_width": 0.3,
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.25,
+        "diff_pair_gap": 0.2,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.3,
+        "name": "POWER",
+        "pcb_color": "",
+        "schematic_color": "",
+        "track_width": 0.6,
+        "via_diameter": 1.0,
+        "via_drill": 0.5,
+        "wire_width": 6
+      }
+    ],
+    "meta": {
+      "version": 3
+    },
+    "net_colors": {},
+    "rule_severities": {},
+    "track_widths": [
+      0.25,
+      0.3,
+      0.45,
+      0.6
+    ],
+    "via_dimensions": [
+      {
+        "diameter": 0.8,
+        "drill": 0.4
+      },
+      {
+        "diameter": 1.0,
+        "drill": 0.5
+      }
+    ],
+    "teardrop_dimensions": []
+  },
+  "pcbnew": {},
+  "schematic": {},
+  "text_variables": {}
+}
+
+===== END FILE: ESP32_S3_Master_Reconstruction.kicad_pro =====
+
+===== BEGIN FILE: ESP32_S3_Master_Reconstruction.net =====
+(export (version D)
+  (design
+    (source "ESP32_S3_Master_Reconstruction.kicad_pcb")
+    (tool "KiCad PCB Database")
+  )
+  (components
+    (comp (ref "BZ1") (value "Active buzzer") (footprint "Custom:BZ1"))
+    (comp (ref "C8") (value "100nF") (footprint "Custom:C8"))
+    (comp (ref "D1") (value "SS14") (footprint "Custom:D1"))
+    (comp (ref "F1") (value "PTC 0.75A") (footprint "Custom:F1"))
+    (comp (ref "J1") (value "ESP32-S3 DevKitC-1 1x22 socket") (footprint "Custom:J1"))
+    (comp (ref "J3") (value "ESP32-S3 DevKitC-1 1x22 socket") (footprint "Custom:J3"))
+    (comp (ref "J_BAT") (value "BATTERY SENSE") (footprint "Custom:J_BAT"))
+    (comp (ref "J_ENC1") (value "KY-040 5P") (footprint "Custom:J_ENC1"))
+    (comp (ref "J_GPS1") (value "NEO-6M GPS 4P") (footprint "Custom:J_GPS1"))
+    (comp (ref "J_PWR") (value "5V INPUT") (footprint "Custom:J_PWR"))
+    (comp (ref "J_RF1") (value "nRF24L01+ 2x4 socket") (footprint "Custom:J_RF1"))
+    (comp (ref "J_RF2") (value "nRF24L01+ 2x4 socket") (footprint "Custom:J_RF2"))
+    (comp (ref "J_TFT_BUS") (value "TFT BUS 1x8 external") (footprint "Custom:J_TFT_BUS"))
+    (comp (ref "Q1") (value "2N3904 TO-92") (footprint "Custom:Q1"))
+    (comp (ref "R13") (value "2.2k") (footprint "Custom:R13"))
+    (comp (ref "R14") (value "1k") (footprint "Custom:R14"))
+    (comp (ref "R5") (value "1k") (footprint "Custom:R5"))
+    (comp (ref "R6") (value "100k") (footprint "Custom:R6"))
+    (comp (ref "SW1") (value "6x6 tactile") (footprint "Custom:SW1"))
+    (comp (ref "SW2") (value "6x6 tactile") (footprint "Custom:SW2"))
+    (comp (ref "SW3") (value "6x6 tactile") (footprint "Custom:SW3"))
+    (comp (ref "SW4") (value "6x6 tactile") (footprint "Custom:SW4"))
+    (comp (ref "U1_3D") (value "ESP32-S3 DevKitC-1 N16R8") (footprint "Custom:U1_3D"))
+  )
+  (nets
+    (net (code 1) (name "3V3")
+      (node (ref "BZ1") (pin "1"))
+      (node (ref "J1") (pin "1"))
+      (node (ref "J1") (pin "2"))
+      (node (ref "J_ENC1") (pin "2"))
+      (node (ref "J_GPS1") (pin "1"))
+      (node (ref "J_RF1") (pin "2"))
+      (node (ref "J_RF2") (pin "2"))
+      (node (ref "J_TFT_BUS") (pin "1"))
+      (node (ref "J_TFT_BUS") (pin "8"))
+    )
+    (net (code 2) (name "RST")
+      (node (ref "J1") (pin "3"))
+    )
+    (net (code 3) (name "GPIO4")
+      (node (ref "J1") (pin "4"))
+      (node (ref "J_RF1") (pin "3"))
+    )
+    (net (code 4) (name "GPIO5")
+      (node (ref "J1") (pin "5"))
+      (node (ref "J_RF1") (pin "7"))
+      (node (ref "J_RF2") (pin "7"))
+    )
+    (net (code 5) (name "GPIO6")
+      (node (ref "J1") (pin "6"))
+      (node (ref "J_RF1") (pin "5"))
+      (node (ref "J_RF2") (pin "5"))
+    )
+    (net (code 6) (name "GPIO7")
+      (node (ref "J1") (pin "7"))
+      (node (ref "J_RF1") (pin "6"))
+      (node (ref "J_RF2") (pin "6"))
+    )
+    (net (code 7) (name "GPIO15")
+      (node (ref "J1") (pin "8"))
+      (node (ref "SW3") (pin "1"))
+      (node (ref "SW3") (pin "2"))
+    )
+    (net (code 8) (name "GPIO16")
+      (node (ref "J1") (pin "9"))
+      (node (ref "SW4") (pin "1"))
+      (node (ref "SW4") (pin "2"))
+    )
+    (net (code 9) (name "GPIO17")
+      (node (ref "J1") (pin "10"))
+      (node (ref "J_GPS1") (pin "4"))
+    )
+    (net (code 10) (name "GPIO18")
+      (node (ref "J1") (pin "11"))
+      (node (ref "J_GPS1") (pin "3"))
+    )
+    (net (code 11) (name "GPIO8")
+      (node (ref "J1") (pin "12"))
+      (node (ref "J_TFT_BUS") (pin "7"))
+    )
+    (net (code 12) (name "GPIO3")
+      (node (ref "J1") (pin "13"))
+      (node (ref "J_RF1") (pin "4"))
+    )
+    (net (code 13) (name "GPIO46")
+      (node (ref "J1") (pin "14"))
+    )
+    (net (code 14) (name "GPIO9")
+      (node (ref "J1") (pin "15"))
+      (node (ref "J_TFT_BUS") (pin "5"))
+    )
+    (net (code 15) (name "GPIO10")
+      (node (ref "J1") (pin "16"))
+      (node (ref "J_TFT_BUS") (pin "6"))
+    )
+    (net (code 16) (name "GPIO11")
+      (node (ref "J1") (pin "17"))
+      (node (ref "J_TFT_BUS") (pin "4"))
+    )
+    (net (code 17) (name "GPIO12")
+      (node (ref "J1") (pin "18"))
+      (node (ref "J_TFT_BUS") (pin "3"))
+    )
+    (net (code 18) (name "GPIO13")
+      (node (ref "J1") (pin "19"))
+      (node (ref "SW1") (pin "1"))
+      (node (ref "SW1") (pin "2"))
+    )
+    (net (code 19) (name "GPIO14")
+      (node (ref "J1") (pin "20"))
+      (node (ref "SW2") (pin "1"))
+      (node (ref "SW2") (pin "2"))
+    )
+    (net (code 20) (name "5V_PROTECTED")
+      (node (ref "D1") (pin "2"))
+      (node (ref "J1") (pin "21"))
+    )
+    (net (code 21) (name "GND")
+      (node (ref "C8") (pin "2"))
+      (node (ref "J1") (pin "22"))
+      (node (ref "J3") (pin "1"))
+      (node (ref "J3") (pin "21"))
+      (node (ref "J3") (pin "22"))
+      (node (ref "J_BAT") (pin "2"))
+      (node (ref "J_ENC1") (pin "1"))
+      (node (ref "J_GPS1") (pin "2"))
+      (node (ref "J_PWR") (pin "2"))
+      (node (ref "J_RF1") (pin "1"))
+      (node (ref "J_RF1") (pin "8"))
+      (node (ref "J_RF2") (pin "1"))
+      (node (ref "J_RF2") (pin "8"))
+      (node (ref "J_TFT_BUS") (pin "2"))
+      (node (ref "Q1") (pin "3"))
+      (node (ref "R14") (pin "2"))
+      (node (ref "R6") (pin "2"))
+      (node (ref "SW1") (pin "3"))
+      (node (ref "SW1") (pin "4"))
+      (node (ref "SW2") (pin "3"))
+      (node (ref "SW2") (pin "4"))
+      (node (ref "SW3") (pin "3"))
+      (node (ref "SW3") (pin "4"))
+      (node (ref "SW4") (pin "3"))
+      (node (ref "SW4") (pin "4"))
+    )
+    (net (code 22) (name "GPIO43")
+      (node (ref "J3") (pin "2"))
+    )
+    (net (code 23) (name "GPIO44")
+      (node (ref "J3") (pin "3"))
+    )
+    (net (code 24) (name "GPIO1")
+      (node (ref "J3") (pin "4"))
+      (node (ref "J_RF2") (pin "4"))
+    )
+    (net (code 25) (name "GPIO2")
+      (node (ref "J3") (pin "5"))
+      (node (ref "J_RF2") (pin "3"))
+    )
+    (net (code 26) (name "GPIO42")
+      (node (ref "J3") (pin "6"))
+      (node (ref "R5") (pin "1"))
+    )
+    (net (code 27) (name "GPIO41")
+      (node (ref "J3") (pin "7"))
+      (node (ref "J_ENC1") (pin "5"))
+    )
+    (net (code 28) (name "GPIO40")
+      (node (ref "J3") (pin "8"))
+      (node (ref "J_ENC1") (pin "4"))
+    )
+    (net (code 29) (name "GPIO39")
+      (node (ref "J3") (pin "9"))
+      (node (ref "J_ENC1") (pin "3"))
+    )
+    (net (code 30) (name "GPIO38")
+      (node (ref "J3") (pin "10"))
+    )
+    (net (code 31) (name "GPIO37")
+      (node (ref "J3") (pin "11"))
+    )
+    (net (code 32) (name "GPIO36")
+      (node (ref "J3") (pin "12"))
+    )
+    (net (code 33) (name "GPIO35")
+      (node (ref "J3") (pin "13"))
+    )
+    (net (code 34) (name "GPIO0")
+      (node (ref "J3") (pin "14"))
+    )
+    (net (code 35) (name "GPIO45")
+      (node (ref "J3") (pin "15"))
+    )
+    (net (code 36) (name "GPIO48")
+      (node (ref "J3") (pin "16"))
+    )
+    (net (code 37) (name "GPIO47")
+      (node (ref "J3") (pin "17"))
+    )
+    (net (code 38) (name "GPIO21")
+      (node (ref "J3") (pin "18"))
+    )
+    (net (code 39) (name "GPIO20")
+      (node (ref "J3") (pin "19"))
+    )
+    (net (code 40) (name "GPIO19")
+      (node (ref "J3") (pin "20"))
+    )
+    (net (code 41) (name "BUZZER_LOW")
+      (node (ref "BZ1") (pin "2"))
+      (node (ref "Q1") (pin "2"))
+    )
+    (net (code 42) (name "BUZZER_BASE")
+      (node (ref "Q1") (pin "1"))
+      (node (ref "R5") (pin "2"))
+      (node (ref "R6") (pin "1"))
+    )
+    (net (code 43) (name "5V_IN")
+      (node (ref "F1") (pin "1"))
+      (node (ref "J_PWR") (pin "1"))
+    )
+    (net (code 44) (name "5V_FUSED")
+      (node (ref "D1") (pin "1"))
+      (node (ref "F1") (pin "2"))
+    )
+    (net (code 45) (name "VBAT_RAW")
+      (node (ref "J_BAT") (pin "1"))
+      (node (ref "R13") (pin "1"))
+    )
+    (net (code 46) (name "BAT_ADC")
+      (node (ref "C8") (pin "1"))
+      (node (ref "R13") (pin "2"))
+      (node (ref "R14") (pin "1"))
+    )
+  )
+)
+
+===== END FILE: ESP32_S3_Master_Reconstruction.net =====
+
+===== BEGIN FILE: ESP32_S3_Master_Reconstruction_netlist.json =====
+{
+  "format": "KiCad PCB netlist export",
+  "source": "ESP32_S3_Master_Reconstruction.kicad_pcb",
+  "components": [
+    {
+      "reference": "BZ1",
+      "value": "Active buzzer",
+      "footprint": "Custom:BZ1"
+    },
+    {
+      "reference": "C8",
+      "value": "100nF",
+      "footprint": "Custom:C8"
+    },
+    {
+      "reference": "D1",
+      "value": "SS14",
+      "footprint": "Custom:D1"
+    },
+    {
+      "reference": "F1",
+      "value": "PTC 0.75A",
+      "footprint": "Custom:F1"
+    },
+    {
+      "reference": "J1",
+      "value": "ESP32-S3 DevKitC-1 1x22 socket",
+      "footprint": "Custom:J1"
+    },
+    {
+      "reference": "J3",
+      "value": "ESP32-S3 DevKitC-1 1x22 socket",
+      "footprint": "Custom:J3"
+    },
+    {
+      "reference": "J_BAT",
+      "value": "BATTERY SENSE",
+      "footprint": "Custom:J_BAT"
+    },
+    {
+      "reference": "J_ENC1",
+      "value": "KY-040 5P",
+      "footprint": "Custom:J_ENC1"
+    },
+    {
+      "reference": "J_GPS1",
+      "value": "NEO-6M GPS 4P",
+      "footprint": "Custom:J_GPS1"
+    },
+    {
+      "reference": "J_PWR",
+      "value": "5V INPUT",
+      "footprint": "Custom:J_PWR"
+    },
+    {
+      "reference": "J_RF1",
+      "value": "nRF24L01+ 2x4 socket",
+      "footprint": "Custom:J_RF1"
+    },
+    {
+      "reference": "J_RF2",
+      "value": "nRF24L01+ 2x4 socket",
+      "footprint": "Custom:J_RF2"
+    },
+    {
+      "reference": "J_TFT_BUS",
+      "value": "TFT BUS 1x8 external",
+      "footprint": "Custom:J_TFT_BUS"
+    },
+    {
+      "reference": "Q1",
+      "value": "2N3904 TO-92",
+      "footprint": "Custom:Q1"
+    },
+    {
+      "reference": "R13",
+      "value": "2.2k",
+      "footprint": "Custom:R13"
+    },
+    {
+      "reference": "R14",
+      "value": "1k",
+      "footprint": "Custom:R14"
+    },
+    {
+      "reference": "R5",
+      "value": "1k",
+      "footprint": "Custom:R5"
+    },
+    {
+      "reference": "R6",
+      "value": "100k",
+      "footprint": "Custom:R6"
+    },
+    {
+      "reference": "SW1",
+      "value": "6x6 tactile",
+      "footprint": "Custom:SW1"
+    },
+    {
+      "reference": "SW2",
+      "value": "6x6 tactile",
+      "footprint": "Custom:SW2"
+    },
+    {
+      "reference": "SW3",
+      "value": "6x6 tactile",
+      "footprint": "Custom:SW3"
+    },
+    {
+      "reference": "SW4",
+      "value": "6x6 tactile",
+      "footprint": "Custom:SW4"
+    },
+    {
+      "reference": "U1_3D",
+      "value": "ESP32-S3 DevKitC-1 N16R8",
+      "footprint": "Custom:U1_3D"
+    }
+  ],
+  "nets": [
+    {
+      "code": 1,
+      "name": "3V3",
+      "nodes": [
+        {
+          "reference": "BZ1",
+          "pin": "1"
+        },
+        {
+          "reference": "J1",
+          "pin": "1"
+        },
+        {
+          "reference": "J1",
+          "pin": "2"
+        },
+        {
+          "reference": "J_ENC1",
+          "pin": "2"
+        },
+        {
+          "reference": "J_GPS1",
+          "pin": "1"
+        },
+        {
+          "reference": "J_RF1",
+          "pin": "2"
+        },
+        {
+          "reference": "J_RF2",
+          "pin": "2"
+        },
+        {
+          "reference": "J_TFT_BUS",
+          "pin": "1"
+        },
+        {
+          "reference": "J_TFT_BUS",
+          "pin": "8"
+        }
+      ]
+    },
+    {
+      "code": 2,
+      "name": "RST",
+      "nodes": [
+        {
+          "reference": "J1",
+          "pin": "3"
+        }
+      ]
+    },
+    {
+      "code": 3,
+      "name": "GPIO4",
+      "nodes": [
+        {
+          "reference": "J1",
+          "pin": "4"
+        },
+        {
+          "reference": "J_RF1",
+          "pin": "3"
+        }
+      ]
+    },
+    {
+      "code": 4,
+      "name": "GPIO5",
+      "nodes": [
+        {
+          "reference": "J1",
+          "pin": "5"
+        },
+        {
+          "reference": "J_RF1",
+          "pin": "7"
+        },
+        {
+          "reference": "J_RF2",
+          "pin": "7"
+        }
+      ]
+    },
+    {
+      "code": 5,
+      "name": "GPIO6",
+      "nodes": [
+        {
+          "reference": "J1",
+          "pin": "6"
+        },
+        {
+          "reference": "J_RF1",
+          "pin": "5"
+        },
+        {
+          "reference": "J_RF2",
+          "pin": "5"
+        }
+      ]
+    },
+    {
+      "code": 6,
+      "name": "GPIO7",
+      "nodes": [
+        {
+          "reference": "J1",
+          "pin": "7"
+        },
+        {
+          "reference": "J_RF1",
+          "pin": "6"
+        },
+        {
+          "reference": "J_RF2",
+          "pin": "6"
+        }
+      ]
+    },
+    {
+      "code": 7,
+      "name": "GPIO15",
+      "nodes": [
+        {
+          "reference": "J1",
+          "pin": "8"
+        },
+        {
+          "reference": "SW3",
+          "pin": "1"
+        },
+        {
+          "reference": "SW3",
+          "pin": "2"
+        }
+      ]
+    },
+    {
+      "code": 8,
+      "name": "GPIO16",
+      "nodes": [
+        {
+          "reference": "J1",
+          "pin": "9"
+        },
+        {
+          "reference": "SW4",
+          "pin": "1"
+        },
+        {
+          "reference": "SW4",
+          "pin": "2"
+        }
+      ]
+    },
+    {
+      "code": 9,
+      "name": "GPIO17",
+      "nodes": [
+        {
+          "reference": "J1",
+          "pin": "10"
+        },
+        {
+          "reference": "J_GPS1",
+          "pin": "4"
+        }
+      ]
+    },
+    {
+      "code": 10,
+      "name": "GPIO18",
+      "nodes": [
+        {
+          "reference": "J1",
+          "pin": "11"
+        },
+        {
+          "reference": "J_GPS1",
+          "pin": "3"
+        }
+      ]
+    },
+    {
+      "code": 11,
+      "name": "GPIO8",
+      "nodes": [
+        {
+          "reference": "J1",
+          "pin": "12"
+        },
+        {
+          "reference": "J_TFT_BUS",
+          "pin": "7"
+        }
+      ]
+    },
+    {
+      "code": 12,
+      "name": "GPIO3",
+      "nodes": [
+        {
+          "reference": "J1",
+          "pin": "13"
+        },
+        {
+          "reference": "J_RF1",
+          "pin": "4"
+        }
+      ]
+    },
+    {
+      "code": 13,
+      "name": "GPIO46",
+      "nodes": [
+        {
+          "reference": "J1",
+          "pin": "14"
+        }
+      ]
+    },
+    {
+      "code": 14,
+      "name": "GPIO9",
+      "nodes": [
+        {
+          "reference": "J1",
+          "pin": "15"
+        },
+        {
+          "reference": "J_TFT_BUS",
+          "pin": "5"
+        }
+      ]
+    },
+    {
+      "code": 15,
+      "name": "GPIO10",
+      "nodes": [
+        {
+          "reference": "J1",
+          "pin": "16"
+        },
+        {
+          "reference": "J_TFT_BUS",
+          "pin": "6"
+        }
+      ]
+    },
+    {
+      "code": 16,
+      "name": "GPIO11",
+      "nodes": [
+        {
+          "reference": "J1",
+          "pin": "17"
+        },
+        {
+          "reference": "J_TFT_BUS",
+          "pin": "4"
+        }
+      ]
+    },
+    {
+      "code": 17,
+      "name": "GPIO12",
+      "nodes": [
+        {
+          "reference": "J1",
+          "pin": "18"
+        },
+        {
+          "reference": "J_TFT_BUS",
+          "pin": "3"
+        }
+      ]
+    },
+    {
+      "code": 18,
+      "name": "GPIO13",
+      "nodes": [
+        {
+          "reference": "J1",
+          "pin": "19"
+        },
+        {
+          "reference": "SW1",
+          "pin": "1"
+        },
+        {
+          "reference": "SW1",
+          "pin": "2"
+        }
+      ]
+    },
+    {
+      "code": 19,
+      "name": "GPIO14",
+      "nodes": [
+        {
+          "reference": "J1",
+          "pin": "20"
+        },
+        {
+          "reference": "SW2",
+          "pin": "1"
+        },
+        {
+          "reference": "SW2",
+          "pin": "2"
+        }
+      ]
+    },
+    {
+      "code": 20,
+      "name": "5V_PROTECTED",
+      "nodes": [
+        {
+          "reference": "D1",
+          "pin": "2"
+        },
+        {
+          "reference": "J1",
+          "pin": "21"
+        }
+      ]
+    },
+    {
+      "code": 21,
+      "name": "GND",
+      "nodes": [
+        {
+          "reference": "C8",
+          "pin": "2"
+        },
+        {
+          "reference": "J1",
+          "pin": "22"
+        },
+        {
+          "reference": "J3",
+          "pin": "1"
+        },
+        {
+          "reference": "J3",
+          "pin": "21"
+        },
+        {
+          "reference": "J3",
+          "pin": "22"
+        },
+        {
+          "reference": "J_BAT",
+          "pin": "2"
+        },
+        {
+          "reference": "J_ENC1",
+          "pin": "1"
+        },
+        {
+          "reference": "J_GPS1",
+          "pin": "2"
+        },
+        {
+          "reference": "J_PWR",
+          "pin": "2"
+        },
+        {
+          "reference": "J_RF1",
+          "pin": "1"
+        },
+        {
+          "reference": "J_RF1",
+          "pin": "8"
+        },
+        {
+          "reference": "J_RF2",
+          "pin": "1"
+        },
+        {
+          "reference": "J_RF2",
+          "pin": "8"
+        },
+        {
+          "reference": "J_TFT_BUS",
+          "pin": "2"
+        },
+        {
+          "reference": "Q1",
+          "pin": "3"
+        },
+        {
+          "reference": "R14",
+          "pin": "2"
+        },
+        {
+          "reference": "R6",
+          "pin": "2"
+        },
+        {
+          "reference": "SW1",
+          "pin": "3"
+        },
+        {
+          "reference": "SW1",
+          "pin": "4"
+        },
+        {
+          "reference": "SW2",
+          "pin": "3"
+        },
+        {
+          "reference": "SW2",
+          "pin": "4"
+        },
+        {
+          "reference": "SW3",
+          "pin": "3"
+        },
+        {
+          "reference": "SW3",
+          "pin": "4"
+        },
+        {
+          "reference": "SW4",
+          "pin": "3"
+        },
+        {
+          "reference": "SW4",
+          "pin": "4"
+        }
+      ]
+    },
+    {
+      "code": 22,
+      "name": "GPIO43",
+      "nodes": [
+        {
+          "reference": "J3",
+          "pin": "2"
+        }
+      ]
+    },
+    {
+      "code": 23,
+      "name": "GPIO44",
+      "nodes": [
+        {
+          "reference": "J3",
+          "pin": "3"
+        }
+      ]
+    },
+    {
+      "code": 24,
+      "name": "GPIO1",
+      "nodes": [
+        {
+          "reference": "J3",
+          "pin": "4"
+        },
+        {
+          "reference": "J_RF2",
+          "pin": "4"
+        }
+      ]
+    },
+    {
+      "code": 25,
+      "name": "GPIO2",
+      "nodes": [
+        {
+          "reference": "J3",
+          "pin": "5"
+        },
+        {
+          "reference": "J_RF2",
+          "pin": "3"
+        }
+      ]
+    },
+    {
+      "code": 26,
+      "name": "GPIO42",
+      "nodes": [
+        {
+          "reference": "J3",
+          "pin": "6"
+        },
+        {
+          "reference": "R5",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "code": 27,
+      "name": "GPIO41",
+      "nodes": [
+        {
+          "reference": "J3",
+          "pin": "7"
+        },
+        {
+          "reference": "J_ENC1",
+          "pin": "5"
+        }
+      ]
+    },
+    {
+      "code": 28,
+      "name": "GPIO40",
+      "nodes": [
+        {
+          "reference": "J3",
+          "pin": "8"
+        },
+        {
+          "reference": "J_ENC1",
+          "pin": "4"
+        }
+      ]
+    },
+    {
+      "code": 29,
+      "name": "GPIO39",
+      "nodes": [
+        {
+          "reference": "J3",
+          "pin": "9"
+        },
+        {
+          "reference": "J_ENC1",
+          "pin": "3"
+        }
+      ]
+    },
+    {
+      "code": 30,
+      "name": "GPIO38",
+      "nodes": [
+        {
+          "reference": "J3",
+          "pin": "10"
+        }
+      ]
+    },
+    {
+      "code": 31,
+      "name": "GPIO37",
+      "nodes": [
+        {
+          "reference": "J3",
+          "pin": "11"
+        }
+      ]
+    },
+    {
+      "code": 32,
+      "name": "GPIO36",
+      "nodes": [
+        {
+          "reference": "J3",
+          "pin": "12"
+        }
+      ]
+    },
+    {
+      "code": 33,
+      "name": "GPIO35",
+      "nodes": [
+        {
+          "reference": "J3",
+          "pin": "13"
+        }
+      ]
+    },
+    {
+      "code": 34,
+      "name": "GPIO0",
+      "nodes": [
+        {
+          "reference": "J3",
+          "pin": "14"
+        }
+      ]
+    },
+    {
+      "code": 35,
+      "name": "GPIO45",
+      "nodes": [
+        {
+          "reference": "J3",
+          "pin": "15"
+        }
+      ]
+    },
+    {
+      "code": 36,
+      "name": "GPIO48",
+      "nodes": [
+        {
+          "reference": "J3",
+          "pin": "16"
+        }
+      ]
+    },
+    {
+      "code": 37,
+      "name": "GPIO47",
+      "nodes": [
+        {
+          "reference": "J3",
+          "pin": "17"
+        }
+      ]
+    },
+    {
+      "code": 38,
+      "name": "GPIO21",
+      "nodes": [
+        {
+          "reference": "J3",
+          "pin": "18"
+        }
+      ]
+    },
+    {
+      "code": 39,
+      "name": "GPIO20",
+      "nodes": [
+        {
+          "reference": "J3",
+          "pin": "19"
+        }
+      ]
+    },
+    {
+      "code": 40,
+      "name": "GPIO19",
+      "nodes": [
+        {
+          "reference": "J3",
+          "pin": "20"
+        }
+      ]
+    },
+    {
+      "code": 41,
+      "name": "BUZZER_LOW",
+      "nodes": [
+        {
+          "reference": "BZ1",
+          "pin": "2"
+        },
+        {
+          "reference": "Q1",
+          "pin": "2"
+        }
+      ]
+    },
+    {
+      "code": 42,
+      "name": "BUZZER_BASE",
+      "nodes": [
+        {
+          "reference": "Q1",
+          "pin": "1"
+        },
+        {
+          "reference": "R5",
+          "pin": "2"
+        },
+        {
+          "reference": "R6",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "code": 43,
+      "name": "5V_IN",
+      "nodes": [
+        {
+          "reference": "F1",
+          "pin": "1"
+        },
+        {
+          "reference": "J_PWR",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "code": 44,
+      "name": "5V_FUSED",
+      "nodes": [
+        {
+          "reference": "D1",
+          "pin": "1"
+        },
+        {
+          "reference": "F1",
+          "pin": "2"
+        }
+      ]
+    },
+    {
+      "code": 45,
+      "name": "VBAT_RAW",
+      "nodes": [
+        {
+          "reference": "J_BAT",
+          "pin": "1"
+        },
+        {
+          "reference": "R13",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "code": 46,
+      "name": "BAT_ADC",
+      "nodes": [
+        {
+          "reference": "C8",
+          "pin": "1"
+        },
+        {
+          "reference": "R13",
+          "pin": "2"
+        },
+        {
+          "reference": "R14",
+          "pin": "1"
+        }
+      ]
+    }
+  ]
+}
+
+===== END FILE: ESP32_S3_Master_Reconstruction_netlist.json =====
+
+===== BEGIN FILE: footprint_assignments.csv =====
+Reference,Footprint,Value
+,MountingHole_M3_15_125,
+,MountingHole_M3_15_15,
+,MountingHole_M3_185_125,
+,MountingHole_M3_185_15,
+BZ1,Custom:BZ1,Active buzzer
+C8,Custom:C8,100nF
+D1,Custom:D1,SS14
+F1,Custom:F1,PTC 0.75A
+J1,Custom:J1,ESP32-S3 DevKitC-1 1x22 socket
+J3,Custom:J3,ESP32-S3 DevKitC-1 1x22 socket
+J_BAT,Custom:J_BAT,BATTERY SENSE
+J_ENC1,Custom:J_ENC1,KY-040 5P
+J_GPS1,Custom:J_GPS1,NEO-6M GPS 4P
+J_PWR,Custom:J_PWR,5V INPUT
+J_RF1,Custom:J_RF1,nRF24L01+ 2x4 socket
+J_RF2,Custom:J_RF2,nRF24L01+ 2x4 socket
+J_TFT_BUS,Custom:J_TFT_BUS,TFT BUS 1x8 external
+Q1,Custom:Q1,2N3904 TO-92
+R13,Custom:R13,2.2k
+R14,Custom:R14,1k
+R5,Custom:R5,1k
+R6,Custom:R6,100k
+SW1,Custom:SW1,6x6 tactile
+SW2,Custom:SW2,6x6 tactile
+SW3,Custom:SW3,6x6 tactile
+SW4,Custom:SW4,6x6 tactile
+U1_3D,Custom:U1_3D,ESP32-S3 DevKitC-1 N16R8
+
+===== END FILE: footprint_assignments.csv =====
+
+===== BEGIN FILE: reconstruct_master_reference.py =====
+import re, math, uuid, os
+from collections import defaultdict
+from shapely.geometry import LineString, Point
+
+from pathlib import Path
+ROOT=Path(__file__).resolve().parent
+SRC=str(ROOT/'source_reference/ESP32_S3_Modular_Carrier_REV4.kicad_pcb')
+OUT=str(ROOT/'ESP32_S3_Master_Reconstruction.kicad_pcb')
+
+src=open(SRC,encoding='utf-8').read()
+
+def blocks(text, token):
+    for m in re.finditer(re.escape(token), text):
+        st=m.start(); depth=0
+        for i in range(st,len(text)):
+            if text[i]=='(': depth+=1
+            elif text[i]==')':
+                depth-=1
+                if depth==0:
+                    yield text[st:i+1]; break
+
+def parse_footprints(board):
+    fps={}
+    for fb in blocks(board,'(footprint "'):
+        fm=re.match(r'\(footprint "([^"]+)"',fb)
+        if not fm: continue
+        name=fm.group(1)
+        am=re.search(r'\(at\s+([-\d.]+)\s+([-\d.]+)(?:\s+([-\d.]+))?\)',fb)
+        if not am: continue
+        fx,fy,fr=map(float,am.groups(default='0'))
+        pads=[]
+        for pb in blocks(fb,'(pad "'):
+            pm=re.match(r'\(pad "([^"]+)"',pb)
+            at=re.search(r'\(at\s+([-\d.]+)\s+([-\d.]+)(?:\s+([-\d.]+))?\)',pb)
+            nm=re.search(r'\(net\s+"([^"]+)"\)',pb)
+            sz=re.search(r'\(size\s+([-\d.]+)\s+([-\d.]+)\)',pb)
+            dr=re.search(r'\(drill\s+([-\d.]+)',pb)
+            if not (pm and at and nm): continue
+            dx,dy,r=map(float,at.groups(default='0'))
+            a=math.radians(fr)
+            x=fx+dx*math.cos(a)-dy*math.sin(a); y=fy+dx*math.sin(a)+dy*math.cos(a)
+            pads.append(dict(pad=pm.group(1),x=x,y=y,net=nm.group(1),size=float(sz.group(1)) if sz else 2.0,drill=float(dr.group(1)) if dr else 0.9))
+        fps[name]=pads
+    return fps
+
+fps=parse_footprints(src)
+net_names=[]
+for pads in fps.values():
+    for p in pads:
+        if p['net'] not in net_names: net_names.append(p['net'])
+net_id={n:i+1 for i,n in enumerate(net_names)}
+
+def P(fp,pad):
+    for p in fps[fp]:
+        if p['pad']==str(pad): return (p['x'],p['y'])
+    raise KeyError((fp,pad))
+
+routes=[]
+def add(net,layer,pts,width=0.32):
+    pts=[(round(float(x),3),round(float(y),3)) for x,y in pts]
+    q=[]
+    for pt in pts:
+        if not q or pt!=q[-1]: q.append(pt)
+    routes.append((net,layer,q,width))
+
+# Produce a path with only 45-degree diagonals and axis-aligned segments,
+# with two 45-degree corners. The dominant axis gets the middle straight segment.
+def dogleg(a,b,small=6.0):
+    x1,y1=a; x2,y2=b
+    dx=x2-x1; dy=y2-y1
+    sx=1 if dx>=0 else -1; sy=1 if dy>=0 else -1
+    adx=abs(dx); ady=abs(dy)
+    if adx < 1e-6 or ady < 1e-6:
+        # avoid a 90-degree corner by using a tiny 45-degree chamfer at one end if possible
+        if adx < 1e-6 and ady < 1e-6: return [a,b]
+        if adx < 1e-6:
+            t=min(4.0, ady/2)
+            return [a,(x1+sx*t,y1+sy*t),(x2,y2)]
+        t=min(4.0, adx/2)
+        return [a,(x1+sx*t,y1+sy*t),(x2,y2)]
+    if adx >= ady:
+        # diag length split; middle horizontal
+        t=min(max(3.0,small), ady*0.45)
+        u=ady-t
+        p1=(x1+sx*u, y1+sy*u)
+        p2=(x2-sx*t, y2-sy*t)
+        return [a,p1,p2,b]
+    else:
+        t=min(max(3.0,small), adx*0.45)
+        u=adx-t
+        p1=(x1+sx*u,y1+sy*u)
+        p2=(x2-sx*t,y2-sy*t)
+        return [a,p1,p2,b]
+
+# --- Shared RF SPI/data bundles on B.Cu, routed across the top in two parallel trunks ---
+# GPIO6 shared between J1, RF1 pad5, RF2 pad5
+C6=(61.3,26.5)
+add('GPIO6','B.Cu',dogleg(P('Custom:J1',6),C6,6.0))
+add('GPIO6','B.Cu',dogleg(C6,P('Custom:J_RF1',5),6.0))
+add('GPIO6','B.Cu',dogleg(C6,P('Custom:J_RF2',5),6.0))
+# GPIO7 shared between J1, RF1 pad6, RF2 pad6
+C7=(61.3,31.0)
+add('GPIO7','B.Cu',dogleg(P('Custom:J1',7),C7,6.0))
+add('GPIO7','B.Cu',dogleg(C7,P('Custom:J_RF1',6),6.0))
+add('GPIO7','B.Cu',dogleg(C7,P('Custom:J_RF2',6),6.0))
+
+# --- Left RF connector bundle on F.Cu ---
+add('GPIO4','F.Cu',dogleg(P('Custom:J1',4),P('Custom:J_RF1',3),7.0))
+add('GPIO5','F.Cu',dogleg(P('Custom:J1',5),P('Custom:J_RF1',7),7.0))
+add('GPIO3','F.Cu',dogleg(P('Custom:J1',13),P('Custom:J_RF1',4),8.0))
+
+# --- Right RF connector bundle on F.Cu ---
+add('GPIO1','F.Cu',dogleg(P('Custom:J3',4),P('Custom:J_RF2',4),7.0))
+add('GPIO2','F.Cu',dogleg(P('Custom:J3',5),P('Custom:J_RF2',3),7.0))
+add('GPIO5','F.Cu',dogleg(P('Custom:J3',6-1),P('Custom:J_RF2',7),7.0))  # J3 pad5 -> GPIO2 actually, corrected below
+# Replace the accidental line above by removing last route and add correct GPIO5 route from J1 shared pad
+routes.pop()
+add('GPIO5','B.Cu',dogleg(P('Custom:J1',5),P('Custom:J_RF2',7),8.0))
+
+# --- TFT 1x8 bus, F.Cu, monotonic fan-out ---
+for net,jp,tp in [
+    ('GPIO8',12,7),('GPIO10',16,6),('GPIO9',15,5),('GPIO11',17,4),('GPIO12',18,3)
+]:
+    add(net,'F.Cu',dogleg(P('Custom:J1',jp),P('Custom:J_TFT_BUS',tp),5.0))
+
+# --- GPS UART pair ---
+add('GPIO18','F.Cu',dogleg(P('Custom:J3',11),P('Custom:J_GPS1',3),6.0))
+add('GPIO17','F.Cu',dogleg(P('Custom:J3',10),P('Custom:J_GPS1',4),6.0))
+
+# --- Four buttons, F.Cu; sources are kept on dedicated radial corridors ---
+add('GPIO13','F.Cu',dogleg(P('Custom:J1',19),P('Custom:SW1',1),4.0))
+add('GPIO13','F.Cu',[(P('Custom:SW1',1)),P('Custom:SW1',2)])
+add('GPIO14','F.Cu',dogleg(P('Custom:J1',20),P('Custom:SW2',1),4.0))
+add('GPIO14','F.Cu',[P('Custom:SW2',1),P('Custom:SW2',2)])
+add('GPIO15','F.Cu',dogleg(P('Custom:J1',8),P('Custom:SW3',1),7.0))
+add('GPIO15','F.Cu',[P('Custom:SW3',1),P('Custom:SW3',2)])
+add('GPIO16','F.Cu',dogleg(P('Custom:J1',9),P('Custom:SW4',1),7.0))
+add('GPIO16','F.Cu',[P('Custom:SW4',1),P('Custom:SW4',2)])
+
+# --- Encoder on B.Cu, using three lower parallel corridors ---
+for net,jp,ex,ep in [
+    ('GPIO41',7,103,5),('GPIO40',8,99,4),('GPIO39',9,95,3)
+]:
+    a=P('Custom:J3',jp); target=P('Custom:J_ENC1',ep)
+    # force a safe B.Cu lane before the lower horizontal fan-out
+    lane=(ex,104.0)
+    add(net,'B.Cu',dogleg(a,lane,7.0))
+    add(net,'B.Cu',dogleg(lane,target,7.0))
+
+# --- Buzzer and GPIO42 path, F.Cu outer-right corridor ---
+add('GPIO42','F.Cu',dogleg(P('Custom:J3',6),P('Custom:R5',1),8.0))
+add('BUZZER_LOW','F.Cu',[(P('Custom:BZ1',2)),(165.62,112),(161.81,123)])
+# GPIO42 enters R5; R5 -> Q1 base, R6 -> Q1 base
+add('BUZZER_BASE','F.Cu',[(P('Custom:R5',2)),(152.54,123),(155.46,123)])
+add('BUZZER_BASE','F.Cu',[(P('Custom:R6',1)),(145.0,124.46),(147.54,123)])
+
+# --- Power chain, B.Cu. Protected 5V is kept above encoder corridors. ---
+add('5V_IN','B.Cu',dogleg(P('Custom:J_PWR',1),P('Custom:F1',1),4.0))
+add('5V_FUSED','B.Cu',dogleg(P('Custom:F1',2),P('Custom:D1',1),4.0))
+# 5V_PROTECTED from D1 to J1 pin21 using a dedicated y=98 corridor, staying right of encoder lanes.
+add('5V_PROTECTED','B.Cu',[
+    P('Custom:D1',2),(150.0,118.46),(150.0,98.0),(120.0,98.0),(112.8,90.8),P('Custom:J1',21)
+])
+
+# --- Battery sense, B.Cu right-side compact analog loop ---
+add('VBAT_RAW','B.Cu',dogleg(P('Custom:J_BAT',1),P('Custom:R13',1),3.5))
+add('BAT_ADC','B.Cu',[(P('Custom:R13',2)),(168.5,94),(168.5,99),(166.54,100)])
+add('BAT_ADC','B.Cu',[(P('Custom:R14',1)),(171.0,100),(171.0,99),(173.46,99)])
+
+# --- GND is a B.Cu copper zone; no unnecessary ground tracks ---
+
+# ---------- Root net declarations / pad net IDs ----------
+netdecl='\t(net 0 "")\n'+''.join(f'\t(net {nid} "{name}")\n' for name,nid in net_id.items())
+le=src.find('\t(setup')
+if le<0: raise RuntimeError('setup not found')
+board=src[:le]+netdecl+src[le:]
+for name,nid in net_id.items():
+    board=board.replace(f'(net "{name}")',f'(net {nid} "{name}")')
+
+# ---------- Graphics ----------
+g=[]
+def gid(): return str(uuid.uuid4())
+def grtext(text,x,y,rot=0,size=1.2,thick=0.18):
+    # encode line breaks as literal KiCad escape sequence
+    text=text.replace('\\','\\\\').replace('"','\\"')
+    g.append(f'''\t(gr_text "{text}"\n\t\t(at {x} {y} {rot})\n\t\t(layer "F.SilkS")\n\t\t(effects (font (size {size} {size}) (thickness {thick})))\n\t\t(uuid "{gid()}")\n\t)''')
+def grrect(x1,y1,x2,y2,w=0.25):
+    g.append(f'''\t(gr_rect\n\t\t(start {x1} {y1})\n\t\t(end {x2} {y2})\n\t\t(stroke (width {w}) (type default))\n\t\t(fill none)\n\t\t(layer "F.SilkS")\n\t\t(uuid "{gid()}")\n\t)''')
+
+grtext('ESP32-S3 N16R8 MODULAR CARRIER',100,15.5,0,1.65,0.28)
+grtext('REV4.1  •  2-LAYER  •  SOCKETED DEVKITC-1',100,18.5,0,0.85,0.14)
+grrect(24,12,46,23,0.3); grrect(144,12,166,23,0.3)
+grtext('ANTENNA KEEP-OUT',35,17.2,0,1.0,0.16); grtext('ANTENNA KEEP-OUT',155,17.2,0,1.0,0.16)
+# central module silhouette
+# keep text away from the actual board edges
+grrect(63.5,28,126.5,108,0.35); grrect(67,31.5,123,105,0.18)
+grtext('ESP32-S3 DEVKITC-1',95,69,90,1.55,0.24)
+grtext('SOCKETED / REMOVABLE',95,89,90,0.85,0.15)
+# peripheral labels
+for t,x,y,r in [
+    ('RF1',35,26.7,0),('nRF24L01+',35,24.8,0),('RF2',155,26.7,0),('nRF24L01+',155,24.8,0),
+    ('TFT BUS 1x8',35,106.6,0),('NEO-6M / UART',155,104.5,0),('KY-040',30,118,0),
+    ('UP',86,119.2,0),('DOWN',104,119.2,0),('ENTER',122,119.2,0),('BACK',140,119.2,0),
+    ('BUZZER',158,106.5,0),('PWR',176,118,90),('BAT',176,84,90),('REV4.1',17.5,70,90),
+]: grtext(t,x,y,r,1.0,0.17)
+# silkscreen pin labels around the two ESP32 headers (compact, readable)
+left_labels=['3V3','3V3','RST','GPIO4','GPIO5','GPIO6','GPIO7','GPIO15','GPIO16','GPIO17','GPIO18','GPIO8','GPIO3','GPIO46','GPIO9','GPIO10','GPIO11','GPIO12','GPIO13','GPIO14','5V','GND']
+right_labels=['GND','GPIO43','GPIO44','GPIO1','GPIO2','GPIO42','GPIO41','GPIO40','GPIO39','GPIO38','GPIO37','GPIO36','GPIO35','GPIO0','GPIO45','GPIO48','GPIO47','GPIO21','GPIO20','GPIO19','GND','GND']
+for i,t in enumerate(left_labels): grtext(t,78.8,40+i*2.54,0,0.55,0.10)
+for i,t in enumerate(right_labels): grtext(t,111.2,40+i*2.54,0,0.55,0.10)
+
+# segments
+segments=[]
+for net,layer,pts,width in routes:
+    nid=net_id[net]
+    for a,b in zip(pts,pts[1:]):
+        if a==b: continue
+        segments.append(f'''\t(segment\n\t\t(start {a[0]} {a[1]})\n\t\t(end {b[0]} {b[1]})\n\t\t(width {width})\n\t\t(layer "{layer}")\n\t\t(net {nid})\n\t\t(uuid "{gid()}")\n\t)''')
+
+# Ground plane B.Cu. The top 13 mm remain solid-free for RF antenna keep-out.
+zone=f'''\t(zone\n\t\t(net {net_id['GND']})\n\t\t(net_name "GND")\n\t\t(layer "B.Cu")\n\t\t(hatch edge 0.5)\n\t\t(connect_pads (clearance 0.3))\n\t\t(min_thickness 0.25)\n\t\t(fill yes (thermal_gap 0.3) (thermal_bridge_width 0.3))\n\t\t(polygon\n\t\t\t(pts\n\t\t\t\t(xy 13 26) (xy 177 26) (xy 177 127) (xy 13 127)\n\t\t\t)\n\t\t)\n\t\t(uuid "{gid()}")\n\t)'''
+
+# 3V3 plane on F.Cu: entire useful board area, kept clear of the two antenna boxes.
+zone33=f'''\t(zone\n\t\t(net {net_id['3V3']})\n\t\t(net_name "3V3")\n\t\t(layer "F.Cu")\n\t\t(hatch edge 0.5)\n\t\t(connect_pads (clearance 0.3))\n\t\t(min_thickness 0.25)\n\t\t(fill yes (thermal_gap 0.3) (thermal_bridge_width 0.3))\n\t\t(polygon\n\t\t\t(pts\n\t\t\t\t(xy 13 26) (xy 177 26) (xy 177 127) (xy 13 127)\n\t\t\t)\n\t\t)\n\t\t(uuid "{gid()}")\n\t)'''
+
+insert='\n'.join(g+segments+[zone,zone33])+'\n'
+idx=board.rfind('\n)')
+board=board[:idx]+'\n'+insert+board[idx:]
+board=board.replace('(title "ESP32-S3 N16R8 Modular Carrier - REV4")','(title "ESP32-S3 N16R8 Modular Carrier - REV4.1 PROFESSIONAL ROUTE")')
+open(OUT,'w',encoding='utf-8').write(board)
+
+# ---------- geometry audit ----------
+# exact turn-angle audit
+bad_turns=[]
+for rid,(net,layer,pts,w) in enumerate(routes):
+    for a,b,c in zip(pts,pts[1:],pts[2:]):
+        v1=(b[0]-a[0],b[1]-a[1]); v2=(c[0]-b[0],c[1]-b[1])
+        l1=math.hypot(*v1); l2=math.hypot(*v2)
+        if l1<1e-9 or l2<1e-9: continue
+        a1=math.degrees(math.atan2(v1[1],v1[0]))%360; a2=math.degrees(math.atan2(v2[1],v2[0]))%360
+        d=abs(a2-a1); d=min(d,360-d)
+        if min(abs(d-45),abs(d),abs(d-180))>1e-3:
+            bad_turns.append((rid,net,layer,a,b,c,d))
+
+# same-layer different-net crossings and very-close centerlines
+segs=[]
+for rid,(net,layer,pts,w) in enumerate(routes):
+    for j,(a,b) in enumerate(zip(pts,pts[1:])):
+        if a==b: continue
+        segs.append((rid,j,net,layer,w,LineString([a,b])))
+cross=[]; near=[]
+for i in range(len(segs)):
+    for j in range(i+1,len(segs)):
+        A=segs[i]; B=segs[j]
+        if A[3]!=B[3] or A[2]==B[2]: continue
+        d=A[5].distance(B[5])
+        if d<0.35: near.append((d,A,B))
+        if d<1e-6: cross.append((A,B))
+
+report=f'''Professional PCB layout audit\n============================\nOutput: {OUT}\nNets: {len(net_id)}\nRoutes: {len(routes)}\nSegments: {len(segments)}\nVias: 0 (no signal-layer changes required)\nTurn violations (anything other than 0/45/180): {len(bad_turns)}\nDifferent-net same-layer centerline crossings: {len(cross)}\nDifferent-net same-layer centerline spacing <0.35 mm: {len(near)}\nNote: KiCad GUI/kicad-cli DRC was not available in this runtime; audit is geometric and syntax-based.\n'''
+open('/mnt/data/ESP32_S3_Modular_Carrier_REV4_PRO_LAYOUT_AUDIT.txt','w').write(report)
+print(report)
+print('first bad turns',bad_turns[:8])
+print('first crossings',[(a[2],a[3],b[2],b[3]) for a,b in cross[:15]])
+print('first near',[(round(d,3),a[2],b[2],a[3]) for d,a,b in near[:15]])
+
+===== END FILE: reconstruct_master_reference.py =====
+
+===== BEGIN FILE: route_manifest.csv =====
+net,layer,width,tag,points
+GPIO5,B.Cu,0.300,RF shared trunk,"27.000:27.200 163.000:27.200"
+GPIO5,B.Cu,0.300,RF1 branch,"27.000:27.200 36.270:38.390"
+GPIO5,B.Cu,0.300,RF2 branch,"163.000:27.200 156.270:38.390"
+GPIO5,B.Cu,0.300,J1 shared branch,"82.300:50.160 59.340:27.200 71.000:27.200"
+GPIO6,B.Cu,0.300,RF shared trunk,"27.000:29.200 163.000:29.200"
+GPIO6,B.Cu,0.300,RF1 branch,"27.000:29.200 33.730:38.390"
+GPIO6,B.Cu,0.300,RF2 branch,"163.000:29.200 153.730:38.390"
+GPIO6,B.Cu,0.300,J1 shared branch,"82.300:52.700 58.800:29.200 71.000:29.200"
+GPIO7,B.Cu,0.300,RF shared trunk,"27.000:31.200 163.000:31.200"
+GPIO7,B.Cu,0.300,RF1 branch,"27.000:31.200 36.270:38.390"
+GPIO7,B.Cu,0.300,RF2 branch,"163.000:31.200 156.270:38.390"
+GPIO7,B.Cu,0.300,J1 shared branch,"82.300:55.240 58.260:31.200 71.000:31.200"
+GPIO4,F.Cu,0.300,RF1 SPI/select,"82.300:47.620 76.680:42.000 42.420:42.000 36.270:35.850"
+GPIO3,F.Cu,0.300,RF1 CE/CS,"82.300:70.480 57.820:46.000 48.960:46.000 38.810:35.850"
+GPIO1,F.Cu,0.300,RF2 link,"107.700:47.620 113.320:42.000 152.660:42.000 158.810:35.850"
+GPIO2,F.Cu,0.300,RF2 link,"107.700:50.160 111.860:46.000 146.120:46.000 156.270:35.850"
+GPIO12,F.Cu,0.300,TFT bundle,"31.190:100.670 35.860:96.000 69.480:96.000 82.300:83.180"
+GPIO11,F.Cu,0.300,TFT bundle,"33.730:100.670 40.400:94.000 68.940:94.000 82.300:80.640"
+GPIO9,F.Cu,0.300,TFT bundle,"36.270:100.670 44.940:92.000 65.860:92.000 82.300:75.560"
+GPIO8,F.Cu,0.300,TFT bundle,"41.350:100.670 54.020:88.000 62.240:88.000 82.300:67.940"
+GPIO10,B.Cu,0.300,TFT bundle layer split,"38.810:100.670 49.480:90.000 70.400:90.000 82.300:78.100"
+GPIO18,B.Cu,0.300,GPS UART,"156.270:85.430 143.700:98.000 114.900:98.000 82.300:65.400"
+GPIO17,B.Cu,0.300,GPS UART,"158.810:85.430 143.240:101.000 120.440:101.000 82.300:62.860"
+GPIO13,B.Cu,0.300,button fanout,"82.300:85.720 78.000:90.020 78.000:104.000 83.460:109.460"
+GPIO13,B.Cu,0.300,button internal,"83.460:109.460 83.460:114.540"
+GPIO14,B.Cu,0.300,button fanout,"82.300:88.260 74.000:96.560 74.000:82.000 101.460:109.460"
+GPIO14,B.Cu,0.300,button internal,"101.460:109.460 101.460:114.540"
+GPIO15,B.Cu,0.300,button fanout,"82.300:57.780 70.000:70.080 70.000:60.000 119.460:109.460"
+GPIO15,B.Cu,0.300,button internal,"119.460:109.460 119.460:114.540"
+GPIO16,B.Cu,0.300,button fanout,"82.300:60.320 66.000:76.620 66.000:38.000 137.460:109.460"
+GPIO16,B.Cu,0.300,button internal,"137.460:109.460 137.460:114.540"
+GPIO39,F.Cu,0.300,encoder bundle,"30.000:112.000 36.000:106.000 62.020:106.000 107.700:60.320"
+GPIO40,F.Cu,0.300,encoder bundle,"32.540:112.000 34.540:110.000 55.480:110.000 107.700:57.780"
+GPIO41,F.Cu,0.300,encoder bundle,"35.080:112.000 37.080:114.000 48.940:114.000 107.700:55.240"
+GPIO42,F.Cu,0.300,buzzer control,"107.700:52.700 139.000:84.000 103.460:84.000 142.460:123.000"
+BUZZER_LOW,F.Cu,0.350,buzzer power return,"161.810:112.000 156.810:117.000 164.000:117.000 158.000:123.000"
+BUZZER_BASE,F.Cu,0.300,Q1 base,"147.540:123.000 150.080:123.000 155.460:123.000"
+BUZZER_BASE,F.Cu,0.300,Q1 base pull,"142.460:128.000 147.540:123.000 155.460:123.000"
+5V_IN,F.Cu,0.600,power,"176.000:123.000 159.460:122.000"
+5V_FUSED,F.Cu,0.600,power,"164.540:122.000 148.460:122.000"
+5V_PROTECTED,F.Cu,0.450,protected 5V branch,"153.540:122.000 125.540:94.000 123.000:94.000"
+5V_PROTECTED,F.Cu,0.450,protected 5V branch,"123.000:94.000 85.500:94.000 82.300:90.800"
+VBAT_RAW,B.Cu,0.400,battery sense,"176.000:88.000 161.460:94.000"
+BAT_ADC,B.Cu,0.300,battery divider,"166.540:94.000 169.080:94.000 169.080:100.000 161.460:100.000"
+BAT_ADC,B.Cu,0.300,battery divider capacitor,"161.460:100.000 170.000:100.000 173.460:99.000"
+
+===== END FILE: route_manifest.csv =====
+
+===== BEGIN FILE: source_reference/ESP32_S3_Modular_Carrier_REV4.kicad_pcb =====
+(kicad_pcb
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(general (thickness 1.6) (legacy_teardrops no))
+	(paper "A4")
+	(title_block
+		(title "ESP32-S3 N16R8 Modular Carrier - REV4")
+		(date "2026-09-22")
+		(rev "4.0")
+		(company "Modular carrier — clean rebuild")
+		(comment 1 "2x nRF24L01+ / TFT BUS / NEO-6M / Encoder / 4 buttons / buzzer / battery sense")
+		(comment 2 "microSD removed; ESP32-S3 DevKitC-1 N16R8 socketed; TFT off-board via 1x8 bus")
+	)
+	(layers
+		(0 "F.Cu" signal)
+		(31 "B.Cu" signal)
+		(36 "B.SilkS" user "b.Silkscreen")
+		(37 "F.SilkS" user "f.Silkscreen")
+		(44 "Edge.Cuts" user)
+		(46 "B.CrtYd" user "b.Courtyard")
+		(47 "F.CrtYd" user "f.Courtyard")
+		(48 "B.Fab" user)
+		(49 "F.Fab" user)
+	)
+	(setup
+		(pad_to_mask_clearance 0)
+		(allow_soldermask_bridges_in_footprints no)
+	)
+	(gr_rect
+		(start 10 10)
+		(end 190 130)
+		(radius 3)
+		(stroke (width 0.05) (type default))
+		(fill none)
+		(layer "Edge.Cuts")
+		(uuid "aad53f8a-0abe-4b13-8d21-8766bba20cbc")
+	)
+	(footprint "MountingHole_M3_15_15"
+		(layer "F.Cu")
+		(uuid "7dc09f5e-c510-4fe2-ad2d-8836bb92edba")
+		(at 15 15)
+		(attr exclude_from_pos_files exclude_from_bom)
+		(fp_circle
+			(center 0 0)
+			(end 3.5 0)
+			(stroke (width 0.3) (type default))
+			(fill none)
+			(layer "F.SilkS")
+			(uuid "60893b04-0eba-4e1c-a1b2-97a5b4b8200d")
+		)
+		(pad "" np_thru_hole circle
+			(at 0 0) (size 6.5 6.5) (drill 3.2)
+			(layers "*.Cu" "*.Mask")
+			(uuid "1ef60e1e-5d51-47c4-8836-527d60466388")
+		)
+	)
+	(footprint "MountingHole_M3_185_15"
+		(layer "F.Cu")
+		(uuid "f4923af6-d6c6-4e38-a1d7-3031e2402896")
+		(at 185 15)
+		(attr exclude_from_pos_files exclude_from_bom)
+		(fp_circle
+			(center 0 0)
+			(end 3.5 0)
+			(stroke (width 0.3) (type default))
+			(fill none)
+			(layer "F.SilkS")
+			(uuid "b522447d-e3c0-47a4-8515-17bc78f222e0")
+		)
+		(pad "" np_thru_hole circle
+			(at 0 0) (size 6.5 6.5) (drill 3.2)
+			(layers "*.Cu" "*.Mask")
+			(uuid "16eb8e55-be4c-4255-8133-1705ddd5c52e")
+		)
+	)
+	(footprint "MountingHole_M3_15_125"
+		(layer "F.Cu")
+		(uuid "4fac5e57-df93-4244-ac3d-5019a9fe6de3")
+		(at 15 125)
+		(attr exclude_from_pos_files exclude_from_bom)
+		(fp_circle
+			(center 0 0)
+			(end 3.5 0)
+			(stroke (width 0.3) (type default))
+			(fill none)
+			(layer "F.SilkS")
+			(uuid "c9e66e7e-d6f1-412d-9771-d70c7fa9a8e1")
+		)
+		(pad "" np_thru_hole circle
+			(at 0 0) (size 6.5 6.5) (drill 3.2)
+			(layers "*.Cu" "*.Mask")
+			(uuid "ba044aed-6ea8-4699-a213-cb763de7aa4a")
+		)
+	)
+	(footprint "MountingHole_M3_185_125"
+		(layer "F.Cu")
+		(uuid "58f9e471-25f3-461d-ba86-5e4db4817259")
+		(at 185 125)
+		(attr exclude_from_pos_files exclude_from_bom)
+		(fp_circle
+			(center 0 0)
+			(end 3.5 0)
+			(stroke (width 0.3) (type default))
+			(fill none)
+			(layer "F.SilkS")
+			(uuid "2f9a2ceb-7064-4439-b597-1f562f329a55")
+		)
+		(pad "" np_thru_hole circle
+			(at 0 0) (size 6.5 6.5) (drill 3.2)
+			(layers "*.Cu" "*.Mask")
+			(uuid "981a66b1-7b81-4dab-8bc9-e53647dd14c8")
+		)
+	)
+	(footprint "Custom:J1"
+		(layer "F.Cu")
+		(uuid "bca11bcf-f077-482e-8025-bbc1a452e73a")
+		(at 82.3 40)
+		(property "Reference" "J1"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "41665824-e2a2-4f1a-b527-df7afbb9ccca")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(property "Value" "ESP32-S3 DevKitC-1 1x22 socket"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "bbd6b486-2a5d-43bf-b6b4-6bb7fcaf23cf")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(attr through_hole)
+		(pad "1" thru_hole rect
+			(at 0 0.0)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "3V3")
+			(uuid "9a0fb5ab-201c-4878-a4a5-2b4b51028ca4")
+		)
+		(pad "2" thru_hole circle
+			(at 0 2.54)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "3V3")
+			(uuid "0e445fd1-fd76-4b42-aaac-54c5cefcc314")
+		)
+		(pad "3" thru_hole circle
+			(at 0 5.08)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "RST")
+			(uuid "5935b613-ece0-4a9a-a239-e27603a7ff18")
+		)
+		(pad "4" thru_hole circle
+			(at 0 7.62)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "GPIO4")
+			(uuid "a6a3cdfc-d3b8-44e9-99cf-2d5e5a7ae152")
+		)
+		(pad "5" thru_hole circle
+			(at 0 10.16)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "GPIO5")
+			(uuid "83ac0c1d-944c-463f-aba1-e135ef064933")
+		)
+		(pad "6" thru_hole circle
+			(at 0 12.7)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "GPIO6")
+			(uuid "299de244-0ff1-4d78-827f-175e2db0f6a8")
+		)
+		(pad "7" thru_hole circle
+			(at 0 15.24)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "GPIO7")
+			(uuid "1434076d-f554-4885-99bd-a330e415967c")
+		)
+		(pad "8" thru_hole circle
+			(at 0 17.78)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "GPIO15")
+			(uuid "f1db50f4-db92-4678-ab62-44803ccd9d02")
+		)
+		(pad "9" thru_hole circle
+			(at 0 20.32)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "GPIO16")
+			(uuid "d65c18e3-033a-4a63-a81f-cf42bc3d9467")
+		)
+		(pad "10" thru_hole circle
+			(at 0 22.86)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "GPIO17")
+			(uuid "b48669bb-076f-418b-8513-dfe48c52537f")
+		)
+		(pad "11" thru_hole circle
+			(at 0 25.4)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "GPIO18")
+			(uuid "23149d2e-3428-43fd-a752-b07a5a80f691")
+		)
+		(pad "12" thru_hole circle
+			(at 0 27.94)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "GPIO8")
+			(uuid "fbab2ca1-4f3a-44cf-b5ca-103fdfb9dab9")
+		)
+		(pad "13" thru_hole circle
+			(at 0 30.48)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "GPIO3")
+			(uuid "888faa47-2b9d-4b6f-87fc-00a7cfe32014")
+		)
+		(pad "14" thru_hole circle
+			(at 0 33.02)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "GPIO46")
+			(uuid "ec790550-e3c6-4a79-8350-b1c8ca65c91c")
+		)
+		(pad "15" thru_hole circle
+			(at 0 35.56)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "GPIO9")
+			(uuid "879110cf-1c54-46c2-88f4-791582b199c6")
+		)
+		(pad "16" thru_hole circle
+			(at 0 38.1)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "GPIO10")
+			(uuid "96be4650-9461-44c3-8154-4c198a4dab94")
+		)
+		(pad "17" thru_hole circle
+			(at 0 40.64)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "GPIO11")
+			(uuid "a98c1cec-1913-4769-978b-3b71d889015d")
+		)
+		(pad "18" thru_hole circle
+			(at 0 43.18)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "GPIO12")
+			(uuid "349da265-46ee-4a6d-8a19-abe2f5a6f50e")
+		)
+		(pad "19" thru_hole circle
+			(at 0 45.72)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "GPIO13")
+			(uuid "ba242c3f-4b9d-4e80-9c7d-abae0c6452a1")
+		)
+		(pad "20" thru_hole circle
+			(at 0 48.26)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "GPIO14")
+			(uuid "ce2d8fc2-1469-402e-9bf6-c37d854cbe55")
+		)
+		(pad "21" thru_hole circle
+			(at 0 50.8)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "5V_PROTECTED")
+			(uuid "de35d7d7-3bd4-4a62-9943-dd4b19b74ed6")
+		)
+		(pad "22" thru_hole circle
+			(at 0 53.34)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "GND")
+			(uuid "6607d19c-0c84-4b6d-806d-853d1102b6e7")
+		)
+		(embedded_fonts no)
+	)
+	(footprint "Custom:J3"
+		(layer "F.Cu")
+		(uuid "14330454-51ad-4eba-a160-18c033aa2c9b")
+		(at 107.7 40)
+		(property "Reference" "J3"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "8f7e2b60-cedc-4d31-a7be-a4b4169232a6")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(property "Value" "ESP32-S3 DevKitC-1 1x22 socket"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "504bf1fa-0f23-401a-8a80-e0e18988b77c")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(attr through_hole)
+		(pad "1" thru_hole rect
+			(at 0 0.0)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "GND")
+			(uuid "a5b49d40-9949-4dc3-91c5-c66f4a762c25")
+		)
+		(pad "2" thru_hole circle
+			(at 0 2.54)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "GPIO43")
+			(uuid "b37c53b2-fda3-43fc-9226-18d61354fb5a")
+		)
+		(pad "3" thru_hole circle
+			(at 0 5.08)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "GPIO44")
+			(uuid "526f9f1a-c092-48d0-a938-ea407a7d4cc8")
+		)
+		(pad "4" thru_hole circle
+			(at 0 7.62)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "GPIO1")
+			(uuid "c24ccf40-0359-4cc9-a8be-910415554799")
+		)
+		(pad "5" thru_hole circle
+			(at 0 10.16)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "GPIO2")
+			(uuid "d77cf55a-080f-4354-a988-11d2a7f53508")
+		)
+		(pad "6" thru_hole circle
+			(at 0 12.7)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "GPIO42")
+			(uuid "7f8cba08-9267-4d58-934d-be8e7271e0ef")
+		)
+		(pad "7" thru_hole circle
+			(at 0 15.24)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "GPIO41")
+			(uuid "b06f9b4f-5225-4c09-ba4b-4c1789dbce99")
+		)
+		(pad "8" thru_hole circle
+			(at 0 17.78)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "GPIO40")
+			(uuid "cd2d63d0-2f2a-460b-a0c8-2e6a2054a592")
+		)
+		(pad "9" thru_hole circle
+			(at 0 20.32)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "GPIO39")
+			(uuid "f097c644-a02d-4f0d-88db-bdc0f404497d")
+		)
+		(pad "10" thru_hole circle
+			(at 0 22.86)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "GPIO38")
+			(uuid "3ca9883b-7427-44ab-8368-19bd006b4a00")
+		)
+		(pad "11" thru_hole circle
+			(at 0 25.4)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "GPIO37")
+			(uuid "0c83aebb-33fb-4dd2-b00a-738ad43f7547")
+		)
+		(pad "12" thru_hole circle
+			(at 0 27.94)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "GPIO36")
+			(uuid "19d32f77-725e-4c4e-b16f-7f83c0bb60c0")
+		)
+		(pad "13" thru_hole circle
+			(at 0 30.48)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "GPIO35")
+			(uuid "8049be57-a721-43ed-9ffe-f21c2dbf5150")
+		)
+		(pad "14" thru_hole circle
+			(at 0 33.02)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "GPIO0")
+			(uuid "773a9a7c-06fd-4fab-ac8e-07b9af93873b")
+		)
+		(pad "15" thru_hole circle
+			(at 0 35.56)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "GPIO45")
+			(uuid "f5b3fe0f-45b6-4943-b5c1-180e981665d0")
+		)
+		(pad "16" thru_hole circle
+			(at 0 38.1)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "GPIO48")
+			(uuid "fbe899ee-4e64-4d45-bb70-5d37c8d884ef")
+		)
+		(pad "17" thru_hole circle
+			(at 0 40.64)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "GPIO47")
+			(uuid "944eda60-76f0-47a4-92ed-0029ab54d8f1")
+		)
+		(pad "18" thru_hole circle
+			(at 0 43.18)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "GPIO21")
+			(uuid "2696b072-d84f-4bbd-abcb-cfcb7d7aca20")
+		)
+		(pad "19" thru_hole circle
+			(at 0 45.72)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "GPIO20")
+			(uuid "df1bb3e1-b754-402a-a79f-3e8d412cc386")
+		)
+		(pad "20" thru_hole circle
+			(at 0 48.26)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "GPIO19")
+			(uuid "d44576c0-a499-498c-bedf-0f542a0975fe")
+		)
+		(pad "21" thru_hole circle
+			(at 0 50.8)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "GND")
+			(uuid "16e99798-29ce-4ba8-8193-12a82c1ec6fc")
+		)
+		(pad "22" thru_hole circle
+			(at 0 53.34)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "GND")
+			(uuid "51425a1c-1bfd-48d7-b195-52f61c222434")
+		)
+		(embedded_fonts no)
+	)
+	(footprint "Custom:U1_3D"
+		(layer "F.Cu")
+		(uuid "02d7d47b-ebbc-40e7-938c-1f3489325bc2")
+		(at 95 66.67)
+		(property "Reference" "U1_3D"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "47ccb5ad-a2dc-48f5-be39-2cf067ecf568")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(property "Value" "ESP32-S3 DevKitC-1 N16R8"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "296b1f9b-547a-49fa-9fb7-4130a9204e5d")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(attr through_hole)
+		(model "${KIPRJMOD}/3Dmodels/ESP32S3_DevKitC1_N16R8.wrl"
+			(offset (xyz 0 0 0))
+			(scale (xyz 1 1 1))
+			(rotate (xyz 0 0 0))
+		)
+		(embedded_fonts no)
+	)
+	(footprint "Custom:J_RF1"
+		(layer "F.Cu")
+		(uuid "3503c99a-1cfe-4721-9e74-d6cea9f03c63")
+		(at 35 29.5)
+		(property "Reference" "J_RF1"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "818c7c6a-4008-4e6c-a17e-206f9589fcd6")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(property "Value" "nRF24L01+ 2x4 socket"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "8bdba18b-aa69-42ad-aecf-270a02b16d88")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(attr through_hole)
+		(fp_rect
+			(start -14.6 -7.95)
+			(end 14.6 7.95)
+			(stroke (width 0.25) (type default))
+			(fill none)
+			(layer "F.SilkS")
+			(uuid "81d90e91-3984-4fa3-bb21-6e5d52fb6c26")
+		)
+		(pad "1" thru_hole rect
+			(at -3.81 6.35)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "GND")
+			(uuid "288e0a48-59be-4781-b171-8f60ae9c6b55")
+		)
+		(pad "2" thru_hole circle
+			(at -1.27 6.35)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "3V3")
+			(uuid "f85b2682-bdd5-458f-9674-7c6e7e2cf333")
+		)
+		(pad "3" thru_hole circle
+			(at 1.27 6.35)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "GPIO4")
+			(uuid "7c76cac3-481c-4e92-b9b8-1265bb81e7aa")
+		)
+		(pad "4" thru_hole circle
+			(at 3.81 6.35)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "GPIO3")
+			(uuid "f323c41f-037f-4eb4-9dbb-f523ed9085a2")
+		)
+		(pad "5" thru_hole circle
+			(at -3.81 8.89)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "GPIO6")
+			(uuid "2999a433-0398-4aab-b5ac-99c094fb7fb0")
+		)
+		(pad "6" thru_hole circle
+			(at -1.27 8.89)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "GPIO7")
+			(uuid "a1cc754a-861a-4917-99ec-631a936f3039")
+		)
+		(pad "7" thru_hole circle
+			(at 1.27 8.89)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "GPIO5")
+			(uuid "addbe6e5-5097-4a9f-99f9-88925d4d0783")
+		)
+		(pad "8" thru_hole circle
+			(at 3.81 8.89)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "GND")
+			(uuid "46dfbd6c-9646-4eb1-a78b-d4e98b311779")
+		)
+		(model "${KIPRJMOD}/3Dmodels/nRF24L01_2x4.wrl"
+			(offset (xyz 0 0 0))
+			(scale (xyz 1 1 1))
+			(rotate (xyz 0 0 0))
+		)
+		(embedded_fonts no)
+	)
+	(footprint "Custom:J_RF2"
+		(layer "F.Cu")
+		(uuid "3d64dfdf-92dc-41a2-a3d6-437cb78b8e9b")
+		(at 155 29.5)
+		(property "Reference" "J_RF2"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "822c3d34-58ac-4bc7-9fca-86c329f1a538")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(property "Value" "nRF24L01+ 2x4 socket"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "83f88278-d79b-4370-b95f-7bc1730cc786")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(attr through_hole)
+		(fp_rect
+			(start -14.6 -7.95)
+			(end 14.6 7.95)
+			(stroke (width 0.25) (type default))
+			(fill none)
+			(layer "F.SilkS")
+			(uuid "52abe844-d8bc-4fec-9a74-153d2a4ed8cf")
+		)
+		(pad "1" thru_hole rect
+			(at -3.81 6.35)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "GND")
+			(uuid "c5be906d-3cad-4f11-bb2e-3e29232c9aed")
+		)
+		(pad "2" thru_hole circle
+			(at -1.27 6.35)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "3V3")
+			(uuid "f84472f9-b70c-4e62-a64b-a6d20ad0cecb")
+		)
+		(pad "3" thru_hole circle
+			(at 1.27 6.35)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "GPIO2")
+			(uuid "e6f42b13-6f95-43f1-85b5-9baf6b75b9ff")
+		)
+		(pad "4" thru_hole circle
+			(at 3.81 6.35)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "GPIO1")
+			(uuid "915e9dea-5372-494b-9266-54c64b33d415")
+		)
+		(pad "5" thru_hole circle
+			(at -3.81 8.89)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "GPIO6")
+			(uuid "15dbe4dd-b150-4e7b-bc76-98cb82e4fe21")
+		)
+		(pad "6" thru_hole circle
+			(at -1.27 8.89)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "GPIO7")
+			(uuid "e6926769-9946-4940-af1b-115d9abad941")
+		)
+		(pad "7" thru_hole circle
+			(at 1.27 8.89)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "GPIO5")
+			(uuid "8c025e9f-87f0-4b99-a9ff-e3434577bb9a")
+		)
+		(pad "8" thru_hole circle
+			(at 3.81 8.89)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "GND")
+			(uuid "7de141a1-bf16-4f0b-a595-85a185c28eba")
+		)
+		(model "${KIPRJMOD}/3Dmodels/nRF24L01_2x4.wrl"
+			(offset (xyz 0 0 0))
+			(scale (xyz 1 1 1))
+			(rotate (xyz 0 0 0))
+		)
+		(embedded_fonts no)
+	)
+	(footprint "Custom:J_TFT_BUS"
+		(layer "F.Cu")
+		(uuid "2cad03ed-c744-4757-8b9b-8db31207e8cd")
+		(at 35 74)
+		(property "Reference" "J_TFT_BUS"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "c528a3c2-57f6-4237-969f-527747c96270")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(property "Value" "TFT BUS 1x8 external"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "acf5f187-2450-4f8f-9a44-5decccc4a0d0")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(attr through_hole)
+		(fp_rect
+			(start -11.5 24.0)
+			(end 11.5 29.5)
+			(stroke (width 0.25) (type default))
+			(fill none)
+			(layer "F.SilkS")
+			(uuid "e2bcd8ed-8ad6-4c28-87a8-8a1b7783b4cb")
+		)
+		(pad "1" thru_hole rect
+			(at -8.89 26.67)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "3V3")
+			(uuid "abb38915-36f2-4d89-97a5-fcbb1dde6dbd")
+		)
+		(pad "2" thru_hole circle
+			(at -6.3500000000000005 26.67)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "GND")
+			(uuid "e76180d2-546d-4bd7-b2bd-692aab476501")
+		)
+		(pad "3" thru_hole circle
+			(at -3.8100000000000005 26.67)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "GPIO12")
+			(uuid "ecb2383a-3eba-4619-a561-86adcd3d4c5e")
+		)
+		(pad "4" thru_hole circle
+			(at -1.2700000000000005 26.67)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "GPIO11")
+			(uuid "7ef42873-1e9c-4ace-9f75-312eae963f55")
+		)
+		(pad "5" thru_hole circle
+			(at 1.2699999999999996 26.67)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "GPIO9")
+			(uuid "c786809c-e522-45d1-8320-ed8d3ecfca3c")
+		)
+		(pad "6" thru_hole circle
+			(at 3.8099999999999987 26.67)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "GPIO10")
+			(uuid "69df82cc-5f17-4614-9149-6da755afe867")
+		)
+		(pad "7" thru_hole circle
+			(at 6.35 26.67)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "GPIO8")
+			(uuid "29e68310-837e-4876-a8f4-5666d4d46d98")
+		)
+		(pad "8" thru_hole circle
+			(at 8.89 26.67)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "3V3")
+			(uuid "4030e61b-179e-41f1-8631-9cb6deaa405d")
+		)
+		(embedded_fonts no)
+	)
+	(footprint "Custom:J_GPS1"
+		(layer "F.Cu")
+		(uuid "41e0676e-9d80-4420-b0c9-7aae59b8c3aa")
+		(at 155 74)
+		(property "Reference" "J_GPS1"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "8f8622e8-a840-47eb-8416-4c13bac2fb65")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(property "Value" "NEO-6M GPS 4P"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "d9f57bf5-5f52-4caa-9b35-3b7d99819eb2")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(attr through_hole)
+		(fp_rect
+			(start -13.0 -13.0)
+			(end 13.0 13.0)
+			(stroke (width 0.25) (type default))
+			(fill none)
+			(layer "F.SilkS")
+			(uuid "4322f640-7f1f-412f-815f-ded836adaf09")
+		)
+		(pad "1" thru_hole rect
+			(at -3.81 11.43)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "3V3")
+			(uuid "fe91bd3d-f899-4e99-afc0-6aac27769276")
+		)
+		(pad "2" thru_hole circle
+			(at -1.27 11.43)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "GND")
+			(uuid "dc0a3a98-6688-4fa0-9f3e-42cae7de0cc9")
+		)
+		(pad "3" thru_hole circle
+			(at 1.27 11.43)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "GPIO18")
+			(uuid "c4a7a067-e20c-464f-8e2c-6dcafaa85217")
+		)
+		(pad "4" thru_hole circle
+			(at 3.81 11.43)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "GPIO17")
+			(uuid "ca0d9141-4fa4-43ba-83d7-a41d51f07d47")
+		)
+		(model "${KIPRJMOD}/3Dmodels/NEO6M.wrl"
+			(offset (xyz 0 0 0))
+			(scale (xyz 1 1 1))
+			(rotate (xyz 0 0 0))
+		)
+		(embedded_fonts no)
+	)
+	(footprint "Custom:J_ENC1"
+		(layer "F.Cu")
+		(uuid "37455d3e-e1a0-46ea-ab98-25390808d68a")
+		(at 30 112)
+		(property "Reference" "J_ENC1"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "8db45c5a-7bc8-42f5-9f2a-076ffc04a690")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(property "Value" "KY-040 5P"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "e52e22ee-17c5-4e45-97d6-d9624b0b785e")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(attr through_hole)
+		(fp_rect
+			(start -10.0 -5.0)
+			(end 10.0 5.0)
+			(stroke (width 0.25) (type default))
+			(fill none)
+			(layer "F.SilkS")
+			(uuid "1087b384-4dcf-4813-9c9c-b3ebe1b61808")
+		)
+		(pad "1" thru_hole rect
+			(at -5.08 0)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "GND")
+			(uuid "fa0e3934-eda3-4634-a1a0-cd3fac55330f")
+		)
+		(pad "2" thru_hole circle
+			(at -2.54 0)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "3V3")
+			(uuid "49f9911a-fdac-47a7-8efb-3dedacfec702")
+		)
+		(pad "3" thru_hole circle
+			(at 0 0)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "GPIO39")
+			(uuid "8fe4747c-5a92-4058-a3fd-433ef6899b07")
+		)
+		(pad "4" thru_hole circle
+			(at 2.54 0)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "GPIO40")
+			(uuid "66520920-6ab3-48cd-8bd8-2c881c5609b7")
+		)
+		(pad "5" thru_hole circle
+			(at 5.08 0)
+			(size 2.0 2.0)
+			(drill 1.0)
+			(layers "*.Cu" "*.Mask")
+			(net "GPIO41")
+			(uuid "1bb4bfdf-bf8f-49e0-9086-ba56cee5865a")
+		)
+		(model "${KIPRJMOD}/3Dmodels/KY040_Encoder.wrl"
+			(offset (xyz 0 0 0))
+			(scale (xyz 1 1 1))
+			(rotate (xyz 0 0 0))
+		)
+		(embedded_fonts no)
+	)
+	(footprint "Custom:SW1"
+		(layer "F.Cu")
+		(uuid "29d5f087-ef33-4b80-844c-02498460f30e")
+		(at 86 112)
+		(property "Reference" "SW1"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "e74b9660-8dbb-4d7f-9060-4eb0e437e631")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(property "Value" "6x6 tactile"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "269317a7-d275-4892-a4a9-81caaa00105d")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(attr through_hole)
+		(fp_rect
+			(start -4.5 -4.5)
+			(end 4.5 4.5)
+			(stroke (width 0.25) (type default))
+			(fill none)
+			(layer "F.SilkS")
+			(uuid "52edc7bd-de5a-4453-9db6-c502c6d170ef")
+		)
+		(pad "1" thru_hole rect
+			(at -2.54 -2.54)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net "GPIO13")
+			(uuid "202572d6-bf97-4860-bdcd-1f42ea6ca15e")
+		)
+		(pad "2" thru_hole circle
+			(at -2.54 2.54)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net "GPIO13")
+			(uuid "3b0f3cbf-4ed0-40e2-bd9b-ca7eb78d0e59")
+		)
+		(pad "3" thru_hole circle
+			(at 2.54 -2.54)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net "GND")
+			(uuid "2eb2a6bd-1666-451c-89ed-b4b1f4eb4bf6")
+		)
+		(pad "4" thru_hole circle
+			(at 2.54 2.54)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net "GND")
+			(uuid "07de85a0-641a-4e0c-8083-7e1e1a09d65b")
+		)
+		(model "${KIPRJMOD}/3Dmodels/Tactile_6x6.wrl"
+			(offset (xyz 0 0 0))
+			(scale (xyz 1 1 1))
+			(rotate (xyz 0 0 0))
+		)
+		(embedded_fonts no)
+	)
+	(footprint "Custom:SW2"
+		(layer "F.Cu")
+		(uuid "b8bbd99a-9d6a-4ad2-8271-ca0a716ab2fb")
+		(at 104 112)
+		(property "Reference" "SW2"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "a1f32e89-ecff-4d56-8d9d-e87d6a3aa286")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(property "Value" "6x6 tactile"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "50bd3d1c-573c-4f86-916f-7928f6b2aad3")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(attr through_hole)
+		(fp_rect
+			(start -4.5 -4.5)
+			(end 4.5 4.5)
+			(stroke (width 0.25) (type default))
+			(fill none)
+			(layer "F.SilkS")
+			(uuid "cf391a74-0ecc-49d2-8b4f-7e1da0f0fcf6")
+		)
+		(pad "1" thru_hole rect
+			(at -2.54 -2.54)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net "GPIO14")
+			(uuid "3bc90f46-453d-4420-99fa-ec121769d846")
+		)
+		(pad "2" thru_hole circle
+			(at -2.54 2.54)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net "GPIO14")
+			(uuid "0d1535d3-e50f-46e8-bb5e-8df0157a7a52")
+		)
+		(pad "3" thru_hole circle
+			(at 2.54 -2.54)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net "GND")
+			(uuid "de816b4f-58bb-4791-ad22-56993d2e15b8")
+		)
+		(pad "4" thru_hole circle
+			(at 2.54 2.54)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net "GND")
+			(uuid "b29f1b82-bdbe-42f6-a315-5720c91cd49d")
+		)
+		(model "${KIPRJMOD}/3Dmodels/Tactile_6x6.wrl"
+			(offset (xyz 0 0 0))
+			(scale (xyz 1 1 1))
+			(rotate (xyz 0 0 0))
+		)
+		(embedded_fonts no)
+	)
+	(footprint "Custom:SW3"
+		(layer "F.Cu")
+		(uuid "8cc29f6d-65bd-4966-ba2b-127ccec6aa42")
+		(at 122 112)
+		(property "Reference" "SW3"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "f600f589-a0a9-42c2-b7d7-f2dddbae5781")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(property "Value" "6x6 tactile"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "c628d77d-3c33-4849-afb2-1fc9e0d75be7")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(attr through_hole)
+		(fp_rect
+			(start -4.5 -4.5)
+			(end 4.5 4.5)
+			(stroke (width 0.25) (type default))
+			(fill none)
+			(layer "F.SilkS")
+			(uuid "c6144803-de19-41fc-9a1c-7fa480de344a")
+		)
+		(pad "1" thru_hole rect
+			(at -2.54 -2.54)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net "GPIO15")
+			(uuid "2d1b4403-78b0-4c9f-a920-ed7a20471451")
+		)
+		(pad "2" thru_hole circle
+			(at -2.54 2.54)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net "GPIO15")
+			(uuid "576bd691-00ed-4a1b-ba0e-fafcd642fdcf")
+		)
+		(pad "3" thru_hole circle
+			(at 2.54 -2.54)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net "GND")
+			(uuid "1ca80d1b-f9eb-4d13-8e35-59f3691698ff")
+		)
+		(pad "4" thru_hole circle
+			(at 2.54 2.54)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net "GND")
+			(uuid "6b3d84c4-7ebf-42ae-b75f-f0ec0367f39c")
+		)
+		(model "${KIPRJMOD}/3Dmodels/Tactile_6x6.wrl"
+			(offset (xyz 0 0 0))
+			(scale (xyz 1 1 1))
+			(rotate (xyz 0 0 0))
+		)
+		(embedded_fonts no)
+	)
+	(footprint "Custom:SW4"
+		(layer "F.Cu")
+		(uuid "e4e16a68-2a48-4953-a04c-f3fc9483c46a")
+		(at 140 112)
+		(property "Reference" "SW4"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "42443574-bc1c-4744-8ceb-f8a627ea5e29")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(property "Value" "6x6 tactile"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "4975a494-73f3-4f42-908b-5cfe8add0d45")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(attr through_hole)
+		(fp_rect
+			(start -4.5 -4.5)
+			(end 4.5 4.5)
+			(stroke (width 0.25) (type default))
+			(fill none)
+			(layer "F.SilkS")
+			(uuid "e1a84a8a-c7bb-4614-8bbd-414dc5cd20db")
+		)
+		(pad "1" thru_hole rect
+			(at -2.54 -2.54)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net "GPIO16")
+			(uuid "5fe7a264-ee51-4c16-aa7a-a8bdb59287c2")
+		)
+		(pad "2" thru_hole circle
+			(at -2.54 2.54)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net "GPIO16")
+			(uuid "2f056ea9-e886-42cd-95d9-395900b17147")
+		)
+		(pad "3" thru_hole circle
+			(at 2.54 -2.54)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net "GND")
+			(uuid "c9e61806-3d0b-4ec4-9ee3-10227d20a865")
+		)
+		(pad "4" thru_hole circle
+			(at 2.54 2.54)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net "GND")
+			(uuid "17d77704-11bd-4ce4-9a68-15f8ed81d982")
+		)
+		(model "${KIPRJMOD}/3Dmodels/Tactile_6x6.wrl"
+			(offset (xyz 0 0 0))
+			(scale (xyz 1 1 1))
+			(rotate (xyz 0 0 0))
+		)
+		(embedded_fonts no)
+	)
+	(footprint "Custom:BZ1"
+		(layer "F.Cu")
+		(uuid "52a58082-06bf-41b8-b132-54b9c4b70ff1")
+		(at 158 112)
+		(property "Reference" "BZ1"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "ce1d8df4-b259-4d6e-9018-8da5d3b7411e")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(property "Value" "Active buzzer"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "343ee7ea-4633-4901-8abe-8d394ca25b50")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(attr through_hole)
+		(fp_rect
+			(start -6.0 -6.0)
+			(end 6.0 6.0)
+			(stroke (width 0.25) (type default))
+			(fill none)
+			(layer "F.SilkS")
+			(uuid "4b776750-ea30-4b18-b649-2b1ed915a3ff")
+		)
+		(pad "1" thru_hole rect
+			(at -3.81 0)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net "3V3")
+			(uuid "f12aebe8-d760-4cd7-90f3-9f607d0e3a97")
+		)
+		(pad "2" thru_hole circle
+			(at 3.81 0)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net "BUZZER_LOW")
+			(uuid "3ec89072-af22-497e-9d1f-2af563c06306")
+		)
+		(model "${KIPRJMOD}/3Dmodels/Buzzer_12mm.wrl"
+			(offset (xyz 0 0 0))
+			(scale (xyz 1 1 1))
+			(rotate (xyz 0 0 0))
+		)
+		(embedded_fonts no)
+	)
+	(footprint "Custom:Q1"
+		(layer "F.Cu")
+		(uuid "48c50b2c-54ff-4570-bd47-e30def646747")
+		(at 158 123)
+		(property "Reference" "Q1"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "ae51bd19-e5af-473a-90c2-969d71e808fa")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(property "Value" "2N3904 TO-92"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "5bf24b5d-2c21-459f-aa2d-e289397fb192")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(attr through_hole)
+		(fp_rect
+			(start -4.0 -2.5)
+			(end 4.0 2.5)
+			(stroke (width 0.25) (type default))
+			(fill none)
+			(layer "F.SilkS")
+			(uuid "99e336aa-5125-4ce5-9ad1-3b611e858985")
+		)
+		(pad "1" thru_hole rect
+			(at -2.54 0)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net "BUZZER_BASE")
+			(uuid "aca0d4a1-61d0-4648-8075-16a4c63dc629")
+		)
+		(pad "2" thru_hole circle
+			(at 0 0)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net "BUZZER_LOW")
+			(uuid "2b99003b-135c-4f2a-81cc-eceba10dd26a")
+		)
+		(pad "3" thru_hole circle
+			(at 2.54 0)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net "GND")
+			(uuid "5b5834ec-3896-47dd-be9b-da36b0d56dbe")
+		)
+		(model "${KIPRJMOD}/3Dmodels/2N3904_TO92.wrl"
+			(offset (xyz 0 0 0))
+			(scale (xyz 1 1 1))
+			(rotate (xyz 0 0 0))
+		)
+		(embedded_fonts no)
+	)
+	(footprint "Custom:R5"
+		(layer "F.Cu")
+		(uuid "b449ebf8-e1ef-4c85-921d-1c34ad7aaabc")
+		(at 145 123)
+		(property "Reference" "R5"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "73846fc1-2951-4aa3-b715-60d364414f17")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(property "Value" "1k"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "c34d749b-33c5-4e3f-bbfd-00207a8bbf60")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(attr through_hole)
+		(fp_rect
+			(start -4.0 -1.5)
+			(end 4.0 1.5)
+			(stroke (width 0.25) (type default))
+			(fill none)
+			(layer "F.SilkS")
+			(uuid "dfc58fa4-e8b5-462c-a764-c93efe4e5a1b")
+		)
+		(pad "1" thru_hole rect
+			(at -2.54 0)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net "GPIO42")
+			(uuid "258f8f95-97c7-43de-ab56-a38268e0c4a4")
+		)
+		(pad "2" thru_hole circle
+			(at 2.54 0)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net "BUZZER_BASE")
+			(uuid "d89ffe03-01af-4c34-b403-7464d0226f1d")
+		)
+		(model "${KIPRJMOD}/3Dmodels/Resistor_THT.wrl"
+			(offset (xyz 0 0 0))
+			(scale (xyz 1 1 1))
+			(rotate (xyz 0 0 0))
+		)
+		(embedded_fonts no)
+	)
+	(footprint "Custom:R6"
+		(layer "F.Cu")
+		(uuid "89201fcf-6189-4446-b0c8-b745e24cbe9b")
+		(at 145 128)
+		(property "Reference" "R6"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "bbdcb6d2-35ed-405a-bed3-599143d66414")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(property "Value" "100k"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "990459cb-ee84-44f2-92f5-7bb2c7d1d9a5")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(attr through_hole)
+		(fp_rect
+			(start -4.0 -1.5)
+			(end 4.0 1.5)
+			(stroke (width 0.25) (type default))
+			(fill none)
+			(layer "F.SilkS")
+			(uuid "834182c4-59a7-4e2a-b88f-c5b0ca0dea79")
+		)
+		(pad "1" thru_hole rect
+			(at -2.54 0)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net "BUZZER_BASE")
+			(uuid "02f7659d-099f-4eba-9d8a-0ddc0bf5c7f8")
+		)
+		(pad "2" thru_hole circle
+			(at 2.54 0)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net "GND")
+			(uuid "830b721c-07e1-447d-8ed1-a8cb9420a328")
+		)
+		(model "${KIPRJMOD}/3Dmodels/Resistor_THT.wrl"
+			(offset (xyz 0 0 0))
+			(scale (xyz 1 1 1))
+			(rotate (xyz 0 0 0))
+		)
+		(embedded_fonts no)
+	)
+	(footprint "Custom:J_PWR"
+		(layer "F.Cu")
+		(uuid "f9b80f0f-b6b9-4b9c-8137-feb448c08dfc")
+		(at 176 123)
+		(property "Reference" "J_PWR"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "fc353cdd-07cb-4c64-b5c2-88e3deda2971")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(property "Value" "5V INPUT"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "0adb5418-ecbf-46f1-ac68-48d2df603e92")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(attr through_hole)
+		(fp_rect
+			(start -3.5 -3.5)
+			(end 3.5 3.5)
+			(stroke (width 0.25) (type default))
+			(fill none)
+			(layer "F.SilkS")
+			(uuid "cb2eeb24-bb5f-46c6-b0a5-5673a68d95eb")
+		)
+		(pad "1" thru_hole rect
+			(at 0 0)
+			(size 2.4 2.4)
+			(drill 1.1)
+			(layers "*.Cu" "*.Mask")
+			(net "5V_IN")
+			(uuid "2eac6399-96eb-437b-aa95-57497c7563b7")
+		)
+		(pad "2" thru_hole circle
+			(at 0 2.54)
+			(size 2.4 2.4)
+			(drill 1.1)
+			(layers "*.Cu" "*.Mask")
+			(net "GND")
+			(uuid "7cbdaade-05eb-4320-9d10-b91fc5f9b204")
+		)
+		(model "${KIPRJMOD}/3Dmodels/Header_1x02.wrl"
+			(offset (xyz 0 0 0))
+			(scale (xyz 1 1 1))
+			(rotate (xyz 0 0 0))
+		)
+		(embedded_fonts no)
+	)
+	(footprint "Custom:F1"
+		(layer "F.Cu")
+		(uuid "e0460c9d-c1ab-4ca8-9e6a-0cf6f57302e8")
+		(at 162 122)
+		(property "Reference" "F1"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "437a339a-9f4a-4470-a286-97d4759034cc")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(property "Value" "PTC 0.75A"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "b0481f96-68dc-401b-801c-c70d99a226f1")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(attr through_hole)
+		(fp_rect
+			(start -4.0 -1.5)
+			(end 4.0 1.5)
+			(stroke (width 0.25) (type default))
+			(fill none)
+			(layer "F.SilkS")
+			(uuid "2caf6196-cc51-489c-9676-e2254a4d3126")
+		)
+		(pad "1" thru_hole rect
+			(at -2.54 0)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net "5V_IN")
+			(uuid "edfe7d83-441d-489c-9958-bde8ea09d72d")
+		)
+		(pad "2" thru_hole circle
+			(at 2.54 0)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net "5V_FUSED")
+			(uuid "6362a2c3-2c03-4768-928e-0d7eb0620de3")
+		)
+		(model "${KIPRJMOD}/3Dmodels/Fuse_PTC.wrl"
+			(offset (xyz 0 0 0))
+			(scale (xyz 1 1 1))
+			(rotate (xyz 0 0 0))
+		)
+		(embedded_fonts no)
+	)
+	(footprint "Custom:D1"
+		(layer "F.Cu")
+		(uuid "39e30be1-1321-42cc-8a9f-39d93d92bc76")
+		(at 151 122)
+		(property "Reference" "D1"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "503cc45a-ef40-4524-bca1-1ddd56fbd7d0")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(property "Value" "SS14"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "6e0cb2b3-c69e-469f-a68b-77276ee662f0")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(attr through_hole)
+		(fp_rect
+			(start -4.0 -1.5)
+			(end 4.0 1.5)
+			(stroke (width 0.25) (type default))
+			(fill none)
+			(layer "F.SilkS")
+			(uuid "7dbad7f5-4d4c-47f2-a5dc-ae975a392b1a")
+		)
+		(pad "1" thru_hole rect
+			(at -2.54 0)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net "5V_FUSED")
+			(uuid "54a6ec31-93da-4f7f-af91-0be22a060a29")
+		)
+		(pad "2" thru_hole circle
+			(at 2.54 0)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net "5V_PROTECTED")
+			(uuid "a3b6a092-ef1b-41bf-8dbd-9a0cf45caf01")
+		)
+		(model "${KIPRJMOD}/3Dmodels/Diode_SS14.wrl"
+			(offset (xyz 0 0 0))
+			(scale (xyz 1 1 1))
+			(rotate (xyz 0 0 0))
+		)
+		(embedded_fonts no)
+	)
+	(footprint "Custom:J_BAT"
+		(layer "F.Cu")
+		(uuid "3aa4f3e3-1b07-48e7-9602-ef3d85162005")
+		(at 176 88)
+		(property "Reference" "J_BAT"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "e070fb13-ee6f-45c9-947d-a37b9002ee4c")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(property "Value" "BATTERY SENSE"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "945e8ca4-7527-41f1-851c-dfc8de0118ae")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(attr through_hole)
+		(fp_rect
+			(start -3.5 -3.5)
+			(end 3.5 3.5)
+			(stroke (width 0.25) (type default))
+			(fill none)
+			(layer "F.SilkS")
+			(uuid "800639fa-8819-4c3f-b020-2a1f866c0fd1")
+		)
+		(pad "1" thru_hole rect
+			(at 0 0)
+			(size 2.4 2.4)
+			(drill 1.1)
+			(layers "*.Cu" "*.Mask")
+			(net "VBAT_RAW")
+			(uuid "62716e19-e837-4134-85d3-a95784b75454")
+		)
+		(pad "2" thru_hole circle
+			(at 0 2.54)
+			(size 2.4 2.4)
+			(drill 1.1)
+			(layers "*.Cu" "*.Mask")
+			(net "GND")
+			(uuid "d16b2a34-7428-4514-ac2b-e720e1a2e5c3")
+		)
+		(model "${KIPRJMOD}/3Dmodels/Header_1x02.wrl"
+			(offset (xyz 0 0 0))
+			(scale (xyz 1 1 1))
+			(rotate (xyz 0 0 0))
+		)
+		(embedded_fonts no)
+	)
+	(footprint "Custom:R13"
+		(layer "F.Cu")
+		(uuid "d1f377e1-f188-49a8-be3c-ff417cb84386")
+		(at 164 94)
+		(property "Reference" "R13"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "d36e5f3e-c065-468f-a133-2a6704a3c419")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(property "Value" "2.2k"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "8d0839c2-677c-42ab-8a29-6a9a1cf03722")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(attr through_hole)
+		(fp_rect
+			(start -4.0 -1.5)
+			(end 4.0 1.5)
+			(stroke (width 0.25) (type default))
+			(fill none)
+			(layer "F.SilkS")
+			(uuid "5fe64759-242c-4ad0-8f9b-45c922190113")
+		)
+		(pad "1" thru_hole rect
+			(at -2.54 0)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net "VBAT_RAW")
+			(uuid "7016a680-ebae-42f2-baf3-a8a3817f99a8")
+		)
+		(pad "2" thru_hole circle
+			(at 2.54 0)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net "BAT_ADC")
+			(uuid "bfa1e2f6-d0ef-4463-9b2a-6cd47c8bfad1")
+		)
+		(model "${KIPRJMOD}/3Dmodels/Resistor_THT.wrl"
+			(offset (xyz 0 0 0))
+			(scale (xyz 1 1 1))
+			(rotate (xyz 0 0 0))
+		)
+		(embedded_fonts no)
+	)
+	(footprint "Custom:R14"
+		(layer "F.Cu")
+		(uuid "621485b2-dd3f-4d8d-8350-644c2158c89c")
+		(at 164 100)
+		(property "Reference" "R14"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "258707b3-76df-4429-8879-318e0444dc71")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(property "Value" "1k"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "2f29b5a4-cf72-4bbf-8c0d-bb5ca40faedd")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(attr through_hole)
+		(fp_rect
+			(start -4.0 -1.5)
+			(end 4.0 1.5)
+			(stroke (width 0.25) (type default))
+			(fill none)
+			(layer "F.SilkS")
+			(uuid "942d04a4-9f7d-4cbf-97b3-e33d9ac62c7f")
+		)
+		(pad "1" thru_hole rect
+			(at -2.54 0)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net "BAT_ADC")
+			(uuid "25498ae7-2a19-4c4c-9a24-9d6cd1e1e381")
+		)
+		(pad "2" thru_hole circle
+			(at 2.54 0)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net "GND")
+			(uuid "c0359eba-f5d8-44f8-8b56-b0ba2c571a6c")
+		)
+		(model "${KIPRJMOD}/3Dmodels/Resistor_THT.wrl"
+			(offset (xyz 0 0 0))
+			(scale (xyz 1 1 1))
+			(rotate (xyz 0 0 0))
+		)
+		(embedded_fonts no)
+	)
+	(footprint "Custom:C8"
+		(layer "F.Cu")
+		(uuid "447dffae-0fa1-4ed9-b5e0-e307eed9a784")
+		(at 176 99)
+		(property "Reference" "C8"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "f05c4ba2-94ef-4f0c-8350-5d49fa581718")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(property "Value" "100nF"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "1dc3a6c2-47f3-42ec-9be0-36020a377e76")
+			(hide yes)
+			(effects
+				(font (size 1 1) (thickness 0.15))
+			)
+		)
+		(attr through_hole)
+		(fp_rect
+			(start -3.0 -2.0)
+			(end 3.0 2.0)
+			(stroke (width 0.25) (type default))
+			(fill none)
+			(layer "F.SilkS")
+			(uuid "db394438-cc7e-4123-8abc-def012345678")
+		)
+		(pad "1" thru_hole rect
+			(at -2.54 0)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net "BAT_ADC")
+			(uuid "a1234567-89ab-cdef-0123-456789abcdef")
+		)
+		(pad "2" thru_hole circle
+			(at 2.54 0)
+			(size 2.0 2.0)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(net "GND")
+			(uuid "fedcba98-7654-3210-fedc-ba9876543210")
+		)
+		(model "${KIPRJMOD}/3Dmodels/Capacitor_THT.wrl"
+			(offset (xyz 0 0 0))
+			(scale (xyz 1 1 1))
+			(rotate (xyz 0 0 0))
+		)
+		(embedded_fonts no)
+	)
+)
+===== END FILE: source_reference/ESP32_S3_Modular_Carrier_REV4.kicad_pcb =====

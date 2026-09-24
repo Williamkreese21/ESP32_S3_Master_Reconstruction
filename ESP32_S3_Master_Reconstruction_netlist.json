@@ -1,0 +1,863 @@
+{
+  "format": "KiCad PCB netlist export",
+  "source": "ESP32_S3_Master_Reconstruction.kicad_pcb",
+  "components": [
+    {
+      "reference": "BZ1",
+      "value": "Active buzzer",
+      "footprint": "Custom:BZ1"
+    },
+    {
+      "reference": "C8",
+      "value": "100nF",
+      "footprint": "Custom:C8"
+    },
+    {
+      "reference": "D1",
+      "value": "SS14",
+      "footprint": "Custom:D1"
+    },
+    {
+      "reference": "F1",
+      "value": "PTC 0.75A",
+      "footprint": "Custom:F1"
+    },
+    {
+      "reference": "J1",
+      "value": "ESP32-S3 DevKitC-1 1x22 socket",
+      "footprint": "Custom:J1"
+    },
+    {
+      "reference": "J3",
+      "value": "ESP32-S3 DevKitC-1 1x22 socket",
+      "footprint": "Custom:J3"
+    },
+    {
+      "reference": "J_BAT",
+      "value": "BATTERY SENSE",
+      "footprint": "Custom:J_BAT"
+    },
+    {
+      "reference": "J_ENC1",
+      "value": "KY-040 5P",
+      "footprint": "Custom:J_ENC1"
+    },
+    {
+      "reference": "J_GPS1",
+      "value": "NEO-6M GPS 4P",
+      "footprint": "Custom:J_GPS1"
+    },
+    {
+      "reference": "J_PWR",
+      "value": "5V INPUT",
+      "footprint": "Custom:J_PWR"
+    },
+    {
+      "reference": "J_RF1",
+      "value": "nRF24L01+ 2x4 socket",
+      "footprint": "Custom:J_RF1"
+    },
+    {
+      "reference": "J_RF2",
+      "value": "nRF24L01+ 2x4 socket",
+      "footprint": "Custom:J_RF2"
+    },
+    {
+      "reference": "J_TFT_BUS",
+      "value": "TFT BUS 1x8 external",
+      "footprint": "Custom:J_TFT_BUS"
+    },
+    {
+      "reference": "Q1",
+      "value": "2N3904 TO-92",
+      "footprint": "Custom:Q1"
+    },
+    {
+      "reference": "R13",
+      "value": "2.2k",
+      "footprint": "Custom:R13"
+    },
+    {
+      "reference": "R14",
+      "value": "1k",
+      "footprint": "Custom:R14"
+    },
+    {
+      "reference": "R5",
+      "value": "1k",
+      "footprint": "Custom:R5"
+    },
+    {
+      "reference": "R6",
+      "value": "100k",
+      "footprint": "Custom:R6"
+    },
+    {
+      "reference": "SW1",
+      "value": "6x6 tactile",
+      "footprint": "Custom:SW1"
+    },
+    {
+      "reference": "SW2",
+      "value": "6x6 tactile",
+      "footprint": "Custom:SW2"
+    },
+    {
+      "reference": "SW3",
+      "value": "6x6 tactile",
+      "footprint": "Custom:SW3"
+    },
+    {
+      "reference": "SW4",
+      "value": "6x6 tactile",
+      "footprint": "Custom:SW4"
+    },
+    {
+      "reference": "U1_3D",
+      "value": "ESP32-S3 DevKitC-1 N16R8",
+      "footprint": "Custom:U1_3D"
+    }
+  ],
+  "nets": [
+    {
+      "code": 1,
+      "name": "3V3",
+      "nodes": [
+        {
+          "reference": "BZ1",
+          "pin": "1"
+        },
+        {
+          "reference": "J1",
+          "pin": "1"
+        },
+        {
+          "reference": "J1",
+          "pin": "2"
+        },
+        {
+          "reference": "J_ENC1",
+          "pin": "2"
+        },
+        {
+          "reference": "J_GPS1",
+          "pin": "1"
+        },
+        {
+          "reference": "J_RF1",
+          "pin": "2"
+        },
+        {
+          "reference": "J_RF2",
+          "pin": "2"
+        },
+        {
+          "reference": "J_TFT_BUS",
+          "pin": "1"
+        },
+        {
+          "reference": "J_TFT_BUS",
+          "pin": "8"
+        }
+      ]
+    },
+    {
+      "code": 2,
+      "name": "RST",
+      "nodes": [
+        {
+          "reference": "J1",
+          "pin": "3"
+        }
+      ]
+    },
+    {
+      "code": 3,
+      "name": "GPIO4",
+      "nodes": [
+        {
+          "reference": "J1",
+          "pin": "4"
+        },
+        {
+          "reference": "J_RF1",
+          "pin": "3"
+        }
+      ]
+    },
+    {
+      "code": 4,
+      "name": "GPIO5",
+      "nodes": [
+        {
+          "reference": "J1",
+          "pin": "5"
+        },
+        {
+          "reference": "J_RF1",
+          "pin": "7"
+        },
+        {
+          "reference": "J_RF2",
+          "pin": "7"
+        }
+      ]
+    },
+    {
+      "code": 5,
+      "name": "GPIO6",
+      "nodes": [
+        {
+          "reference": "J1",
+          "pin": "6"
+        },
+        {
+          "reference": "J_RF1",
+          "pin": "5"
+        },
+        {
+          "reference": "J_RF2",
+          "pin": "5"
+        }
+      ]
+    },
+    {
+      "code": 6,
+      "name": "GPIO7",
+      "nodes": [
+        {
+          "reference": "J1",
+          "pin": "7"
+        },
+        {
+          "reference": "J_RF1",
+          "pin": "6"
+        },
+        {
+          "reference": "J_RF2",
+          "pin": "6"
+        }
+      ]
+    },
+    {
+      "code": 7,
+      "name": "GPIO15",
+      "nodes": [
+        {
+          "reference": "J1",
+          "pin": "8"
+        },
+        {
+          "reference": "SW3",
+          "pin": "1"
+        },
+        {
+          "reference": "SW3",
+          "pin": "2"
+        }
+      ]
+    },
+    {
+      "code": 8,
+      "name": "GPIO16",
+      "nodes": [
+        {
+          "reference": "J1",
+          "pin": "9"
+        },
+        {
+          "reference": "SW4",
+          "pin": "1"
+        },
+        {
+          "reference": "SW4",
+          "pin": "2"
+        }
+      ]
+    },
+    {
+      "code": 9,
+      "name": "GPIO17",
+      "nodes": [
+        {
+          "reference": "J1",
+          "pin": "10"
+        },
+        {
+          "reference": "J_GPS1",
+          "pin": "4"
+        }
+      ]
+    },
+    {
+      "code": 10,
+      "name": "GPIO18",
+      "nodes": [
+        {
+          "reference": "J1",
+          "pin": "11"
+        },
+        {
+          "reference": "J_GPS1",
+          "pin": "3"
+        }
+      ]
+    },
+    {
+      "code": 11,
+      "name": "GPIO8",
+      "nodes": [
+        {
+          "reference": "J1",
+          "pin": "12"
+        },
+        {
+          "reference": "J_TFT_BUS",
+          "pin": "7"
+        }
+      ]
+    },
+    {
+      "code": 12,
+      "name": "GPIO3",
+      "nodes": [
+        {
+          "reference": "J1",
+          "pin": "13"
+        },
+        {
+          "reference": "J_RF1",
+          "pin": "4"
+        }
+      ]
+    },
+    {
+      "code": 13,
+      "name": "GPIO46",
+      "nodes": [
+        {
+          "reference": "J1",
+          "pin": "14"
+        }
+      ]
+    },
+    {
+      "code": 14,
+      "name": "GPIO9",
+      "nodes": [
+        {
+          "reference": "J1",
+          "pin": "15"
+        },
+        {
+          "reference": "J_TFT_BUS",
+          "pin": "5"
+        }
+      ]
+    },
+    {
+      "code": 15,
+      "name": "GPIO10",
+      "nodes": [
+        {
+          "reference": "J1",
+          "pin": "16"
+        },
+        {
+          "reference": "J_TFT_BUS",
+          "pin": "6"
+        }
+      ]
+    },
+    {
+      "code": 16,
+      "name": "GPIO11",
+      "nodes": [
+        {
+          "reference": "J1",
+          "pin": "17"
+        },
+        {
+          "reference": "J_TFT_BUS",
+          "pin": "4"
+        }
+      ]
+    },
+    {
+      "code": 17,
+      "name": "GPIO12",
+      "nodes": [
+        {
+          "reference": "J1",
+          "pin": "18"
+        },
+        {
+          "reference": "J_TFT_BUS",
+          "pin": "3"
+        }
+      ]
+    },
+    {
+      "code": 18,
+      "name": "GPIO13",
+      "nodes": [
+        {
+          "reference": "J1",
+          "pin": "19"
+        },
+        {
+          "reference": "SW1",
+          "pin": "1"
+        },
+        {
+          "reference": "SW1",
+          "pin": "2"
+        }
+      ]
+    },
+    {
+      "code": 19,
+      "name": "GPIO14",
+      "nodes": [
+        {
+          "reference": "J1",
+          "pin": "20"
+        },
+        {
+          "reference": "SW2",
+          "pin": "1"
+        },
+        {
+          "reference": "SW2",
+          "pin": "2"
+        }
+      ]
+    },
+    {
+      "code": 20,
+      "name": "5V_PROTECTED",
+      "nodes": [
+        {
+          "reference": "D1",
+          "pin": "2"
+        },
+        {
+          "reference": "J1",
+          "pin": "21"
+        }
+      ]
+    },
+    {
+      "code": 21,
+      "name": "GND",
+      "nodes": [
+        {
+          "reference": "C8",
+          "pin": "2"
+        },
+        {
+          "reference": "J1",
+          "pin": "22"
+        },
+        {
+          "reference": "J3",
+          "pin": "1"
+        },
+        {
+          "reference": "J3",
+          "pin": "21"
+        },
+        {
+          "reference": "J3",
+          "pin": "22"
+        },
+        {
+          "reference": "J_BAT",
+          "pin": "2"
+        },
+        {
+          "reference": "J_ENC1",
+          "pin": "1"
+        },
+        {
+          "reference": "J_GPS1",
+          "pin": "2"
+        },
+        {
+          "reference": "J_PWR",
+          "pin": "2"
+        },
+        {
+          "reference": "J_RF1",
+          "pin": "1"
+        },
+        {
+          "reference": "J_RF1",
+          "pin": "8"
+        },
+        {
+          "reference": "J_RF2",
+          "pin": "1"
+        },
+        {
+          "reference": "J_RF2",
+          "pin": "8"
+        },
+        {
+          "reference": "J_TFT_BUS",
+          "pin": "2"
+        },
+        {
+          "reference": "Q1",
+          "pin": "3"
+        },
+        {
+          "reference": "R14",
+          "pin": "2"
+        },
+        {
+          "reference": "R6",
+          "pin": "2"
+        },
+        {
+          "reference": "SW1",
+          "pin": "3"
+        },
+        {
+          "reference": "SW1",
+          "pin": "4"
+        },
+        {
+          "reference": "SW2",
+          "pin": "3"
+        },
+        {
+          "reference": "SW2",
+          "pin": "4"
+        },
+        {
+          "reference": "SW3",
+          "pin": "3"
+        },
+        {
+          "reference": "SW3",
+          "pin": "4"
+        },
+        {
+          "reference": "SW4",
+          "pin": "3"
+        },
+        {
+          "reference": "SW4",
+          "pin": "4"
+        }
+      ]
+    },
+    {
+      "code": 22,
+      "name": "GPIO43",
+      "nodes": [
+        {
+          "reference": "J3",
+          "pin": "2"
+        }
+      ]
+    },
+    {
+      "code": 23,
+      "name": "GPIO44",
+      "nodes": [
+        {
+          "reference": "J3",
+          "pin": "3"
+        }
+      ]
+    },
+    {
+      "code": 24,
+      "name": "GPIO1",
+      "nodes": [
+        {
+          "reference": "J3",
+          "pin": "4"
+        },
+        {
+          "reference": "J_RF2",
+          "pin": "4"
+        }
+      ]
+    },
+    {
+      "code": 25,
+      "name": "GPIO2",
+      "nodes": [
+        {
+          "reference": "J3",
+          "pin": "5"
+        },
+        {
+          "reference": "J_RF2",
+          "pin": "3"
+        }
+      ]
+    },
+    {
+      "code": 26,
+      "name": "GPIO42",
+      "nodes": [
+        {
+          "reference": "J3",
+          "pin": "6"
+        },
+        {
+          "reference": "R5",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "code": 27,
+      "name": "GPIO41",
+      "nodes": [
+        {
+          "reference": "J3",
+          "pin": "7"
+        },
+        {
+          "reference": "J_ENC1",
+          "pin": "5"
+        }
+      ]
+    },
+    {
+      "code": 28,
+      "name": "GPIO40",
+      "nodes": [
+        {
+          "reference": "J3",
+          "pin": "8"
+        },
+        {
+          "reference": "J_ENC1",
+          "pin": "4"
+        }
+      ]
+    },
+    {
+      "code": 29,
+      "name": "GPIO39",
+      "nodes": [
+        {
+          "reference": "J3",
+          "pin": "9"
+        },
+        {
+          "reference": "J_ENC1",
+          "pin": "3"
+        }
+      ]
+    },
+    {
+      "code": 30,
+      "name": "GPIO38",
+      "nodes": [
+        {
+          "reference": "J3",
+          "pin": "10"
+        }
+      ]
+    },
+    {
+      "code": 31,
+      "name": "GPIO37",
+      "nodes": [
+        {
+          "reference": "J3",
+          "pin": "11"
+        }
+      ]
+    },
+    {
+      "code": 32,
+      "name": "GPIO36",
+      "nodes": [
+        {
+          "reference": "J3",
+          "pin": "12"
+        }
+      ]
+    },
+    {
+      "code": 33,
+      "name": "GPIO35",
+      "nodes": [
+        {
+          "reference": "J3",
+          "pin": "13"
+        }
+      ]
+    },
+    {
+      "code": 34,
+      "name": "GPIO0",
+      "nodes": [
+        {
+          "reference": "J3",
+          "pin": "14"
+        }
+      ]
+    },
+    {
+      "code": 35,
+      "name": "GPIO45",
+      "nodes": [
+        {
+          "reference": "J3",
+          "pin": "15"
+        }
+      ]
+    },
+    {
+      "code": 36,
+      "name": "GPIO48",
+      "nodes": [
+        {
+          "reference": "J3",
+          "pin": "16"
+        }
+      ]
+    },
+    {
+      "code": 37,
+      "name": "GPIO47",
+      "nodes": [
+        {
+          "reference": "J3",
+          "pin": "17"
+        }
+      ]
+    },
+    {
+      "code": 38,
+      "name": "GPIO21",
+      "nodes": [
+        {
+          "reference": "J3",
+          "pin": "18"
+        }
+      ]
+    },
+    {
+      "code": 39,
+      "name": "GPIO20",
+      "nodes": [
+        {
+          "reference": "J3",
+          "pin": "19"
+        }
+      ]
+    },
+    {
+      "code": 40,
+      "name": "GPIO19",
+      "nodes": [
+        {
+          "reference": "J3",
+          "pin": "20"
+        }
+      ]
+    },
+    {
+      "code": 41,
+      "name": "BUZZER_LOW",
+      "nodes": [
+        {
+          "reference": "BZ1",
+          "pin": "2"
+        },
+        {
+          "reference": "Q1",
+          "pin": "2"
+        }
+      ]
+    },
+    {
+      "code": 42,
+      "name": "BUZZER_BASE",
+      "nodes": [
+        {
+          "reference": "Q1",
+          "pin": "1"
+        },
+        {
+          "reference": "R5",
+          "pin": "2"
+        },
+        {
+          "reference": "R6",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "code": 43,
+      "name": "5V_IN",
+      "nodes": [
+        {
+          "reference": "F1",
+          "pin": "1"
+        },
+        {
+          "reference": "J_PWR",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "code": 44,
+      "name": "5V_FUSED",
+      "nodes": [
+        {
+          "reference": "D1",
+          "pin": "1"
+        },
+        {
+          "reference": "F1",
+          "pin": "2"
+        }
+      ]
+    },
+    {
+      "code": 45,
+      "name": "VBAT_RAW",
+      "nodes": [
+        {
+          "reference": "J_BAT",
+          "pin": "1"
+        },
+        {
+          "reference": "R13",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "code": 46,
+      "name": "BAT_ADC",
+      "nodes": [
+        {
+          "reference": "C8",
+          "pin": "1"
+        },
+        {
+          "reference": "R13",
+          "pin": "2"
+        },
+        {
+          "reference": "R14",
+          "pin": "1"
+        }
+      ]
+    }
+  ]
+}

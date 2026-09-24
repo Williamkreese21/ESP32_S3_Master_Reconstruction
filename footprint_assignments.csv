@@ -1,0 +1,28 @@
+Reference,Footprint,Value
+,MountingHole_M3_15_125,
+,MountingHole_M3_15_15,
+,MountingHole_M3_185_125,
+,MountingHole_M3_185_15,
+BZ1,Custom:BZ1,Active buzzer
+C8,Custom:C8,100nF
+D1,Custom:D1,SS14
+F1,Custom:F1,PTC 0.75A
+J1,Custom:J1,ESP32-S3 DevKitC-1 1x22 socket
+J3,Custom:J3,ESP32-S3 DevKitC-1 1x22 socket
+J_BAT,Custom:J_BAT,BATTERY SENSE
+J_ENC1,Custom:J_ENC1,KY-040 5P
+J_GPS1,Custom:J_GPS1,NEO-6M GPS 4P
+J_PWR,Custom:J_PWR,5V INPUT
+J_RF1,Custom:J_RF1,nRF24L01+ 2x4 socket
+J_RF2,Custom:J_RF2,nRF24L01+ 2x4 socket
+J_TFT_BUS,Custom:J_TFT_BUS,TFT BUS 1x8 external
+Q1,Custom:Q1,2N3904 TO-92
+R13,Custom:R13,2.2k
+R14,Custom:R14,1k
+R5,Custom:R5,1k
+R6,Custom:R6,100k
+SW1,Custom:SW1,6x6 tactile
+SW2,Custom:SW2,6x6 tactile
+SW3,Custom:SW3,6x6 tactile
+SW4,Custom:SW4,6x6 tactile
+U1_3D,Custom:U1_3D,ESP32-S3 DevKitC-1 N16R8

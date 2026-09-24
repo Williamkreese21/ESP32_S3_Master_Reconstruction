@@ -1,0 +1,125 @@
+{
+  "project": "ESP32_S3_Master_Reconstruction",
+  "files": [
+    {
+      "path": "3Dmodels/2N3904_TO92.wrl",
+      "bytes": 81,
+      "sha256": "fe13f4671f1a38d7ee7fb1674e1a5e72a6f232e415b39b048570a1416e04453b"
+    },
+    {
+      "path": "3Dmodels/Buzzer_12mm.wrl",
+      "bytes": 81,
+      "sha256": "fe13f4671f1a38d7ee7fb1674e1a5e72a6f232e415b39b048570a1416e04453b"
+    },
+    {
+      "path": "3Dmodels/Capacitor_THT.wrl",
+      "bytes": 81,
+      "sha256": "fe13f4671f1a38d7ee7fb1674e1a5e72a6f232e415b39b048570a1416e04453b"
+    },
+    {
+      "path": "3Dmodels/Diode_SS14.wrl",
+      "bytes": 81,
+      "sha256": "fe13f4671f1a38d7ee7fb1674e1a5e72a6f232e415b39b048570a1416e04453b"
+    },
+    {
+      "path": "3Dmodels/ESP32S3_DevKitC1_N16R8.wrl",
+      "bytes": 81,
+      "sha256": "fe13f4671f1a38d7ee7fb1674e1a5e72a6f232e415b39b048570a1416e04453b"
+    },
+    {
+      "path": "3Dmodels/Fuse_PTC.wrl",
+      "bytes": 81,
+      "sha256": "fe13f4671f1a38d7ee7fb1674e1a5e72a6f232e415b39b048570a1416e04453b"
+    },
+    {
+      "path": "3Dmodels/Header_1x02.wrl",
+      "bytes": 81,
+      "sha256": "fe13f4671f1a38d7ee7fb1674e1a5e72a6f232e415b39b048570a1416e04453b"
+    },
+    {
+      "path": "3Dmodels/KY040_Encoder.wrl",
+      "bytes": 81,
+      "sha256": "fe13f4671f1a38d7ee7fb1674e1a5e72a6f232e415b39b048570a1416e04453b"
+    },
+    {
+      "path": "3Dmodels/NEO6M.wrl",
+      "bytes": 81,
+      "sha256": "fe13f4671f1a38d7ee7fb1674e1a5e72a6f232e415b39b048570a1416e04453b"
+    },
+    {
+      "path": "3Dmodels/Resistor_THT.wrl",
+      "bytes": 81,
+      "sha256": "fe13f4671f1a38d7ee7fb1674e1a5e72a6f232e415b39b048570a1416e04453b"
+    },
+    {
+      "path": "3Dmodels/Tactile_6x6.wrl",
+      "bytes": 81,
+      "sha256": "fe13f4671f1a38d7ee7fb1674e1a5e72a6f232e415b39b048570a1416e04453b"
+    },
+    {
+      "path": "3Dmodels/nRF24L01_2x4.wrl",
+      "bytes": 81,
+      "sha256": "fe13f4671f1a38d7ee7fb1674e1a5e72a6f232e415b39b048570a1416e04453b"
+    },
+    {
+      "path": "3d_model_mappings.csv",
+      "bytes": 1101,
+      "sha256": "0ecbf46ed189a92f5d3343b0452a7fa6bdde00bb527735f9ef23e197debef6d0"
+    },
+    {
+      "path": "ALL_SOURCE_TEXT.txt",
+      "bytes": 160439,
+      "sha256": "4e9ae6a09343e8e990ab5fd5214cac9c5876d9bc51423e8dd722538cd9c74663"
+    },
+    {
+      "path": "ESP32_S3_Master_Reconstruction.kicad_dru",
+      "bytes": 555,
+      "sha256": "c6ff772347beecca0df754c66d03c950dff62d62ab48030002195c88543c0ee7"
+    },
+    {
+      "path": "ESP32_S3_Master_Reconstruction.kicad_pcb",
+      "bytes": 72287,
+      "sha256": "ee58c65389058b5b5c54b347b97d3e0faca4a7cdc1306206b5de80b9c0ad24e8"
+    },
+    {
+      "path": "ESP32_S3_Master_Reconstruction.kicad_prl",
+      "bytes": 79,
+      "sha256": "5beb25fd198aa1c17a6eb12021995396137b3db16fd0b72579426d75400ba46c"
+    },
+    {
+      "path": "ESP32_S3_Master_Reconstruction.kicad_pro",
+      "bytes": 1341,
+      "sha256": "87b31aa44f27df2609c784c55ae41502f1090c7aa22219e31091d5ca9d789431"
+    },
+    {
+      "path": "ESP32_S3_Master_Reconstruction.net",
+      "bytes": 7846,
+      "sha256": "4e5049efea3a004fe6df26d7b658eb2ee8a253ae4ce0fc42ed1f0372028c08d6"
+    },
+    {
+      "path": "ESP32_S3_Master_Reconstruction_netlist.json",
+      "bytes": 14582,
+      "sha256": "c485d163a91cceef0610e74c0fdf44815f7fbeddb2c95c890e6ca191419065cf"
+    },
+    {
+      "path": "footprint_assignments.csv",
+      "bytes": 808,
+      "sha256": "d6777bab87943ed9ec961bca8a2db953bb5a22bf81cf099c234a849b9bda7777"
+    },
+    {
+      "path": "reconstruct_master_reference.py",
+      "bytes": 13026,
+      "sha256": "d8812016267c71d76c176480b1a95cd4e6945efafe9dac39c2963b5a2b2c0260"
+    },
+    {
+      "path": "route_manifest.csv",
+      "bytes": 3637,
+      "sha256": "b5d4685b95413cc08023ad0f7d3b1aef94d53569fef06d9a6724525f16691c08"
+    },
+    {
+      "path": "source_reference/ESP32_S3_Modular_Carrier_REV4.kicad_pcb",
+      "bytes": 41690,
+      "sha256": "f3421cdf58e783c7c20feafbc4ff483fd6b1ca7f0303d5b839c4c3ec5b9a1c55"
+    }
+  ]
+}

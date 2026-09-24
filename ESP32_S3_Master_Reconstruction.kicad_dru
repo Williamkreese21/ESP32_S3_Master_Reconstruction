@@ -1,0 +1,21 @@
+(version 1)
+(rule "Default clearance"
+  (constraint clearance (min 0.20mm))
+)
+(rule "Signal track width"
+  (constraint track_width (min 0.25mm) (opt 0.30mm) (max 0.60mm))
+)
+(rule "Power track width"
+  (condition "A.NetClass == 'POWER'")
+  (constraint track_width (min 0.45mm) (opt 0.60mm) (max 1.20mm))
+)
+(rule "Via dimensions"
+  (constraint hole_size (min 0.40mm))
+  (constraint physical_hole_size (min 0.40mm))
+)
+(rule "Copper to board edge"
+  (constraint edge_clearance (min 0.50mm))
+)
+(rule "Hole to hole"
+  (constraint hole_clearance (min 0.25mm))
+)
